@@ -10,6 +10,17 @@ This is a course about [SageMath](http://sagemath.org), which is a software deve
 
 I started Sage ten years ago, and many hundreds of people have contributed since.
 
+# Information
+
+- Course website: <https://github.com/williamstein/sage2014>
+
+- Professor: [William Stein](http://wstein.org)
+
+- TA: Simon Spicer
+
+- Office Hour for this course: Tuesdays 12-1:00pm in Padelford C423
+
+
 # Objectives
 
 In this course you will:
