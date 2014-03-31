@@ -1,7 +1,8 @@
 ︠5fb55eb3-eabb-4edb-ba17-dabd890d2eefi︠
 %md
 # Homework 1 - Math 480b - Spring 2014
-## Due Friday, April 4, 2014 by 6pm
+
+**Due Friday, April 4, 2014 by 6pm**
 
 Turn it in by creating a folder called "homework1" in your project, with this worksheet and also the latex document you create below.
 
@@ -12,7 +13,7 @@ You can put this worksheet in a SageMathCloud project by navigating to a directo
 <br>
 
 Make sure to email sagemath480@gmail.com by Wednesday, April 2, with your `project_id`, so I know where to find your homework!
-︡0fb0de92-591a-48df-83f0-f9fb64c9d848︡{"html":"<h1>Homework 1 - Math 480b - Spring 2014</h1>\n\n<h2>Due Friday, April 4, 2014 by 6pm</h2>\n\n<p>Turn it in by creating a folder called &#8220;homework1&#8221; in your project, with this worksheet and also the latex document you create below.</p>\n\n<p>You can put this worksheet in a SageMathCloud project by navigating to a directory (using the Files tab), then click &#8220;+New&#8221; and paste the following in the blank then click &#8220;From Web\":</p>\n\n<pre><code> https://raw.githubusercontent.com/williamstein/sage2014/master/homework/homework1/hw1.sagews\n</code></pre>\n\n<p><br></p>\n\n<p>Make sure to email sagemath480@gmail.com by Wednesday, April 2, with your <code>project_id</code>, so I know where to find your homework!</p>\n"}︡
+︡fe216546-2bfd-4b4f-8e9e-0329af454762︡{"html":"<h1>Homework 1 - Math 480b - Spring 2014</h1>\n\n<p><strong>Due Friday, April 4, 2014 by 6pm</strong></p>\n\n<p>Turn it in by creating a folder called &#8220;homework1&#8221; in your project, with this worksheet and also the latex document you create below.</p>\n\n<p>You can put this worksheet in a SageMathCloud project by navigating to a directory (using the Files tab), then click &#8220;+New&#8221; and paste the following in the blank then click &#8220;From Web\":</p>\n\n<pre><code> https://raw.githubusercontent.com/williamstein/sage2014/master/homework/homework1/hw1.sagews\n</code></pre>\n\n<p><br></p>\n\n<p>Make sure to email sagemath480@gmail.com by Wednesday, April 2, with your <code>project_id</code>, so I know where to find your homework!</p>\n"}︡
 ︠b5a63860-9c5d-4f36-87a1-0729a9493eedi︠
 %md
 ## Problem 1
