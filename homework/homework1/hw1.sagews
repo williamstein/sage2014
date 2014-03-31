@@ -3,16 +3,16 @@
 # Homework 1 - Math 480b - Spring 2014
 ## Due Friday, April 4, 2014 by 6pm
 
-Turn it in by creating a folder called "1" in your project, with this worksheet and also the latex document you create below.
+Turn it in by creating a folder called "homework1" in your project, with this worksheet and also the latex document you create below.
 
 You can put this worksheet in a SageMathCloud project by navigating to a directory (using the Files tab), then click "+New" and paste the following in the blank then click "From Web":
 
-     https://raw.githubusercontent.com/williamstein/sage2014/master/homework/1/hw1.sagews
+     https://raw.githubusercontent.com/williamstein/sage2014/master/homework/homework1/hw1.sagews
 
 <br>
 
 Make sure to email sagemath480@gmail.com by Wednesday, April 2, with your `project_id`, so I know where to find your homework!
-︡24e90e64-ecec-4be0-9cc5-6f854327bf11︡{"html":"<h1>Homework 1 - Math 480b - Spring 2014</h1>\n\n<h2>Due Friday, April 4, 2014 by 6pm</h2>\n\n<p>Turn it in by creating a folder called &#8220;1&#8221; in your project, with this worksheet and also the latex document you create below.</p>\n\n<p>You can put this worksheet in a SageMathCloud project by navigating to a directory (using the Files tab), then click &#8220;+New&#8221; and paste the following in the blank then click &#8220;From Web\":</p>\n\n<pre><code> https://raw.githubusercontent.com/williamstein/sage2014/master/homework/1/hw1.sagews\n</code></pre>\n\n<p><br></p>\n\n<p>Make sure to email sagemath480@gmail.com by Wednesday, April 2, with your <code>project_id</code>, so I know where to find your homework!</p>\n"}︡
+︡0fb0de92-591a-48df-83f0-f9fb64c9d848︡{"html":"<h1>Homework 1 - Math 480b - Spring 2014</h1>\n\n<h2>Due Friday, April 4, 2014 by 6pm</h2>\n\n<p>Turn it in by creating a folder called &#8220;homework1&#8221; in your project, with this worksheet and also the latex document you create below.</p>\n\n<p>You can put this worksheet in a SageMathCloud project by navigating to a directory (using the Files tab), then click &#8220;+New&#8221; and paste the following in the blank then click &#8220;From Web\":</p>\n\n<pre><code> https://raw.githubusercontent.com/williamstein/sage2014/master/homework/homework1/hw1.sagews\n</code></pre>\n\n<p><br></p>\n\n<p>Make sure to email sagemath480@gmail.com by Wednesday, April 2, with your <code>project_id</code>, so I know where to find your homework!</p>\n"}︡
 ︠b5a63860-9c5d-4f36-87a1-0729a9493eedi︠
 %md
 ## Problem 1
@@ -48,10 +48,10 @@ This is a programming problem that is nice and easy to get us started with progr
 
 ︠768903c4-228d-40fe-901b-f5b503667775i︠
 %md
-# Problem 3
+## Problem 3
 
 - Write a function called **cashier** that makes change for you. That is, you should take as input a number between 1 and 100, and return a number of quarters, dimes, nickels, and pennies whose total value is equal to that number. You're welcome to decide on your own output format -- however, you must describe the output format in the docstring for the function.   (The number of quarters, dimes, etc., need not be optimal.)
-︡64c9bdff-ab8d-4388-bea0-54fba505a272︡{"html":"<h1>Problem 3</h1>\n\n<ul>\n<li>Write a function called <strong>cashier</strong> that makes change for you. That is, you should take as input a number between 1 and 100, and return a number of quarters, dimes, nickels, and pennies whose total value is equal to that number. You&#8217;re welcome to decide on your own output format &#8211; however, you must describe the output format in the docstring for the function.   (The number of quarters, dimes, etc., need not be optimal.)</li>\n</ul>\n"}︡
+︡d73374e6-78c5-49c3-8d66-1a29b7052481︡{"html":"<h2>Problem 3</h2>\n\n<ul>\n<li>Write a function called <strong>cashier</strong> that makes change for you. That is, you should take as input a number between 1 and 100, and return a number of quarters, dimes, nickels, and pennies whose total value is equal to that number. You&#8217;re welcome to decide on your own output format &#8211; however, you must describe the output format in the docstring for the function.   (The number of quarters, dimes, etc., need not be optimal.)</li>\n</ul>\n"}︡
 ︠2e5c4687-c937-4d09-a680-edd59f48dd1a︠
 
 ︠18368841-5830-4341-97ce-a4fa2d236968︠

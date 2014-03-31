@@ -41,7 +41,7 @@ In this course you will:
 Homework and peer grading of homework is due every Friday by 6pm, and homework will be assigned on Friday, so you have 1 week to do each assignment.  The last week of classes will consist of project presentations.    There is no in-class midterm or final exam.
 
 - Wednesday, April 2 -- create a project at https://cloud.sagemath.com and email the `project_id` to sagemath480@gmail.com
-- Friday, April 4    -- Homework 1 due by 6pm -- in a folder "1" of your project.
+- Friday, April 4    -- Homework 1 due by 6pm -- in a folder "homework1" of your project.
 - Friday, April 11   -- Homework 2 due; peer grading of homework 1 due
 - Friday, April 18   -- Homework 3 due; peer grading of homework 2 due
 - Friday, April 25   -- Homework 4 due; peer grading of homework 3 due
