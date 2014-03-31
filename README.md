@@ -8,7 +8,6 @@ This is a course about [SageMath](http://sagemath.org), which is a software deve
   Create a viable free open source alternative to Magma, Maple, Mathematica and Matlab.
 </h4>
 
-I started Sage ten years ago, and many hundreds of people have contributed since.
 
 # Information
 
@@ -31,7 +30,7 @@ In this course you will:
 # Your Responsibilities
 
 - *Homework:* (40% of grade) You will submit a homework assignment every week.  *No late homework will be accepted*, and no low grades are dropped.
-- *Peer Grading:* (20% of grade) You will have to grade (on time) a lot of other students' homework in this class, and projects.  Peer grading will *not* be anonymous.
+- *Peer Grading:* (20% of grade) You will have to grade (on time) a lot of other students' homework in this class, and projects.  Peer grading will *not* be anonymous.  (**Drop the class now if you don't like this!**)
 - *Project*: (40% of grade) You will create a project, which will be (peer) graded in May and June.
 - *Presentation:* You will give a few minutes presentation about your project at the end of the course.
 - *Attendance:* You are expected to come to class.
@@ -39,9 +38,10 @@ In this course you will:
 
 # Assignment Schedule
 
-Homework and peer grading of homework is due every Friday by 6pm, and homework will be assigned on Friday, so you have 1 week to do each assignment.  The last week of classes will consist of project presentations.    There are no in-class midterms or final exams.
+Homework and peer grading of homework is due every Friday by 6pm, and homework will be assigned on Friday, so you have 1 week to do each assignment.  The last week of classes will consist of project presentations.    There is no in-class midterm or final exam.
 
-- Friday, April 4    -- Homework 1 *due* by email to sagemath480@gmail.com by 6pm
+- Wednesday, April 2 -- create a project at https://cloud.sagemath.com and email the `project_id` to sagemath480@gmail.com
+- Friday, April 4    -- Homework 1 due by 6pm -- in a folder "1" of your project.
 - Friday, April 11   -- Homework 2 due; peer grading of homework 1 due
 - Friday, April 18   -- Homework 3 due; peer grading of homework 2 due
 - Friday, April 25   -- Homework 4 due; peer grading of homework 3 due
