@@ -16,6 +16,7 @@ I started Sage ten years ago, and many hundreds of people have contributed since
 - Professor: [William Stein](http://wstein.org)
 - TA: Simon Spicer
 - Office Hour for this course: Tuesdays 12-1:00pm in Padelford C423
+- Course mailing list: <https://groups.google.com/forum/?hl=en#!forum/sagemath2014>
 
 
 # Objectives
