@@ -26,7 +26,7 @@ In this course you will:
 
 - *Homework:* You will submit a homework assignment every week.  *No late homework will be accepted*, and no low grades are dropped. If you don't think you can handle this, **drop the course.**
 
-- *Peer Grading:* You will have to grade (on time) a lot of other students' homework in this class, and projects.  If you don't want to do so, **drop the course.**
+- *Peer Grading:* You will have to grade (on time) a lot of other students' homework in this class, and projects.  If you don't want to do so, **drop the course.**  Peer grading will *not* be anonymous; if this is a problem for you, **drop the course**.
 
 - *Presentation:* You will give a few minutes presentation about your project at the end of the course.
 
