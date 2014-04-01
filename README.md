@@ -11,7 +11,7 @@ This is a course about [SageMath](http://sagemath.org), which is a software deve
 
 # Information
 
-- Course location: MWF at 12:30 in Condon 711B
+- Course location: MWF at 12:30 in [Johnson Hall 111](http://www.css.washington.edu/room/JHN+111) which is [here](http://tinyurl.com/pdse7jz)
 - Course website: <https://github.com/williamstein/sage2014>
 - Professor: [William Stein](http://wstein.org)
 - TA: Simon Spicer
