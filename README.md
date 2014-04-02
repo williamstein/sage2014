@@ -23,7 +23,7 @@ This is a course about [SageMath](http://sagemath.org), which is a software deve
 
 In this course you will:
 
-- Learn how to use Sage, LaTex, Python, and Cython
+- Learn how to use Sage, LaTeX, Python, and Cython
 - Understand how Sage is constructed and how to change Sage
 - Do a nontrivial project involving Sage
 - Understand how to work with abstract mathematical objects in Sage (e.g., a "linear transformation", a group, ring or field, etc.)
