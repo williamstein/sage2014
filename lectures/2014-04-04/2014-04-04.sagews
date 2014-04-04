@@ -112,7 +112,26 @@ v
 - reload
 - %load
 ︡acf381f7-6483-4abc-a40f-36f4c531e7c9︡{"html":"<h2>Putting code in files/modules and loading it</h2>\n\n<p><strong>WARNING:</strong> The Sage preparser!</p>\n\n<ul>\n<li>import</li>\n<li>reload</li>\n<li>%load</li>\n</ul>\n"}︡
+︠44727bca-3e79-4f07-8b09-c134dc51a8b9︠
+%default_mode python
+︡bff4fede-f5f9-44e1-868b-bfd73840817b︡
 ︠b321b637-d503-4cb0-b720-52f3c0c28774︠
+2/3
+︡839c224e-8f3d-42ea-a8f8-3ae22550dd31︡{"stdout":"0\n"}︡
+︠ee2e43dd-bbb1-41e3-84c5-6e0652609c95︠
+3^8
+︡bbc29bba-2ddd-4906-b797-db3e69d86c45︡{"stdout":"11\n"}︡
+︠d5c5a7ba-1658-4bcf-b8bb-003528341deb︠
+%default_mode sage
+︡3d83d509-8c76-44a2-8508-979bc4579e76︡
+︠404785a5-5698-4f3b-bc0b-8a49e357ecb5︠
+2/3
+︡5633dfde-ddaf-4438-9742-233aca1994f2︡{"stdout":"2/3\n"}︡
+︠d559fe91-ac3f-4b8d-ac72-c173a46d187d︠
+%python
+2/3
+︡81ec1888-66b7-41b2-8321-a8da1b5b6462︡{"stdout":"0\n"}︡
+︠005a0a16-eb09-490b-ae43-6314cdd83309︠
 
 
 
