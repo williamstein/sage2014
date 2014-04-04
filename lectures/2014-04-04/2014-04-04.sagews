@@ -16,9 +16,10 @@ Screencast: **Remind me to start QuickTime!!!**
    - data types: string, integer, list, tuple, dict
    - functions
    - Python variables are references
+   - putting code in files/modules and loading them
 - Homework 2
 
-︡2f497ca0-e3e2-4cb0-bfa2-2e4ac2fe479e︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 4, 2014</h2>\n\n<p>Screencast: <strong>Remind me to start QuickTime!!!</strong></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions?</li>\n<li>Python\n<ul>\n<li>control structures: if/then/else</li>\n<li>looping: while, for, range</li>\n<li>data types: string, integer, list, tuple, dict</li>\n<li>functions</li>\n<li>Python variables are references</li>\n</ul></li>\n<li>Homework 2</li>\n</ul>\n"}︡
+︡5f3b152e-f2d4-494d-aa1e-b052cf9f57a4︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 4, 2014</h2>\n\n<p>Screencast: <strong>Remind me to start QuickTime!!!</strong></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions?</li>\n<li>Python\n<ul>\n<li>control structures: if/then/else</li>\n<li>looping: while, for, range</li>\n<li>data types: string, integer, list, tuple, dict</li>\n<li>functions</li>\n<li>Python variables are references</li>\n<li>putting code in files/modules and loading them</li>\n</ul></li>\n<li>Homework 2</li>\n</ul>\n"}︡
 ︠69e172f8-ba55-439c-975a-42165862b852i︠
 %md
 ## Python - Control Structures: if/then/else
@@ -71,7 +72,10 @@ Screencast: **Remind me to start QuickTime!!!**
 
 %md
 ## Python - Variables are *references* !
-︡790699db-05bb-4349-9540-fa4343fc6a78︡{"html":"<h2>Python - Variables are <em>references</em> !</h2>\n"}︡
+
+There is a **major** difference between how the math-oriented programming languages (Matlab, Pari, Maple, etc.) work, and how most modern mainstream programming languages, such as Python, work.
+
+︡aebcd9b7-cf2d-4ac8-a6f6-e9ea663366d7︡{"html":"<h2>Python - Variables are <em>references</em> !</h2>\n\n<p>There is a <strong>major</strong> difference between how the math-oriented programming languages (Matlab, Pari, Maple, etc.) work, and how most modern mainstream programming languages, such as Python, work.</p>\n"}︡
 ︠c8d27fd5-c08a-4585-b215-5e3b8f027173︠
 octave = Octave()
 ︡9b197013-2f91-40d0-b8e0-91d7ad3bbe65︡
@@ -91,7 +95,24 @@ w
 ︠125f9bbe-dbfb-4a02-8d0f-c364eb70774a︠
 v
 ︡dba88fef-5414-465d-90bd-99d49286629d︡{"stdout":"[2014, 4]\n"}︡
-︠fa0bccd6-04c8-4d4b-895e-d1b4ab34e23f︠
+︠479582e4-2419-4991-a268-2ccd81354965︠
+
+︠003f5267-8130-49ea-b519-5094f5201984︠
+
+︠12718f9f-ebd0-40eb-a6a1-3b5ec869d8b0︠
+
+︠fa0bccd6-04c8-4d4b-895e-d1b4ab34e23fi︠
+
+%md
+## Putting code in files/modules and loading it
+
+**WARNING:** The Sage preparser!
+
+- import
+- reload
+- %load
+︡acf381f7-6483-4abc-a40f-36f4c531e7c9︡{"html":"<h2>Putting code in files/modules and loading it</h2>\n\n<p><strong>WARNING:</strong> The Sage preparser!</p>\n\n<ul>\n<li>import</li>\n<li>reload</li>\n<li>%load</li>\n</ul>\n"}︡
+︠b321b637-d503-4cb0-b720-52f3c0c28774︠
 
 
 
