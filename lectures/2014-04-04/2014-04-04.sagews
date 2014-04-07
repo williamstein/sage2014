@@ -175,7 +175,7 @@ while a > 3:
 
 ︠c717849a-303a-4493-8fa4-34179dff4b50︠
 
-︠278f0318-b448-44b8-b219-063fff64febei︠
+︠278f0318-b448-44b8-b219-063fff64febe︠
 %md
 ## Python - Data types -- str, int and long, float, list, tuple, dict, etc.
 ︡874b6dc8-8e78-4959-bbc2-1f607ddae63b︡{"html":"<h2>Python - Data types &#8211; str, int and long, float, list, tuple, dict, etc.</h2>\n"}︡
