@@ -17,7 +17,10 @@ Screencast: REMEMBER TO START IT!!!! <>
    - functions
    - Python variables are references
    - putting code in files/modules and loading them
-︡5708c1a7-a805-4e54-8beb-1d946360469a︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 7, 2014</h2>\n\n<p>Screencast: REMEMBER TO START IT!!!! &lt;&gt;</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions?</li>\n<li>Homework 1 grading</li>\n<li>Python\n<ul>\n<li>data types: string, integer, list, tuple, dict</li>\n<li>list comprehensions</li>\n<li>functions</li>\n<li>Python variables are references</li>\n<li>putting code in files/modules and loading them</li>\n</ul></li>\n</ul>\n"}︡
+
+- NEXT: classes
+
+︡d5ad5a7d-b686-474a-aa13-5fef6303e0b1︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 7, 2014</h2>\n\n<p>Screencast: REMEMBER TO START IT!!!! &lt;&gt;</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions?</li>\n<li>Homework 1 grading</li>\n<li><p>Python</p>\n\n<ul>\n<li>data types: string, integer, list, tuple, dict</li>\n<li>list comprehensions</li>\n<li>functions</li>\n<li>Python variables are references</li>\n<li>putting code in files/modules and loading them</li>\n</ul></li>\n<li><p>NEXT: classes</p></li>\n</ul>\n"}︡
 ︠55617e3d-e932-4eb1-95af-5c3060da6c6ci︠
 %md
 ## Python - Data types -- str, int and long, float, list, tuple, dict, etc.
