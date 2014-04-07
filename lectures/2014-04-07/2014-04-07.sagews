@@ -1,0 +1,122 @@
+︠7a43cfb5-767c-4c43-ae73-e1eccb8f1a0di︠
+%md
+
+# Math 480b -- Sage Course
+
+## April 7, 2014
+
+Screencast: REMEMBER TO START IT!!!! <>
+
+**Plan**
+
+- Questions?
+- Homework 1 grading
+- Python
+   - data types: string, integer, list, tuple, dict
+   - list comprehensions
+   - functions
+   - Python variables are references
+   - putting code in files/modules and loading them
+︡5708c1a7-a805-4e54-8beb-1d946360469a︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 7, 2014</h2>\n\n<p>Screencast: REMEMBER TO START IT!!!! &lt;&gt;</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions?</li>\n<li>Homework 1 grading</li>\n<li>Python\n<ul>\n<li>data types: string, integer, list, tuple, dict</li>\n<li>list comprehensions</li>\n<li>functions</li>\n<li>Python variables are references</li>\n<li>putting code in files/modules and loading them</li>\n</ul></li>\n</ul>\n"}︡
+︠55617e3d-e932-4eb1-95af-5c3060da6c6ci︠
+%md
+## Python - Data types -- str, int and long, float, list, tuple, dict, etc.
+︡874b6dc8-8e78-4959-bbc2-1f607ddae63b︡{"html":"<h2>Python - Data types &#8211; str, int and long, float, list, tuple, dict, etc.</h2>\n"}︡
+︠c02a5e2e-e37d-42d9-89f2-6ed4d15e5f0d︠
+
+︠7d74cf90-1312-4e7b-8d62-20d6e623e7fa︠
+
+︠f0350238-5a85-4639-9a0c-e1f11e8dbca9︠
+
+︠daba4b12-3a97-45a9-b945-e8510849786a︠
+
+︠0760fd33-658d-493c-88cd-250114bea116i︠
+%md
+## Python - Functions (again)
+︡601acb4d-8251-4e23-9f13-18f8fad12f20︡{"html":"<h2>Python - Functions (again)</h2>\n"}︡
+︠19a8606d-dada-4b87-995d-cf7e3172640c︠
+
+︠c402afd7-33d4-4cda-9002-98a9537106cf︠
+
+︠a4167923-2101-4fc5-8465-9f22795b867a︠
+
+︠d72f6fa1-449a-4d25-bd36-5c6bc4858b63︠
+
+︠92c520ba-13cd-4525-b567-b198ccc2b4c9︠
+
+︠d085e312-fe02-4412-8bbb-b451eaa1d594i︠
+
+%md
+## Python - Variables are *references* !
+
+There is a **major** difference between how the math-oriented programming languages (Matlab, Pari, Maple, etc.) work, and how most modern mainstream programming languages, such as Python, work.
+
+︡aebcd9b7-cf2d-4ac8-a6f6-e9ea663366d7︡{"html":"<h2>Python - Variables are <em>references</em> !</h2>\n\n<p>There is a <strong>major</strong> difference between how the math-oriented programming languages (Matlab, Pari, Maple, etc.) work, and how most modern mainstream programming languages, such as Python, work.</p>\n"}︡
+︠c8d27fd5-c08a-4585-b215-5e3b8f027173︠
+octave = Octave()
+︡9b197013-2f91-40d0-b8e0-91d7ad3bbe65︡
+︠c8fba380-d194-4a41-956c-393a31f4dfb6︠
+%octave
+v = [3,4]; w = v; w(1)=2014
+︡5869c620-6546-4831-b4b4-6ad6aa82f952︡{"stdout":"w =\n\n 2014 4\n\n"}︡
+︠9c3ab193-6a7d-4a2f-9430-c3be4a0c9ff4︠
+%octave
+v
+︡5712c9c5-b8eb-4d76-b217-c0942fa720b5︡{"stdout":"v =\n\n 3 4\n\n"}︡
+︠b49560d6-fb82-4363-a43d-03cf2ec6d0c6︠
+#python
+v = [3,4]; w = v; w[0]=2014
+w
+︡c1889ec1-6b89-4e1f-8e0c-92a2adba3ea5︡{"stdout":"[2014, 4]\n"}︡
+︠125f9bbe-dbfb-4a02-8d0f-c364eb70774a︠
+v
+︡dba88fef-5414-465d-90bd-99d49286629d︡{"stdout":"[2014, 4]\n"}︡
+︠013ba6b0-9d32-4220-9e99-ff5ea10d885f︠
+
+︠479582e4-2419-4991-a268-2ccd81354965︠
+
+︠003f5267-8130-49ea-b519-5094f5201984︠
+
+︠12718f9f-ebd0-40eb-a6a1-3b5ec869d8b0︠
+
+︠fa0bccd6-04c8-4d4b-895e-d1b4ab34e23fi︠
+
+%md
+## Putting code in files/modules and loading it
+
+**WARNING:** The Sage preparser!
+
+- import
+- reload
+- %load
+︡acf381f7-6483-4abc-a40f-36f4c531e7c9︡{"html":"<h2>Putting code in files/modules and loading it</h2>\n\n<p><strong>WARNING:</strong> The Sage preparser!</p>\n\n<ul>\n<li>import</li>\n<li>reload</li>\n<li>%load</li>\n</ul>\n"}︡
+︠44727bca-3e79-4f07-8b09-c134dc51a8b9︠
+%default_mode python
+︡bff4fede-f5f9-44e1-868b-bfd73840817b︡
+︠b321b637-d503-4cb0-b720-52f3c0c28774︠
+2/3
+︡839c224e-8f3d-42ea-a8f8-3ae22550dd31︡{"stdout":"0\n"}︡
+︠ee2e43dd-bbb1-41e3-84c5-6e0652609c95︠
+3^8
+︡bbc29bba-2ddd-4906-b797-db3e69d86c45︡{"stdout":"11\n"}︡
+︠d5c5a7ba-1658-4bcf-b8bb-003528341deb︠
+%default_mode sage
+︡3d83d509-8c76-44a2-8508-979bc4579e76︡
+︠404785a5-5698-4f3b-bc0b-8a49e357ecb5︠
+2/3
+︡5633dfde-ddaf-4438-9742-233aca1994f2︡{"stdout":"2/3\n"}︡
+︠d559fe91-ac3f-4b8d-ac72-c173a46d187d︠
+%python
+2/3
+︡81ec1888-66b7-41b2-8321-a8da1b5b6462︡{"stdout":"0\n"}︡
+︠005a0a16-eb09-490b-ae43-6314cdd83309︠
+
+
+
+
+
+
+
+
+
+
