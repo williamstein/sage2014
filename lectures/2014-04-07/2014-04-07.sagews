@@ -20,7 +20,7 @@ Screencast: <http://youtu.be/iWWHpafc4Lc>
 
 - NEXT: classes
 
-︡d5ad5a7d-b686-474a-aa13-5fef6303e0b1︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 7, 2014</h2>\n\n<p>Screencast: REMEMBER TO START IT!!!! &lt;&gt;</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions?</li>\n<li>Homework 1 grading</li>\n<li><p>Python</p>\n\n<ul>\n<li>data types: string, integer, list, tuple, dict</li>\n<li>list comprehensions</li>\n<li>functions</li>\n<li>Python variables are references</li>\n<li>putting code in files/modules and loading them</li>\n</ul></li>\n<li><p>NEXT: classes</p></li>\n</ul>\n"}︡
+︡d5ad5a7d-b686-474a-aa13-5fef6303e0b1︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 7, 2014</h2>\n\n<p>Screencast: REMEMBER TO START IT!!!! &lt;&gt;</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions?</li>\n<li>Homework 1 grading</li>\n<li><p><p>Pyth</p>\non</p>\n\n<ul>\n<li>data types: string, integer, list, tuple, dict</li>\n<li>list comprehensions</li>\n<li>functions</li>\n<li>Python variables are references</li>\n<li>putting code in files/modules and loading them</li>\n</ul></li>\n<li><p>NEXT: classes</p></li>\n</ul>\n"}︡
 ︠62c45189-9a96-470b-b3c2-af068153f543︠
 2+3
 ︡95da632b-0452-4021-ba33-66be8749d8a2︡{"stdout":"5\n"}︡
