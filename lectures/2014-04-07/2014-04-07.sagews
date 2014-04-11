@@ -1,4 +1,4 @@
-︠7a43cfb5-767c-4c43-ae73-e1eccb8f1a0d︠
+︠7a43cfb5-767c-4c43-ae73-e1eccb8f1a0dii︠
 %md
 
 # Math 480b -- Sage Course
@@ -213,10 +213,6 @@ v2
 ︠01fbd6d2-236d-44be-a0a0-c82b6784f7e2︠
 v
 ︡1c400877-94cd-406c-8d47-4ccb54e3987e︡{"stdout":"[1, 2, [389, 4], {'a': 5, 'the': 2}]\n"}︡
-︠65a17562-2b98-4f63-a9bb-24ad4dc7753c︠
-v[0]=v
-v
-︡546aabb0-be4d-4b97-a0c5-b9d17616cedd︡{"stdout":"[[...], 2, [389, 4], {'a': 5, 'the': 2}]\n"}︡
 ︠8a231db9-5592-4ddd-98a1-ba0bc018f27b︠
 
 

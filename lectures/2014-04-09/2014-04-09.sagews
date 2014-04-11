@@ -1,4 +1,10 @@
-︠0a143557-ca91-49ad-bc1d-814f8b0fa767i︠
+︠18805c04-25e1-4f63-8089-e733c4a0f1c9︠
+
+︡3a1d1a32-fe8d-4087-b19b-1a02ca01a9ae︡
+︡3a1d1a32-fe8d-4087-b19b-1a02ca01a9ae︡
+︡3a1d1a32-fe8d-4087-b19b-1a02ca01a9ae︡
+︡3a1d1a32-fe8d-4087-b19b-1a02ca01a9ae︡
+︠0a143557-ca91-49ad-bc1d-814f8b0fa767︠
 %md
 
 # Math 480b -- Sage Course
