@@ -1,6 +1,6 @@
 ︠a3dbc567-090d-468a-90d7-8e7e420e4a86︠
 TOTAL:13/20
-︠0a143557-ca91-49ad-bc1d-814f8b0fa767i︠
+︠0a143557-ca91-49ad-bc1d-814f8b0fa767︠
 %md
 
 # Math 480b -- Sage Course
