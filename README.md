@@ -1,6 +1,6 @@
 # Sage: Open Source Mathematical Software
-## Spring 2014 at the University of Washington
 
+## Spring 2014 at the University of Washington
 
 This is a course about [SageMath](http://sagemath.org), which is a software development project with the following mission:
 
