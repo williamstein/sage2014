@@ -15,7 +15,8 @@ This is a course about [SageMath](http://sagemath.org), which is a software deve
 - Course website: <https://github.com/williamstein/sage2014>
 - Professor: [William Stein](http://wstein.org)
 - TA: Simon Spicer
-- Office Hour for this course: Tuesdays 12-1:00pm in Padelford C423
+- Office Hour for this course: Tuesdays 12:00-13:00 in Padelford C423
+- TA Office Hours: Tuesdays 13:00-15:00 in Padelford C430
 - Course mailing list: <https://groups.google.com/forum/?hl=en#!forum/sagemath2014>
 
 
