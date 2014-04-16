@@ -5,7 +5,7 @@
 
 ## April 14, 2014
 
-Screencast: REMEMBER!
+Screencast: <http://youtu.be/fualtE_GcuY>
 
 **Plan**
 
@@ -21,7 +21,7 @@ Screencast: REMEMBER!
    - classes: creating your own data types
    - decorators
 
-︡4e8ed880-72fd-4c9d-a1eb-8520ecb18bfd︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 14, 2014</h2>\n\n<p>Screencast: REMEMBER!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework discussion:</p>\n\n<ul>\n<li>You&#8217;ll find a folder grading/homework2 in your project.  Grade the <em>three</em> assignments.</li>\n<li>You&#8217;ll find a new assignment in homework3/</li>\n<li>We&#8217;ve collected the homework you graded and are looking at it.</li>\n</ul></li>\n<li><p>Python</p>\n\n<ul>\n<li>exception handling: try/except/finally</li>\n<li>classes: creating your own data types</li>\n<li>decorators</li>\n</ul></li>\n</ul>\n"}︡
+︡963082ab-5232-480f-b17f-27d93a7d6ddb︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 14, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/fualtE_GcuY\">http://youtu.be/fualtE_GcuY</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework discussion:</p>\n\n<ul>\n<li>You&#8217;ll find a folder grading/homework2 in your project.  Grade the <em>three</em> assignments.</li>\n<li>You&#8217;ll find a new assignment in homework3/</li>\n<li>We&#8217;ve collected the homework you graded and are looking at it.</li>\n</ul></li>\n<li><p>Python</p>\n\n<ul>\n<li>exception handling: try/except/finally</li>\n<li>classes: creating your own data types</li>\n<li>decorators</li>\n</ul></li>\n</ul>\n"}︡
 ︠4c422b59-aa2e-4e9d-b7db-028210f69128︠
 points([(1,2), (3,4)])
 ︡edf16916-1e2a-4850-8e2e-67f726dedf46︡{"once":false,"file":{"show":true,"uuid":"061f7741-a015-481e-8857-a34ca7144fec","filename":"/projects/edf7b34d-8ef9-49ad-b83f-8fa4cde53380/.sage/temp/compute3dc1/4309/tmp_W_3hLv.png"}}︡
