@@ -5,7 +5,7 @@
 
 ## April 14, 2014
 
-Screencast: <http://youtu.be/fualtE_GcuY>
+Screencast: REMEMBER!
 
 **Plan**
 
@@ -21,7 +21,7 @@ Screencast: <http://youtu.be/fualtE_GcuY>
    - classes: creating your own data types
    - decorators
 
-︡d41ac795-0cc5-4787-8ea6-53088fc33872︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 14, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/fualtE_GcuY\">http://youtu.be/fualtE_GcuY</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework discussion:</p>\n\n<ul>\n<li>You&#8217;ll find a folder grading/homework2 in your project.  Grade the <em>three</em> assignments.</li>\n<li>You&#8217;ll find a new assignment in homework3/</li>\n<li>We&#8217;ve collected the homework you graded and are looking at it.</li>\n</ul></li>\n<li><p>Python</p>\n\n<ul>\n<li>exception handling: try/except/finally</li>\n<li>classes: creating your own data types</li>\n<li>decorators</li>\n</ul></li>\n</ul>\n"}︡
+︡4e8ed880-72fd-4c9d-a1eb-8520ecb18bfd︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 14, 2014</h2>\n\n<p>Screencast: REMEMBER!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework discussion:</p>\n\n<ul>\n<li>You&#8217;ll find a folder grading/homework2 in your project.  Grade the <em>three</em> assignments.</li>\n<li>You&#8217;ll find a new assignment in homework3/</li>\n<li>We&#8217;ve collected the homework you graded and are looking at it.</li>\n</ul></li>\n<li><p>Python</p>\n\n<ul>\n<li>exception handling: try/except/finally</li>\n<li>classes: creating your own data types</li>\n<li>decorators</li>\n</ul></li>\n</ul>\n"}︡
 ︠4c422b59-aa2e-4e9d-b7db-028210f69128︠
 points([(1,2), (3,4)])
 ︡edf16916-1e2a-4850-8e2e-67f726dedf46︡{"once":false,"file":{"show":true,"uuid":"061f7741-a015-481e-8857-a34ca7144fec","filename":"/projects/edf7b34d-8ef9-49ad-b83f-8fa4cde53380/.sage/temp/compute3dc1/4309/tmp_W_3hLv.png"}}︡
@@ -100,14 +100,53 @@ NameError
 ︡fcfa4675-f723-4e87-bb5f-cc1abd16345b︡{"html":"<h2>Python classes</h2>\n"}︡
 ︠1b0ed46e-fc47-4eae-a34c-9ddf4f721dda︠
 class Hour:
-    def __init__(self, hour, am):
-        self.hour = hour
-        self.am = am
-︡68041344-f4ce-4ace-9b90-9726943ba195︡
+    def __init__(self, hour, am):  # underscoreunderscore=dunder
+        self.hour = Integer(hour)
+        if self.hour <=0 or self.hour >= 13:
+            raise ValueError("hour must be between 1 and 12")
+        self.am = bool(am)
+    def __repr__(self):
+        return "%s%s"%(self.hour, "am" if self.am else "pm")
+    def military(self):
+        return (self.hour + (0 if self.am else 12))%24
+    def __add__(self, right):
+        n = self.military() + right.military()
+        hour = n%12
+        if hour == 0:
+            hour += 12
+        return Hour(hour, n%24 < 12)  # am/pm is RIGHT
+︡fcbff2c3-cb91-4aaf-ae13-911d2c7151a9︡
+︠4009e28f-3a23-4da7-8fcd-6971cd775bda︠
+n = 78
+︡04b48d62-b07d-4b6b-8783-b226b304f542︡
+︠99bbd615-6ea4-4e06-9a5d-6f077eda881e︠
+n.military() # BOOM
 ︠f670025f-4ee3-464a-b588-c54320c9c3cb︠
-
-︠d13bd2de-1a14-4652-b9ea-0eb9d0392658︠
-
+h = Hour(7, False)
+h
+︡e91eed29-1492-4c0c-ba82-f241c560a479︡{"stdout":"7pm\n"}︡
+︠ccdc4880-f2d4-40df-a0be-affcf7473ca5︠
+h.
+︠9e116905-ee02-4717-9ff3-2b12c6963cb9︠
+h.military()
+︡3f49a2b7-16f0-4444-82f0-f9a554647027︡{"stdout":"19\n"}︡
+︠88cc11f0-bb19-4d73-bdab-49f83a49905d︠
+Hour(1,False) + Hour(3,False)
+︡1e207bbd-9b7e-4ad8-822c-f8b13ff63ab2︡{"stdout":"4am\n"}︡
+︠7ee26828-2c98-4412-9f58-e0a25017b574︠
+h = Hour(1,False)
+h
+︡b20db130-808c-4859-b34a-c0e061605ebf︡{"stdout":"1pm\n"}︡
+︠b29d86d4-c925-4d58-b8cc-684855d535a7︠
+h + Hour(11,False)
+︡dffbc82c-b024-4e43-827f-107e7c98f29e︡{"stdout":"12pm\n"}︡
+︠ebe2c9cc-313a-4f2b-86e7-b3355529842a︠
+h.hour
+︡6f4b9af3-f87e-46a4-9a29-96ee30a0067d︡{"stdout":"1\n"}︡
+︠00a34698-479b-4d78-a7c0-25c9f7c1b598︠
+h.am
+︡1862d7a0-7f50-478b-9ab6-afeb99fd66dd︡{"stdout":"False\n"}︡
+︠3bb91e7f-1e90-4080-be70-ea1d6b28ecd1︠
 
 
 
