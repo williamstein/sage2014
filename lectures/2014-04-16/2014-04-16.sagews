@@ -19,12 +19,9 @@ Screencast: <http://youtu.be/Z5lye6AIC5Y> (part 1) and <http://youtu.be/dp-ovN6J
 
 - Python decorators
 
-- Example python decorator: @interact
-
-- Something different: some 2D graphics in Sage
 
 
-︡beda4e20-963e-4c81-bb75-8b2033d75330︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 16, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/Z5lye6AIC5Y\">http://youtu.be/Z5lye6AIC5Y</a> (part 1) and <a href=\"http://youtu.be/dp-ovN6J-_M\">http://youtu.be/dp-ovN6J-_M</a> (part 2)</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework reminder: everything due by Friday at 6pm.  If you have permissions issues, restart your project server.</p></li>\n<li><p>Python classes: creating your own data types:</p>\n\n<ul>\n<li>rational numbers</li>\n<li>the field of all rational numbers</li>\n</ul></li>\n<li><p>Python decorators</p></li>\n<li><p>Example python decorator: @interact</p></li>\n<li><p>Something different: some 2D graphics in Sage</p></li>\n</ul>\n"}︡
+︡8ce60ddf-6919-479c-894e-4a3ec4948334︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 16, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/Z5lye6AIC5Y\">http://youtu.be/Z5lye6AIC5Y</a> (part 1) and <a href=\"http://youtu.be/dp-ovN6J-_M\">http://youtu.be/dp-ovN6J-_M</a> (part 2)</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework reminder: everything due by Friday at 6pm.  If you have permissions issues, restart your project server.</p></li>\n<li><p>Python classes: creating your own data types:</p>\n\n<ul>\n<li>rational numbers</li>\n<li>the field of all rational numbers</li>\n</ul></li>\n<li><p>Python decorators</p></li>\n</ul>\n"}︡
 ︠476e1335-c9b7-4653-b0f3-de4218612ef1︠
 
 ︠c7195f96-ebf5-4f17-adae-80d4890b781b︠
