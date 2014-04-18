@@ -10,10 +10,10 @@ Turn it in by creating a folder called "homework4" in your project, with this wo
 ideas:
 
     - project update
-    - python class involving ineritence and all arith operators, with exception raising
+    - python class modeling something: maybe vectors in 3 space, with cross product, etc.
     - cython q
     - timing/debugging
-    - 
+    -
 
 
 

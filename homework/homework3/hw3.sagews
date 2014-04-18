@@ -1,4 +1,4 @@
-︠194a7d69-e00f-4a9a-8c22-36e0b98088bei︠
+︠194a7d69-e00f-4a9a-8c22-36e0b98088be︠
 %md
 # Homework 3- Math 480b - Spring 2014
 
