@@ -13,10 +13,28 @@ Screencast: REMEMBER!!!!!!!
 
 - Homework reminder: everything due tonight at 6pm.
 
+- Python class: the field of rational numbers
+
 - Example decorators: @interact, @parallel, @cached_function, @disk_cached_function
 
 - Something different: some 2D (and maybe 3D?) graphics in Sage
-︡b7886a3b-3133-4202-9656-e244011aecaf︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 18, 2014</h2>\n\n<p>Screencast: REMEMBER!!!!!!!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework reminder: everything due tonight at 6pm.</p></li>\n<li><p>Example decorators: @interact, @parallel, @cached_function, @disk_cached_function</p></li>\n<li><p>Something different: some 2D (and maybe 3D?) graphics in Sage</p></li>\n</ul>\n"}︡
+
+
+︡db95eaf1-79e7-485a-a69a-70eb54460ff4︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>April 18, 2014</h2>\n\n<p>Screencast: REMEMBER!!!!!!!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework reminder: everything due tonight at 6pm.</p></li>\n<li><p>Python class: the field of rational numbers</p></li>\n<li><p>Example decorators: @interact, @parallel, @cached_function, @disk_cached_function</p></li>\n<li><p>Something different: some 2D (and maybe 3D?) graphics in Sage</p></li>\n</ul>\n"}︡
+︠5ac07e2e-8f86-4dad-82a9-90226cd040ab︠
+
+︠adef80f7-9d95-4827-bb8c-f0a24c4ea806i︠
+%md
+## The Field of Rational Numbers
+︡46462787-16ca-47dd-a0ff-46ad16e4cad0︡{"html":"<h2>The Field of Rational Numbers</h2>\n"}︡
+︠a0f14d60-2cb6-467f-8d8e-31efa65fe607︠
+
+︠0bb455c9-e013-415f-8b22-520b788c6b3d︠
+
+︠85d167c7-4215-43b0-891a-252130587ac3︠
+
+︠bd7fee18-6a96-4101-9634-30172a368d8a︠
+
 ︠807f1eeb-e3f1-4632-968c-5eeea9e5b06f︠
 
 ︠f68864e9-3335-478f-a1ed-7edd5ac637de︠
