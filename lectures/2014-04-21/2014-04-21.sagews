@@ -12,11 +12,15 @@ Screencast: REMEMBER!!!!!
 
 - Questions?
 
+- Homework 4; grading of homework 3 available for you to do; peer grading of homework 2 returned.
+
 - 2D (and 3D) graphics in Sage
-︡db878ed1-a222-4053-9015-2c11d0dbf754︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Drawing Plots using Sage, Matplotlib, R, etc.</h2>\n\n<h2>April 21, 2014</h2>\n\n<p>Screencast: REMEMBER!!!!!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>2D (and 3D) graphics in Sage</p></li>\n</ul>\n"}︡
+︡c7431b55-3f5a-428a-91af-e200a1c3f265︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Drawing Plots using Sage, Matplotlib, R, etc.</h2>\n\n<h2>April 21, 2014</h2>\n\n<p>Screencast: REMEMBER!!!!!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions?</p></li>\n<li><p>Homework 4; grading of homework 3 available for you to do; peer grading of homework 2 returned.</p></li>\n<li><p>2D (and 3D) graphics in Sage</p></li>\n</ul>\n"}︡
 ︠8557b1f8-53cb-4c28-b172-8368f94469be︠
 
-︠29cb8764-35b7-49da-afde-e837345ab00d︠
+
+
+
 
 
 
@@ -34,18 +38,69 @@ Screencast: REMEMBER!!!!!
 - implicit plot
 - saving plots as pdf (e.g,. to include in a LaTeX document)
 ︡9aeecc36-90de-4bd0-a15f-c5deba9e58e9︡{"html":"<h2>2d Sage Graphics (like Mathematica, but better)</h2>\n\n<ul>\n<li>sequence of line segments</li>\n<li>a function</li>\n<li>interlude: combining plot objects using +</li>\n<li>points</li>\n<li>polygons, ellipses, etc.</li>\n<li>arrows</li>\n<li>contour plot</li>\n<li>implicit plot</li>\n<li>saving plots as pdf (e.g,. to include in a LaTeX document)</li>\n</ul>\n"}︡
+︠d3ea8ee6-a313-4c50-ad9e-e2eb79bbcbb2︠
+@interact
+def f(c=Color('green')):
+    show(plot(sin, (-1, 10), color=c))
+︡eab8fec2-d9f0-4052-9c3a-c302898929d6︡{"interact":{"style":"None","flicker":false,"layout":[[["c",12,null]],[["",12,null]]],"id":"01e24a90-00e4-4433-a5b2-31cf276ec0c6","controls":[{"widget":null,"control_type":"color-selector","hide_box":false,"Color":"<class 'sage.plot.colors.Color'>","label":"c","default":"#008000","readonly":false,"var":"c"}]}}︡
 ︠cd5125ab-7df4-4036-9e38-799c646d444d︠
-
+g = plot(sin(x^3)/x, (-1, 10), color='darkgreen', thickness=.1, fillcolor='purple', fill=True)
+g
+︡83275de6-612e-45d8-99e8-87d3dcb1e1f5︡{"once":false,"file":{"show":true,"uuid":"36e2be8e-9434-4fab-97c9-90f41e80717b","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/25742/tmp_AFhBV3.png"}}︡
+︠1dd96ea5-0c20-40e5-983d-1fe8143fbc7a︠
+show(g, svg=True)
+︡47171ee5-f54c-44a5-b2d6-49a94de81740︡{"once":false,"file":{"show":true,"uuid":"64ab5dd3-4070-4169-89fb-8213bad48807","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/25742/tmp_x6InfA.svg"}}︡
+︠90c2426e-9688-4ff2-be2d-c4f8f19dce10︠
+g.save('a.pdf')
+︡795ed237-6f04-4e99-830c-827eb16812f8︡
 ︠0dc997d8-00ac-4c8b-a25b-813b14061d4f︠
-
+plot(sin, (-1, 10), frame=True, axes=False, gridlines=True)
+︡ad57f980-e0ff-4fd1-b2f4-4e87395eeed7︡{"once":false,"file":{"show":true,"uuid":"a69c0d61-ae34-4c03-85f0-ab2eb2ae1995","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/25742/tmp_jFTN4j.png"}}︡
 ︠74de4bef-be6e-437f-b859-d7f78369f530︠
-
+g = plot(sin(x), (x, 0, 4*pi), color='darkgreen')
+h = plot(cos(x), (x, 0, 4*pi), color='darkblue')
+︡f1d02ba7-f740-4211-be2f-4e5b58d0a1a6︡
 ︠4524622b-9fb8-4f48-9ff0-5f03b785cf7f︠
-
-︠bc4bdeaa-e7bd-4837-b57d-703f1c8a55a4︠
-
+g + h  # salvus.file(...) behind the scenes.
+︡409a1108-9a00-4fe2-8390-236ed850e63f︡{"once":false,"file":{"show":true,"uuid":"207d73ce-16f9-41cd-ad32-867fc8125eb0","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/25742/tmp_IM6ESc.png"}}︡
+︠d2b9a1c3-3d7e-4130-8111-6c1d0cc4ac9f︠
+random()
+︡b2c5b169-47b2-405f-9d35-f3566cbde7bf︡{"stdout":"0.8181731957981786\n"}︡
+︠e0e70c15-1222-4d59-81da-7bb757355710︠
+v = [(0,0)]
+for i in range(2000):
+    last = v[-1]
+    v.append((last[0]+(random()-.5), last[1]+(random()-.5)))
+    
+g = line(v, thickness=.4, color='purple') 
+g += points(v, pointsize=10, color='grey')
+g.show(aspect_ratio=1, svg=True, figsize=10)
+︡ff2023cb-84d7-4f17-8572-268950e19218︡{"once":false,"file":{"show":true,"uuid":"bddc31a8-ea1a-416b-b719-d2cba10f5146","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/25742/tmp_V9jDQj.svg"}}︡
+︠9da4f2ef-5566-47f7-98db-00c05de58aef︠
+a = polygon2d([(0,0), (1,1), (2,0)], fill=False, color='black', thickness=10)
+b = polygon2d([(0,0), (1,1), (2,0)], color='yellow')
+g = a+b; g
+︡3e3b72a2-dc93-4a39-86bf-4fae92007735︡{"once":false,"file":{"show":true,"uuid":"e978f7e9-9762-4d52-83c6-b766f8c91ed4","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/25742/tmp_sXfDb0.png"}}︡
 ︠eb619bbb-15bf-4b00-9555-3d4108af4d94︠
-
+g.rotate  # project idea; also g.copy()
+︠fc75ee1d-5ed5-4750-8639-73883e325646︠
+v = [(0,0)]
+for i in range(5):
+    last = v[-1]
+    v.append((last[0]+(random()-.5), last[1]+(random()-.5)))
+    
+plots = []
+for i in range(1,5):    
+    g = line(v[:i], thickness=.4, color='purple') 
+    g += points(v[:i], pointsize=10, color='grey', aspect_ratio=1)
+    plots.append(g)
+︡1239b777-c778-40f9-870b-2016ad20ad94︡
+︠ca686052-406f-46ca-96b2-9034844fd942︠
+len(plots)
+︡8d1ed3be-4916-4c49-9370-512cd9e13eee︡{"stdout":"4\n"}︡
+︠d903aba3-bd95-4e17-bb10-42010c1c54a8︠
+animate(plots)
+︡0557889d-8a7b-4691-86c4-81ff65b6ca21︡{"once":false,"file":{"show":true,"uuid":"a8fbe218-a5d9-45b7-9ce2-89113c19293e","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/23784/tmp_4wrqiA.gif"}}︡
 ︠59d8a7de-2df7-4e49-b37a-91ce154fd47a︠
 
 ︠83568660-5bab-4d3e-ac80-83ac1346343ai︠
