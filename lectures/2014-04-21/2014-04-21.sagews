@@ -6,7 +6,7 @@
 
 ## April 21, 2014
 
-Screencast: REMEMBER!!!!!
+Screencast: <http://youtu.be/52Gd_qAEqF8>
 
 **Plan**
 
@@ -92,7 +92,8 @@ for i in range(5):
 plots = []
 for i in range(1,5):    
     g = line(v[:i], thickness=.4, color='purple') 
-    g += points(v[:i], pointsize=10, color='grey', aspect_ratio=1)
+    g += points(v[:i], pointsize=10, color='grey', 
+                aspect_ratio=1, xmin=-1, x)
     plots.append(g)
 ︡1239b777-c778-40f9-870b-2016ad20ad94︡
 ︠ca686052-406f-46ca-96b2-9034844fd942︠
