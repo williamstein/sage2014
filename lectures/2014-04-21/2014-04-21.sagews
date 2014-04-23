@@ -71,8 +71,8 @@ v = [(0,0)]
 for i in range(2000):
     last = v[-1]
     v.append((last[0]+(random()-.5), last[1]+(random()-.5)))
-    
-g = line(v, thickness=.4, color='purple') 
+
+g = line(v, thickness=.4, color='purple')
 g += points(v, pointsize=10, color='grey')
 g.show(aspect_ratio=1, svg=True, figsize=10)
 ︡ff2023cb-84d7-4f17-8572-268950e19218︡{"once":false,"file":{"show":true,"uuid":"bddc31a8-ea1a-416b-b719-d2cba10f5146","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/25742/tmp_V9jDQj.svg"}}︡
@@ -88,11 +88,11 @@ v = [(0,0)]
 for i in range(5):
     last = v[-1]
     v.append((last[0]+(random()-.5), last[1]+(random()-.5)))
-    
+
 plots = []
-for i in range(1,5):    
-    g = line(v[:i], thickness=.4, color='purple') 
-    g += points(v[:i], pointsize=10, color='grey', 
+for i in range(1,5):
+    g = line(v[:i], thickness=.4, color='purple')
+    g += points(v[:i], pointsize=10, color='grey',
                 aspect_ratio=1, xmin=-1, x)
     plots.append(g)
 ︡1239b777-c778-40f9-870b-2016ad20ad94︡
@@ -220,16 +220,16 @@ trucks <- c(2, 5, 4, 5, 12)
 # Calculate range from 0 to max value of cars and trucks
 g_range <- range(0, cars, trucks)
 
-# Graph autos using y axis that ranges from 0 to max 
-# value in cars or trucks vector.  Turn off axes and 
+# Graph autos using y axis that ranges from 0 to max
+# value in cars or trucks vector.  Turn off axes and
 # annotations (axis labels) so we can specify them ourself
-plot(cars, type="o", col="blue", ylim=g_range, 
+plot(cars, type="o", col="blue", ylim=g_range,
    axes=FALSE, ann=FALSE)
 
 # Make x axis using Mon-Fri labels
 axis(1, at=1:5, lab=c("Mon","Tue","Wed","Thu","Fri"))
 
-# Make y axis with horizontal labels that display ticks at 
+# Make y axis with horizontal labels that display ticks at
 # every 4 marks. 4*0:g_range[2] is equivalent to c(0,4,8,12).
 axis(2, las=1, at=4*0:g_range[2])
 
@@ -246,10 +246,10 @@ title(main="Autos", col.main="red", font.main=4)
 title(xlab="Days", col.lab=rgb(0,0.5,0))
 title(ylab="Total", col.lab=rgb(0,0.5,0))
 
-# Create a legend at (1, g_range[2]) that is slightly smaller 
-# (cex) and uses the same line colors and points used by 
-# the actual plots 
-legend(1, g_range[2], c("cars","trucks"), cex=0.8, 
+# Create a legend at (1, g_range[2]) that is slightly smaller
+# (cex) and uses the same line colors and points used by
+# the actual plots
+legend(1, g_range[2], c("cars","trucks"), cex=0.8,
    col=c("blue","red"), pch=21:22, lty=1:2);
 ︡2303ad3d-1565-44c0-9d07-a3b13eeea8af︡{"stdout":"\n"}︡{"once":false,"file":{"show":true,"uuid":"3762dddb-668e-4a34-9011-a972f97296ad","filename":"/tmp/bb6d3f0b-15be-40d4-8eb1-afe49bf6dd59.png"}}︡{"stdout":"\n"}︡
 ︠3d7151d2-2919-45bb-ada6-eea57701c5ddi︠
