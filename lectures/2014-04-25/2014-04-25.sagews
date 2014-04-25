@@ -13,8 +13,16 @@ Screencast: REMEMBER!!!!!! (with sound)
 - Homework
     -- your grading of hw3 is due today at 6pm.  I will collect and redistribute it by Saturday morning so at least you'll get some feedback on your project.
     -- your hw4 is due **Sunday at 6pm.**
+- Go over hw5 (new homework).
 - Lecture today on Command Line Terminal
-︡2adf8c7a-fbc7-498c-a371-e4cb4387f956︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>The Command Line Terminal</h2>\n\n<h2>April 25, 2014</h2>\n\n<p>Screencast: REMEMBER!!!!!! (with sound)</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Homework\n&#8211; your grading of hw3 is due today at 6pm.  I will collect and redistribute it by Saturday morning so at least you&#8217;ll get some feedback on your project.\n&#8211; your hw4 is due <strong>Sunday at 6pm.</strong></li>\n<li>Lecture today on Command Line Terminal</li>\n</ul>\n"}︡
+︡346938fc-1c02-47fd-a34a-8861d7e9d951︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>The Command Line Terminal</h2>\n\n<h2>April 25, 2014</h2>\n\n<p>Screencast: REMEMBER!!!!!! (with sound)</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Homework\n&#8211; your grading of hw3 is due today at 6pm.  I will collect and redistribute it by Saturday morning so at least you&#8217;ll get some feedback on your project.\n&#8211; your hw4 is due <strong>Sunday at 6pm.</strong></li>\n<li>Go over hw5 (new homework).</li>\n<li>Lecture today on Command Line Terminal</li>\n</ul>\n"}︡
+︠cb5fdc17-a5fd-4126-9e10-2f514ecc1c3f︠
+
+︠2e9023dc-549b-445e-9940-53618517684d︠
+something = 5
+if isinstance(something, (int, long, Rational, Integer)):
+    print "yes!"
+︡5ed6b7a1-0f13-4288-aaa8-03a21edec020︡{"stdout":"yes!\n"}︡
 ︠a1768089-42df-45c0-9a7f-f89371a04f85︠
 
 ︠6629b8ce-36ef-4a61-ac9c-291a8eb25a62︠

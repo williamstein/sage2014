@@ -5,14 +5,14 @@ TOTAL: X/20
 
 **Due Friday, May 2, 2014 by 6pm**
 
-This homework will be automatically collected from the folder **homework4** in your project, sometime after 6pm on Friday, May 2, 2014.
+This homework will be automatically collected from the folder **homework5** in your project, sometime after 6pm on Friday, May 2, 2014.
 
 For help -- email Simon Spicer (mlungu@uw.edu) and/or William Stein (wstein@uw.edu) and/or the mailing list sagemath2014@googlegroups.com.
 
-︡95d405f1-39b1-4fc5-9c82-b9a5e21822d1︡{"html":"<h1>Homework 5 - Math 480b - Spring 2014</h1>\n\n<p><strong>Due Friday, May 2, 2014 by 6pm</strong></p>\n\n<p>This homework will be automatically collected from the folder <strong>homework4</strong> in your project, sometime after 6pm on Friday, May 2, 2014.</p>\n\n<p>For help &#8211; email Simon Spicer (mlungu@uw.edu) and/or William Stein (wstein@uw.edu) and/or the mailing list sagemath2014@googlegroups.com.</p>\n"}︡
+︡e06ad4da-1f08-45db-82ed-02aad02124ff︡{"html":"<h1>Homework 5 - Math 480b - Spring 2014</h1>\n\n<p><strong>Due Friday, May 2, 2014 by 6pm</strong></p>\n\n<p>This homework will be automatically collected from the folder <strong>homework5</strong> in your project, sometime after 6pm on Friday, May 2, 2014.</p>\n\n<p>For help &#8211; email Simon Spicer (mlungu@uw.edu) and/or William Stein (wstein@uw.edu) and/or the mailing list sagemath2014@googlegroups.com.</p>\n"}︡
 ︠ec492057-2c0c-49d4-ac0c-3804eb28e208︠
 
-︠2bd6e2d5-bfcb-4a70-96b7-c30571b55fe6︠
+︠2bd6e2d5-bfcb-4a70-96b7-c30571b55fe6i︠
 %md
 ## Problem 1 -- The command line
 
@@ -22,13 +22,13 @@ For each of the tasks listed below, write a line that when run in the terminal a
 - Rename `a_copy` so it is now called `b_copy`.
 - Make a directory called `my_dir`.
 - Copy the file `b_copy` to a file called `foo` inside of `my_dir`.
-- Change the current working directory to `my_dir` and list the files in that directory.
+- Change the current working directory to `my_dir` and list the files in that directory (use `cd` and `ls`).
 - Rename the directory `my_dir` so that it is called `my_dir2`.
 - Copy the directory `my_dir2` to obtain another directory `my_dir3`.
 
 
 
-︡f528c081-5df5-4dc6-8e99-976ea24acedb︡{"html":"<h2>Problem 1 &#8211; The command line</h2>\n\n<p>For each of the tasks listed below, write a line that when run in the terminal accomplishes the listed task.   Assume that the current working directory contains a file called <code>hw5.sagews</code> (namely this homework assignment).  Put your code in the worksheet cells below this problem (you could even run it by putting ! before each line).</p>\n\n<ul>\n<li>Make a copy of the file <code>hw5.sagews</code> called <code>a_copy</code>.</li>\n<li>Rename <code>a_copy</code> so it is now called <code>b_copy</code>.</li>\n<li>Make a directory called <code>my_dir</code>.</li>\n<li>Copy the file <code>b_copy</code> to a file called <code>foo</code> inside of <code>my_dir</code>.</li>\n<li>Rename the directory <code>my_dir</code> so that it is called <code>my_dir2</code>.</li>\n<li>Copy the directory <code>my_dir2</code> to obtain another directory <code>my_dir3</code>.</li>\n</ul>\n"}︡
+︡37f3d96b-3047-4bf6-92a3-d8259b8ab826︡{"html":"<h2>Problem 1 &#8211; The command line</h2>\n\n<p>For each of the tasks listed below, write a line that when run in the terminal accomplishes the listed task.   Assume that the current working directory contains a file called <code>hw5.sagews</code> (namely this homework assignment).  Put your code in the worksheet cells below this problem (you could even run it by putting ! before each line).</p>\n\n<ul>\n<li>Make a copy of the file <code>hw5.sagews</code> called <code>a_copy</code>.</li>\n<li>Rename <code>a_copy</code> so it is now called <code>b_copy</code>.</li>\n<li>Make a directory called <code>my_dir</code>.</li>\n<li>Copy the file <code>b_copy</code> to a file called <code>foo</code> inside of <code>my_dir</code>.</li>\n<li>Change the current working directory to <code>my_dir</code> and list the files in that directory (use <code>cd</code> and <code>ls</code>). </li>\n<li>Rename the directory <code>my_dir</code> so that it is called <code>my_dir2</code>.</li>\n<li>Copy the directory <code>my_dir2</code> to obtain another directory <code>my_dir3</code>.</li>\n</ul>\n"}︡
 ︠0739a88c-ab51-451a-a157-18e5085419d5︠
 
 ︠236cb1b7-3af2-475d-9213-428a232e20cb︠
@@ -45,9 +45,9 @@ For each of the tasks listed below, write a line that when run in the terminal a
 %md
 ## Problem 2 -- in Python
 
-Write Python code (e.g., using the shutil, etc. module, but *not* just using os.system or popen or Subprocess!) to accomplish each of the above tasks from Probelm 1.  Put the code in worksheet cells below.
+Write Python code (e.g., using the shutil, etc. module, but *not* just using os.system or popen or Subprocess!) to accomplish each of the above tasks from Problem 1.  Put the code in worksheet cells below.
 
-︡5d1d4932-6794-4fef-8ec0-39b1462d7c61︡{"html":"<h2>Problem 2 &#8211; in Python</h2>\n\n<p>Write Python code (e.g., using the shutil, etc. module, but <em>not</em> just using os.system or popen or Subprocess!) to accomplish each of the above tasks from Probelm 1.  Put the code in worksheet cells below.</p>\n"}︡
+︡df6fddd6-ead3-4aa4-9366-a3c18c29b93e︡{"html":"<h2>Problem 2 &#8211; in Python</h2>\n\n<p>Write Python code (e.g., using the shutil, etc. module, but <em>not</em> just using os.system or popen or Subprocess!) to accomplish each of the above tasks from Problem 1.  Put the code in worksheet cells below.</p>\n"}︡
 ︠5b664c90-b4dc-4861-9314-3d6913da92ec︠
 
 ︠e8faf1f7-5fd1-4da3-93a7-885397efb8fd︠
