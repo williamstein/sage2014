@@ -1,3 +1,4 @@
+TOTAL: X/20
 ︠8cef1188-8ec6-4a82-bb7b-8071188044afi︠
 %md
 # Homework 5 - Math 480b - Spring 2014
@@ -11,7 +12,7 @@ For help -- email Simon Spicer (mlungu@uw.edu) and/or William Stein (wstein@uw.e
 ︡95d405f1-39b1-4fc5-9c82-b9a5e21822d1︡{"html":"<h1>Homework 5 - Math 480b - Spring 2014</h1>\n\n<p><strong>Due Friday, May 2, 2014 by 6pm</strong></p>\n\n<p>This homework will be automatically collected from the folder <strong>homework4</strong> in your project, sometime after 6pm on Friday, May 2, 2014.</p>\n\n<p>For help &#8211; email Simon Spicer (mlungu@uw.edu) and/or William Stein (wstein@uw.edu) and/or the mailing list sagemath2014@googlegroups.com.</p>\n"}︡
 ︠ec492057-2c0c-49d4-ac0c-3804eb28e208︠
 
-︠2bd6e2d5-bfcb-4a70-96b7-c30571b55fe6i︠
+︠2bd6e2d5-bfcb-4a70-96b7-c30571b55fe6︠
 %md
 ## Problem 1 -- The command line
 
@@ -21,6 +22,7 @@ For each of the tasks listed below, write a line that when run in the terminal a
 - Rename `a_copy` so it is now called `b_copy`.
 - Make a directory called `my_dir`.
 - Copy the file `b_copy` to a file called `foo` inside of `my_dir`.
+- Change the current working directory to `my_dir` and list the files in that directory.
 - Rename the directory `my_dir` so that it is called `my_dir2`.
 - Copy the directory `my_dir2` to obtain another directory `my_dir3`.
 
