@@ -6,7 +6,7 @@
 
 ## April 28, 2014
 
-Screencast: REMEMBER!
+Screencast: <http://youtu.be/AOmUj4c7H4k>
 
 **Plan**
 
@@ -16,7 +16,7 @@ Screencast: REMEMBER!
     -- hw5 assigned
 - More on the command line terminal
 - Git revision control
-︡ed5606ae-2c89-4fa3-8cbf-8b469ec2493f︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>The Command Line Terminal</h2>\n\n<h2>April 28, 2014</h2>\n\n<p>Screencast: REMEMBER!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions</li>\n<li>Homework\n&#8211; hw4 collected and grading of hw4 has been assigned.\n&#8211; hw5 assigned</li>\n<li>More on the command line terminal</li>\n<li>Git revision control</li>\n</ul>\n"}︡
+︡e48fffdd-caed-4818-9593-10f6929dd790︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>The Command Line Terminal</h2>\n\n<h2>April 28, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/AOmUj4c7H4k\">http://youtu.be/AOmUj4c7H4k</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions</li>\n<li>Homework\n&#8211; hw4 collected and grading of hw4 has been assigned.\n&#8211; hw5 assigned</li>\n<li>More on the command line terminal</li>\n<li>Git revision control</li>\n</ul>\n"}︡
 ︠e68236ea-4900-4917-9406-6440c2a7e3a8︠
 
 ︠cb5fdc17-a5fd-4126-9e10-2f514ecc1c3fi︠
