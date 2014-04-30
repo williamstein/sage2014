@@ -6,7 +6,7 @@
 
 ## April 30, 2014
 
-Screencast: REMIND ME!!!!!!! ?!
+Screencast: <http://youtu.be/8z68hQ2CC-Q>
 
 **Plan**
 
@@ -16,7 +16,9 @@ Screencast: REMIND ME!!!!!!! ?!
     -- hw5 due Friday
     -- every student in the class did their grading of hw3 and also did hw3 -- good job!
 - Git -- it will take today and Friday to get through all of this.  Next week will be how to do Sage development. <http://www.sagemath.org/doc/developer/>
-︡a025f949-fb25-4008-ba53-a1ef527c98a3︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Git</h2>\n\n<h2>April 30, 2014</h2>\n\n<p>Screencast: REMIND ME!!!!!!! ?!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions</li>\n<li>Homework reminder\n&#8211; grading of hw4 due Friday\n&#8211; hw5 due Friday\n&#8211; every student in the class did their grading of hw3 and also did hw3 &#8211; good job!</li>\n<li>Git &#8211; it will take today and Friday to get through all of this.  Next week will be how to do Sage development. <a href=\"http://www.sagemath.org/doc/developer/\">http://www.sagemath.org/doc/developer/</a></li>\n</ul>\n"}︡
+︡59f47f5d-0f9c-4925-b6ae-4c440d4976b9︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Git</h2>\n\n<h2>April 30, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/8z68hQ2CC-Q\">http://youtu.be/8z68hQ2CC-Q</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions</li>\n<li>Homework reminder\n&#8211; grading of hw4 due Friday\n&#8211; hw5 due Friday\n&#8211; every student in the class did their grading of hw3 and also did hw3 &#8211; good job!</li>\n<li>Git &#8211; it will take today and Friday to get through all of this.  Next week will be how to do Sage development. <a href=\"http://www.sagemath.org/doc/developer/\">http://www.sagemath.org/doc/developer/</a></li>\n</ul>\n"}︡
+︠117de47f-8c3c-4519-b99d-08a8f9856468︠
+
 ︠e68236ea-4900-4917-9406-6440c2a7e3a8i︠
 %md
 
@@ -27,7 +29,7 @@ NOTES:
 
 
 ︡1c2e540d-ea46-4495-91c0-a3ee65c7dbd4︡{"html":"<p>NOTES: </p>\n\n<ul>\n<li>I&#8217;ve been doing tons of upgrades to SageMathCloud. FYI.</li>\n<li>I like <a href=\"http://git-scm.com/book\">http://git-scm.com/book</a></li>\n</ul>\n"}︡
-︠5be43623-d151-4e2e-9b66-fcf564ab8a5ci︠
+︠5be43623-d151-4e2e-9b66-fcf564ab8a5c︠
 %md
 ## Git Tutorial -- part 1
 ### Starting a new open source project using SageMathCloud and GitHub
@@ -72,15 +74,15 @@ I will do this all in a *brand new SageMathCloud project*.
 
         https://github.com
 
-- Create a corresponding project on github
+- Create a corresponding repository on github
 
-        ...
+        https://github.com/Math480bSageCourse/gauss
 
 - Push our repo there.
 
         ssh-keygen
         open ~/.ssh/id_rsa.pub   # copy this to github
-        git push ...
+        git push
 
 - Clone it from Github to somewhere else
 
