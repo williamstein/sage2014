@@ -15,11 +15,18 @@ Screencast: REMIND ME!!!!!!! ?!
     -- grading of hw4 due Friday
     -- hw5 due Friday
     -- every student in the class did their grading of hw3 and also did hw3 -- good job!
-- Git revision control: part 2
-︡6c47cc72-7092-4d8c-87dd-b686063c8b60︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Git</h2>\n\n<h2>April 30, 2014</h2>\n\n<p>Screencast: REMIND ME!!!!!!! ?!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions</li>\n<li>Homework reminder\n&#8211; grading of hw4 due Friday\n&#8211; hw5 due Friday\n&#8211; every student in the class did their grading of hw3 and also did hw3 &#8211; good job!</li>\n<li>Git revision control: part 2</li>\n</ul>\n"}︡
-︠e68236ea-4900-4917-9406-6440c2a7e3a8︠
+- Git -- it will take today and Friday to get through all of this.  Next week will be how to do Sage development. <http://www.sagemath.org/doc/developer/>
+︡a025f949-fb25-4008-ba53-a1ef527c98a3︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Git</h2>\n\n<h2>April 30, 2014</h2>\n\n<p>Screencast: REMIND ME!!!!!!! ?!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li>Questions</li>\n<li>Homework reminder\n&#8211; grading of hw4 due Friday\n&#8211; hw5 due Friday\n&#8211; every student in the class did their grading of hw3 and also did hw3 &#8211; good job!</li>\n<li>Git &#8211; it will take today and Friday to get through all of this.  Next week will be how to do Sage development. <a href=\"http://www.sagemath.org/doc/developer/\">http://www.sagemath.org/doc/developer/</a></li>\n</ul>\n"}︡
+︠e68236ea-4900-4917-9406-6440c2a7e3a8i︠
+%md
+
+NOTES:
+
+ - I've been doing tons of upgrades to SageMathCloud. FYI.
+ - I like <http://git-scm.com/book>
 
 
+︡1c2e540d-ea46-4495-91c0-a3ee65c7dbd4︡{"html":"<p>NOTES: </p>\n\n<ul>\n<li>I&#8217;ve been doing tons of upgrades to SageMathCloud. FYI.</li>\n<li>I like <a href=\"http://git-scm.com/book\">http://git-scm.com/book</a></li>\n</ul>\n"}︡
 ︠5be43623-d151-4e2e-9b66-fcf564ab8a5ci︠
 %md
 ## Git Tutorial -- part 1
@@ -138,7 +145,10 @@ I will do this all in a *brand new SageMathCloud project*.
 
      Explain how to *figure out how* to do this by doing a Google search on 'push new branch to remote' and reading Stack overflow.  Note that this search doesn't have the word "git" in it, but the entire first page of results is git-specific, even though one could do the same search for other similar software such as mercurial.
 
-︡3be40c4e-b96f-4516-940b-d29eddd0665b︡{"html":"<h2>Git Tutorial - part 3 &#8211; branching</h2>\n\n<ul>\n<li><p>make a new branch of our project</p>\n\n<pre><code>git branch\ngit branch dev\ngit checkout dev   # super lightweight/fast/efficient, even if project is huge\n</code></pre>\n\n<p><br></p></li>\n<li><p>make some changes and commit them</p></li>\n<li><p>push them to github as a new branch</p>\n\n<p>Explain how to <em>figure out how</em> to do this by doing a Google search on &#8216;push new branch to remote&#8217; and reading Stack overflow.  Note that this search doesn&#8217;t have the word &#8220;git&#8221; in it, but the entire first page of results is git-specific, even though one could do the same search for other similar software such as mercurial.</p></li>\n</ul>\n"}︡
+
+- switch back to the original master branch, and merge the changes from the dev branch.
+
+︡ecf1deb6-d903-4bd6-bac3-2e3c63ed5110︡{"html":"<h2>Git Tutorial - part 3 &#8211; branching</h2>\n\n<ul>\n<li><p>make a new branch of our project</p>\n\n<pre><code>git branch\ngit branch dev\ngit checkout dev   # super lightweight/fast/efficient, even if project is huge\n</code></pre>\n\n<p><br></p></li>\n<li><p>make some changes and commit them</p></li>\n<li><p>push them to github as a new branch</p>\n\n<p>Explain how to <em>figure out how</em> to do this by doing a Google search on &#8216;push new branch to remote&#8217; and reading Stack overflow.  Note that this search doesn&#8217;t have the word &#8220;git&#8221; in it, but the entire first page of results is git-specific, even though one could do the same search for other similar software such as mercurial.</p></li>\n<li><p>switch back to the original master branch, and merge the changes from the dev branch.</p></li>\n</ul>\n"}︡
 ︠22d05050-c90b-40bf-92f2-37d648e5d655︠
 
 ︠507e834f-cc3a-41fa-8d2e-ac8a42b2b2ae︠
