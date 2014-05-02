@@ -6,7 +6,7 @@
 
 ## May 2, 2014
 
-Screencast: REMIND ME!!!!!!! ?!
+Screencast: <http://youtu.be/yHUsq6Ut1xA>
 
 **Plan**
 
@@ -22,11 +22,24 @@ Screencast: REMIND ME!!!!!!! ?!
 
 - Build Sage from source (do this by Monday -- it should take you about **1 minute of work**)
 
-︡f466298f-fde7-4a46-87ff-bd86a84e905b︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Git, Build Sage</h2>\n\n<h2>May 2, 2014</h2>\n\n<p>Screencast: REMIND ME!!!!!!! ?!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Quick project descriptions (go around room)</p></li>\n<li><p>Homework reminder\n&#8211; grading of hw4 due TODAY\n&#8211; hw5 due TODAY</p></li>\n<li><p>Git &#8211; forking, cloning, branching</p></li>\n<li><p>Build Sage from source (do this by Monday &#8211; it should take you about <strong>1 minute of work</strong>)</p></li>\n</ul>\n"}︡
+︡0f17eced-c3d9-4f40-9366-01ae3eb1d7e7︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Git, Build Sage</h2>\n\n<h2>May 2, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/yHUsq6Ut1xA\">http://youtu.be/yHUsq6Ut1xA</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Quick project descriptions (go around room)</p></li>\n<li><p>Homework reminder\n&#8211; grading of hw4 due TODAY\n&#8211; hw5 due TODAY</p></li>\n<li><p>Git &#8211; forking, cloning, branching</p></li>\n<li><p>Build Sage from source (do this by Monday &#8211; it should take you about <strong>1 minute of work</strong>)</p></li>\n</ul>\n"}︡
 ︠5da64fcf-04b9-4bb3-b586-990f73f48a28︠
-
+%time t = pi.numerical_approx(1000000)
+︡f65c3899-2f2d-4bdc-87b3-804ef3f810f0︡{"stdout":"CPU time: 1.17 s, Wall time: 1.19 s"}︡{"stdout":"\n"}︡
 ︠117de47f-8c3c-4519-b99d-08a8f9856468︠
-
+%time s=str(t)
+︡07e607e5-b2f3-49f5-b956-97261f1eecc5︡{"stdout":"CPU time: 0.10 s, Wall time: 0.10 s\n"}︡
+︠3ce5dacb-b33b-4154-ba4f-bbf0c1e29a5b︠
+s[:10]
+︡ed07afe2-4000-4fba-a007-d3d9ec3e53ee︡{"stdout":"'3.14159265'\n"}︡
+︠44a1ba6a-8ba7-4f40-83ae-f276181c8567︠
+import QuantLib
+︡d168ebf8-18b1-43b0-941a-cfc064a306ba︡
+︠26c6c118-6b98-425b-abd4-f38240d60503︠
+QuantLib
+︠add06263-ac33-4050-bfe4-ce15de82514f︠
+Bitset
+︡9b186cdb-22f2-4bd3-8959-01c78666eb8a︡{"stdout":"<type 'sage.misc.bitset.Bitset'>\n"}︡
 ︠3450101e-31a2-4e17-bcdb-87d35cda349ai︠
 %md
 ## Git Tutorial: collaborate
