@@ -6,7 +6,7 @@
 
 ## May 5, 2014
 
-Screencast: REMEMBER!!!?!  Remind ME.
+Screencast: <http://youtu.be/tNQN7WPyBD4>
 
 **Plan**
 
@@ -17,7 +17,21 @@ Screencast: REMEMBER!!!?!  Remind ME.
 - Build Sage from source -- quick review
 
 - Overview of what is in Sage
-︡5d0802ac-5d0c-4284-af08-5251fd0dbaa7︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Overview of Sage</h2>\n\n<h2>May 5, 2014</h2>\n\n<p>Screencast: REMEMBER!!!?!  Remind ME.</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Homework remark: all collected, grading assigned, new homework available</p></li>\n<li><p>Build Sage from source &#8211; quick review</p></li>\n<li><p>Overview of what is in Sage</p></li>\n</ul>\n"}︡
+︡e5817ee2-d89c-4e2f-a2ca-a23f72c9d52f︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Overview of Sage</h2>\n\n<h2>May 5, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/tNQN7WPyBD4\">http://youtu.be/tNQN7WPyBD4</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Homework remark: all collected, grading assigned, new homework available</p></li>\n<li><p>Build Sage from source &#8211; quick review</p></li>\n<li><p>Overview of what is in Sage</p></li>\n</ul>\n"}︡
+︠8c65abd5-3e15-4bf2-a92f-2bd2ee2c52a4︠
+u = (x^2, x, x+3)
+︡33f198c1-73d0-40a9-92c3-599a0f0a77a5︡
+︠fd6a7423-81e6-43cd-b72c-af929d9b3e09︠
+u
+︡4224fb56-9d34-47bb-b10e-e03163c1acdb︡{"stdout":"(x^2, x, x + 3)\n"}︡
+︠8db3732f-1173-469b-9dd5-902d61ccd579︠
+tuple(a(x=4) for a in u)
+︡467f57c6-55b6-413e-b2b7-cf512ff5bf4b︡{"stdout":"(16, 4, 7)\n"}︡
+︠5faf573c-e9de-44bd-b9dc-11d872face9d︠
+u
+︡ce1ba193-3fad-4d98-bb8d-90e205c8384a︡{"stdout":"(x^2, x, x + 3)\n"}︡
+︠b0547846-f96a-4260-8ec6-c4db0115caba︠
+
 ︠5d914d16-efe4-465b-84f5-fc4e92dd77a3i︠
 %md
 
@@ -27,9 +41,9 @@ Screencast: REMEMBER!!!?!  Remind ME.
 
 - Everybody should build their own copy of Sage from source.  So far 8 (of 40) of you have: Brian Chan, Taran Dike, Robert Irving, Matt Lorentz, Brad Schlenker, Yueqi Sheng, Bryant Wong, Yamin Zhou.  Everybody else, do it!  Think of your Sage install as like a tamaguchi or something...
 
-    git clone git://github.com/sagemath/sage.git
-    cd sage
-    make
+        git clone git://github.com/sagemath/sage.git
+        cd sage
+        make
 
 
 <br>
@@ -53,11 +67,13 @@ Let's check on our builds.
 
 
 
-︡7d6e1b29-e0bc-4759-82b1-4fa539dbbe38︡{"html":"<p><img src=\"http://3.bp.blogspot.com/-8z54WpUD61Y/TscH_EbhmyI/AAAAAAAAAMM/DDoQINTDOko/s320/tamaguchi.jpg\"></p>\n\n<h2>Check on our personal copies of Sage</h2>\n\n<ul>\n<li><p>Everybody should build their own copy of Sage from source.  So far 8 (of 40) of you have: Brian Chan, Taran Dike, Robert Irving, Matt Lorentz, Brad Schlenker, Yueqi Sheng, Bryant Wong, Yamin Zhou.  Everybody else, do it!  Think of your Sage install as like a tamaguchi or something&#8230;</p>\n\n<p>git clone git://github.com/sagemath/sage.git\ncd sage\nmake</p></li>\n</ul>\n\n<p><br>\nLet&#8217;s check on our builds.</p>\n\n<pre><code>    ~% cd ~/sage\n    ~/sage% du -sch .\n    1.9G    .\n    1.9G    total\n    ~/sage% ./sage\n    # it works; type quit\n</code></pre>\n\n<p><br>Let&#8217;s change something!</p>\n\n<pre><code>    ~/sage% open src/sage/all.py   # put a print statement at the end\n    ~/sage% ./sage -br\n    ~/sage% git status\n    ~/sage% git diff\n</code></pre>\n"}︡
+︡827cf2fb-d0a7-48c6-a9d4-1b12b96f11fa︡{"html":"<p><img src=\"http://3.bp.blogspot.com/-8z54WpUD61Y/TscH_EbhmyI/AAAAAAAAAMM/DDoQINTDOko/s320/tamaguchi.jpg\"></p>\n\n<h2>Check on our personal copies of Sage</h2>\n\n<ul>\n<li><p>Everybody should build their own copy of Sage from source.  So far 8 (of 40) of you have: Brian Chan, Taran Dike, Robert Irving, Matt Lorentz, Brad Schlenker, Yueqi Sheng, Bryant Wong, Yamin Zhou.  Everybody else, do it!  Think of your Sage install as like a tamaguchi or something&#8230;</p>\n\n<pre><code>git clone git://github.com/sagemath/sage.git\ncd sage\nmake\n</code></pre></li>\n</ul>\n\n<p><br>\nLet&#8217;s check on our builds.</p>\n\n<pre><code>    ~% cd ~/sage\n    ~/sage% du -sch .\n    1.9G    .\n    1.9G    total\n    ~/sage% ./sage\n    # it works; type quit\n</code></pre>\n\n<p><br>Let&#8217;s change something!</p>\n\n<pre><code>    ~/sage% open src/sage/all.py   # put a print statement at the end\n    ~/sage% ./sage -br\n    ~/sage% git status\n    ~/sage% git diff\n</code></pre>\n"}︡
 ︠2e99eed9-235e-4302-96b4-98efaf1b4bcb︠
-
+SAGE_ROOT
+︡cc3cf968-b3cf-4772-b78b-0a7e18597318︡{"stdout":"'/usr/local/sage/sage-6.2.rc0'\n"}︡
 ︠aedd45fa-5f83-4ef2-b3a7-abf08eba676f︠
-
+factor??
+︡2ee5e043-7a24-41cc-afe7-06c5b0efc6b8︡{"stdout":"   File: /usr/local/sage/sage-6.2.rc0/local/lib/python2.7/site-packages/sage/rings/arith.py\n   Source:\n   def factor(n, proof=None, int_=False, algorithm='pari', verbose=0, **kwds):\n    \"\"\"\n    Returns the factorization of ``n``.  The result depends on the\n    type of ``n``.\n\n    If ``n`` is an integer, returns the factorization as an object\n    of type ``Factorization``.\n\n    If n is not an integer, ``n.factor(proof=proof, **kwds)`` gets called.\n    See ``n.factor??`` for more documentation in this case.\n\n    .. warning::\n\n       This means that applying ``factor`` to an integer result of\n       a symbolic computation will not factor the integer, because it is\n       considered as an element of a larger symbolic ring.\n\n       EXAMPLE::\n\n           sage: f(n)=n^2\n           sage: is_prime(f(3))\n           False\n           sage: factor(f(3))\n           9\n\n    INPUT:\n\n    -  ``n`` - an nonzero integer\n\n    -  ``proof`` - bool or None (default: None)\n\n    -  ``int_`` - bool (default: False) whether to return\n       answers as Python ints\n\n    -  ``algorithm`` - string\n\n       - ``'pari'`` - (default) use the PARI c library\n\n       - ``'kash'`` - use KASH computer algebra system (requires the\n         optional kash package be installed)\n\n       - ``'magma'`` - use Magma (requires magma be installed)\n\n    -  ``verbose`` - integer (default: 0); PARI's debug\n       variable is set to this; e.g., set to 4 or 8 to see lots of output\n       during factorization.\n\n    OUTPUT:\n\n    -  factorization of n\n\n    The qsieve and ecm commands give access to highly optimized\n    implementations of algorithms for doing certain integer\n    factorization problems. These implementations are not used by the\n    generic factor command, which currently just calls PARI (note that\n    PARI also implements sieve and ecm algorithms, but they aren't as\n    optimized). Thus you might consider using them instead for certain\n    numbers.\n\n    The factorization returned is an element of the class\n    :class:`~sage.structure.factorization.Factorization`; see Factorization??\n    for more details, and examples below for usage. A Factorization contains\n    both the unit factor (+1 or -1) and a sorted list of (prime, exponent)\n    pairs.\n\n    The factorization displays in pretty-print format but it is easy to\n    obtain access to the (prime,exponent) pairs and the unit, to\n    recover the number from its factorization, and even to multiply two\n    factorizations. See examples below.\n\n    EXAMPLES::\n\n        sage: factor(500)\n        2^2 * 5^3\n        sage: factor(-20)\n        -1 * 2^2 * 5\n        sage: f=factor(-20)\n        sage: list(f)\n        [(2, 2), (5, 1)]\n        sage: f.unit()\n        -1\n        sage: f.value()\n        -20\n        sage: factor( -next_prime(10^2) * next_prime(10^7) )\n        -1 * 101 * 10000019\n\n    ::\n\n        sage: factor(-500, algorithm='kash')      # optional - kash\n        -1 * 2^2 * 5^3\n\n    ::\n\n        sage: factor(-500, algorithm='magma')     # optional - magma\n        -1 * 2^2 * 5^3\n\n    ::\n\n        sage: factor(0)\n        Traceback (most recent call last):\n        ...\n        ArithmeticError: Prime factorization of 0 not defined.\n        sage: factor(1)\n        1\n        sage: factor(-1)\n        -1\n        sage: factor(2^(2^7)+1)\n        59649589127497217 * 5704689200685129054721\n\n    Sage calls PARI's factor, which has proof False by default.\n    Sage has a global proof flag, set to True by default (see\n    :mod:`sage.structure.proof.proof`, or proof.[tab]). To override\n    the default, call this function with proof=False.\n\n    ::\n\n        sage: factor(3^89-1, proof=False)\n        2 * 179 * 1611479891519807 * 5042939439565996049162197\n\n    ::\n\n        sage: factor(2^197 + 1)  # long time (2s)\n        3 * 197002597249 * 1348959352853811313 * 251951573867253012259144010843\n\n    Any object which has a factor method can be factored like this::\n\n        sage: K.<i> = QuadraticField(-1)\n        sage: factor(122 - 454*i)\n        (-1) * (-i - 4) * (-3*i - 2) * (-i - 2)^3 * (i + 1)^3\n\n    To access the data in a factorization::\n\n        sage: f = factor(420); f\n        2^2 * 3 * 5 * 7\n        sage: [x for x in f]\n        [(2, 2), (3, 1), (5, 1), (7, 1)]\n        sage: [p for p,e in f]\n        [2, 3, 5, 7]\n        sage: [e for p,e in f]\n        [2, 1, 1, 1]\n        sage: [p^e for p,e in f]\n        [4, 3, 5, 7]\n\n    \"\"\"\n    if isinstance(n, (int, long)):\n        n = ZZ(n)\n\n    if isinstance(n, integer.Integer):\n        return n.factor(proof=proof, algorithm=algorithm,\n                        int_ = int_, verbose=verbose)\n    else:\n        # e.g. n = x**2 + y**2 + 2*x*y\n        try:\n            return n.factor(proof=proof, **kwds)\n        except AttributeError:\n            raise TypeError(\"unable to factor n\")\n        except TypeError:\n            # Just in case factor method doesn't have a proof option.\n            try:\n                return n.factor(**kwds)\n            except AttributeError:\n                raise TypeError(\"unable to factor n\")\n"}︡{"stdout":"\n"}︡
 ︠66dfdd98-2856-4967-9e87-f01a967ca55e︠
 
 ︠23f46c03-cfe1-4fc1-9c31-28eb6a5f84efi︠
@@ -225,8 +241,9 @@ If you like lisp try %lisp in the notebook.
 ︡0d0d6c04-348d-4a58-919b-ae296be3de36︡{"html":"<p><img src=\"http://skunklogic.com/strips/lisp.png\">\n<br><br></p>\n\n<ul>\n<li><strong>ecl</strong>: Embedded Common Lisp &#8211; used by Maxima; but makes using lisp from Sage fast. \nIf you like lisp try %lisp in the notebook.</li>\n</ul>\n"}︡
 ︠36c364cd-f0e5-4248-aa54-9be215458900︠
 %lisp
+
 (+ 3 5)
-︡95941a06-bfe3-4238-8bff-410218e7067a︡{"stdout":"8"}︡
+︡599b4de3-7251-4bae-8255-98d4cc9044eb︡{"stdout":"8"}︡
 ︠4f51fac3-5064-4add-8692-408a0b8a9da0︠
 %lisp
 (setq a 13)
@@ -251,8 +268,8 @@ If you like lisp try %lisp in the notebook.
 ︡160860ef-817d-42a7-a400-8c8058a34d18︡{"stdout":"FACTORS"}︡
 ︠f167ba7f-23d6-4eba-877a-759de28995a5︠
 %lisp
-(factors 2014)
-︡2fac04e6-3d3d-48b5-9125-eb9f8280ff55︡{"stdout":"(1 2 19 38 53 106 1007 2014)"}︡
+(factors 2015)
+︡13f7e1fc-b5a7-4f0c-9acd-ad81dcc612cb︡{"stdout":"(1 5 13 31 65 155 403 2015)"}︡
 ︠88ca0a5e-2eb7-4497-b764-547128f0a293︠
 
 ︠1a3cff50-dd31-4350-a33e-6cf47f03a8fdi︠
