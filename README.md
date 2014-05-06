@@ -17,7 +17,8 @@ This is a course about [SageMath](http://sagemath.org), which is a software deve
 - TA: Simon Spicer
 - Office Hour for this course: Tuesdays 12:00-13:00 in Padelford C423
 - TA Office Hours: Tuesdays 13:00-15:00 in Padelford C430
-- Course mailing list: <https://groups.google.com/forum/?hl=en#!forum/sagemath2014>
+- Google Groups Course mailing list: <https://groups.google.com/forum/?hl=en#!forum/sagemath2014>
+- UW course mailing list: Send email to math480b_sp14@uw.edu or view online at <https://mailman1.u.washington.edu/mailman/private/math480b_sp14/>.
 
 
 # Objectives
