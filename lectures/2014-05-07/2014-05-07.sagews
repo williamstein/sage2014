@@ -1,4 +1,4 @@
-︠2927fd33-96d8-4cf3-9690-ea39c7db21fdi︠
+︠2927fd33-96d8-4cf3-9690-ea39c7db21fd︠
 %md
 
 # Math 480b -- Sage Course
@@ -14,7 +14,9 @@ Screencast: REMIND ME!?
 
 - Build Sage from source: quick checkup
 
-- Sync changes: some remarks and a **live stress test**
+- Sync changes: some remarks...
+
+- HTML/CSS/JS instead of interact
 
 - Overview of what is in Sage -- continued
 
@@ -77,7 +79,7 @@ a = numpy.random.rand(n,n)  # see http://docs.scipy.org/doc/numpy/reference/rout
 b = numpy.random.rand(n,n)
 %time c = a*b  # component-wise multiplication
 %time d = numpy.dot(a,b)   # matrix multiplication (probably uses ATLAS heavily)
-︡258ca898-8ea1-4c29-8bc8-384c9cbdbde8︡{"stdout":"CPU time: 0.00 s, Wall time: 0.00 s\n"}︡{"stdout":"CPU time: 0.29 s, Wall time: 0.00 s"}︡{"stdout":"\n"}︡
+︡5edb0496-e9b7-4be6-9845-b4c944a1431f︡{"stdout":"CPU time: 0.00 s, Wall time: 0.00 s\n"}︡{"stdout":"CPU time: 0.27 s, Wall time: 0.27 s"}︡{"stdout":"\n"}︡
 ︠e6825f4c-2be5-4cf9-a35a-396648b8bcb7︠
 
 ︠fcd13fdb-276a-488b-876d-d438b9102156i︠
@@ -207,20 +209,20 @@ from PIL import Image
 ︠caf21218-8322-4880-b3d9-581ce7f97b6c︠
 im = Image.open("santi.png")
 ︡eac281ad-a7f3-4300-89fa-165a9538fbf0︡
-︠c403a4be-3982-43b8-b738-11f9f934429a︠
+︠c403a4be-3982-43b8-b738-11f9f934429aoo︠
 print(im.format, im.size, im.mode)
 ︡b497eefe-922b-409f-a72a-8990ee8e45b4︡{"stdout":"('PNG', (510, 472), 'RGB')\n"}︡
-︠593f4c13-c1f2-47cf-b5e2-2b46354b237e︠
+︠593f4c13-c1f2-47cf-b5e2-2b46354b237eoo︠
 # convert file to a JPEG (and view it)
 im.save("tmp.jpg"); salvus.file("tmp.jpg")
 ︡7aac346b-18d2-468f-866b-c581d96dffc6︡{"once":false,"file":{"show":true,"uuid":"3f8dd807-ae11-4d8d-8c79-3aa26fe00ef3","filename":"tmp.jpg"}}︡
-︠585d6671-abec-4fb8-89ce-38d80863d848︠
+︠585d6671-abec-4fb8-89ce-38d80863d848oo︠
 # create a thumbnail
 im = Image.open("santi.png")
 im.thumbnail((128,128))
 im.save('thumb.png'); salvus.file('thumb.png')
 ︡e7a17e6c-acff-4987-ba4b-b5f99098531b︡{"once":false,"file":{"show":true,"uuid":"043225f0-ae89-4eba-a084-5d8737dda60f","filename":"thumb.png"}}︡
-︠85f7eab8-985a-4ae8-9975-b7e11cd9a64e︠
+︠85f7eab8-985a-4ae8-9975-b7e11cd9a64eoo︠
 # copy, flip, and paste a region
 im = Image.open("santi.png")
 box = (100, 100, 400, 400)
@@ -229,7 +231,7 @@ region = region.transpose(Image.ROTATE_180)
 im.paste(region, box)
 im.save("tmp3.jpg"); salvus.file("tmp3.jpg")
 ︡40971761-6199-46e3-b646-18c5bcb5bcd8︡{"once":false,"file":{"show":true,"uuid":"0ee1298d-8254-41fc-abb1-ada624536918","filename":"tmp3.jpg"}}︡
-︠2a59939c-5f19-4fb8-b992-ef19f3c23276︠
+︠2a59939c-5f19-4fb8-b992-ef19f3c23276oo︠
 # copy, rotate, and paste a region
 im = Image.open("santi.png")
 box = (100, 100, 400, 400); region = im.crop(box)
@@ -237,12 +239,12 @@ region = region.rotate(-30)
 im.paste(region, box)
 im.save("tmp.jpg"); salvus.file("tmp.jpg")
 ︡d61f207c-2133-45d9-9129-054c870e9f32︡{"once":false,"file":{"show":true,"uuid":"7f49a584-5298-4d82-a155-ec75555f36f8","filename":"tmp.jpg"}}︡
-︠26e569ea-641c-4f5f-9ab4-397b1ecb0763︠
+︠26e569ea-641c-4f5f-9ab4-397b1ecb0763oo︠
 from PIL import ImageFilter
 out = im.filter(ImageFilter.CONTOUR)
 out.save("tmp.jpg"); salvus.file("tmp.jpg")
 ︡c24eca11-bdcc-4651-a374-854aaeb2712f︡{"once":false,"file":{"show":true,"uuid":"c3c738d8-5a43-4beb-a301-78536f076e40","filename":"tmp.jpg"}}︡
-︠ca5d6df0-b158-4b6c-897d-0bf2fd91a583︠
+︠ca5d6df0-b158-4b6c-897d-0bf2fd91a583oo︠
 from PIL import ImageFilter
 filters = [x for x in dir(ImageFilter) if hasattr(getattr(ImageFilter,x),'name')]
 @interact
@@ -251,7 +253,7 @@ def _(filter = selector(filters,buttons=True)):
     out.save("tmp.jpg"); salvus.file("tmp.jpg")
 
 ︡d0ad09c9-b97a-4847-bfee-b985de3d4ebb︡{"interact":{"style":"None","flicker":false,"layout":[[["filter",12,null]],[["",12,null]]],"id":"39d527fa-a2fd-4ee9-9884-e4aa5468d94c","controls":[{"buttons":true,"control_type":"selector","ncols":null,"button_classes":null,"default":0,"lbls":["BLUR","CONTOUR","DETAIL","EDGE_ENHANCE","EDGE_ENHANCE_MORE","EMBOSS","FIND_EDGES","GaussianBlur","MaxFilter","MedianFilter","MinFilter","ModeFilter","RankFilter","SHARPEN","SMOOTH","SMOOTH_MORE","UnsharpMask"],"label":"filter","nrows":null,"width":null,"var":"filter"}]}}︡
-︠d43d8016-9340-43e3-b958-298a459a37ec︠
+︠d43d8016-9340-43e3-b958-298a459a37ecoo︠
 
 
 
