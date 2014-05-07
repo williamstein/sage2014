@@ -3,9 +3,9 @@ $(".app-button").click(function(e) {
     n = parseFloat($(".app-input").val());
 
     worksheet.execute_code({
-        code: "salvus.data['n'] * random()",
+        code: "print a; salvus.data['n'] * random()",
         data: {n:n},
-        preparse: false,
+        preparse: true,
         cb : function(mesg) {
             console.log(mesg);
             if (mesg.stdout) {

@@ -95,9 +95,24 @@ Example here: <http://cvxopt.org/examples/tutorial/lp.html>
 
 <img src="http://cvxopt.org/_images/math/6c7602a7b7dac314c2ee41126fa771a3375d60b7.png">
 ︡7a36813d-f624-4d21-8483-8f1434181e6f︡{"html":"<ul>\n<li><strong>cvxopt</strong>: big convex optimization package; &#8220;Convex minimization has applications in a wide range of disciplines, such as automatic control systems, estimation and signal processing, communications and networks, electronic circuit design, data analysis and modeling, statistics (optimal design), and finance.&#8221; &#8211; Wikipedia</li>\n</ul>\n\n<p>Example here: <a href=\"http://cvxopt.org/examples/tutorial/lp.html\">http://cvxopt.org/examples/tutorial/lp.html</a></p>\n\n<p><img src=\"http://cvxopt.org/_images/math/6c7602a7b7dac314c2ee41126fa771a3375d60b7.png\"></p>\n"}︡
+︠575eeba1-7525-4bed-be8c-f8d80163be72︠
+%var x1, x2
+a = -x1 + x2 <= 1
+a
+︡c35de5ab-8cd3-4e11-9a4f-f67850b42885︡{"stdout":"-x1 + x2 <= 1\n"}︡
+︠3009cd15-7c15-4bd3-a663-76a9e9195948︠
+type(a)
+︡eb7caa38-9794-469c-a756-5803acc41031︡{"stdout":"<type 'sage.symbolic.expression.Expression'>\n"}︡
 ︠1e7e24e1-f36b-4c8b-87fc-ca9c07fe8549︠
 preparse('2.5')
 ︡5a0f54a9-6e44-4073-8270-965e677490d7︡{"stdout":"\"RealNumber('2.5')\"\n"}︡
+︠a68ec833-6ce5-4031-9675-2a5590ab69fb︠
+8585856.929028340824082094380298409284098204382083402834098204982084208402834
+︡559622a8-7be2-45a2-ba1e-0dd298055515︡{"stdout":"8.58585692902834082408209438029840928409820438208340283409820498208420840283e6\n"}︡
+︠55835a15-6aeb-4b9b-8ede-99f545962d02︠
+%python
+8585856.929028340824082094380298409284098204382083402834098204982084208402834
+︡8f42ea5f-8ddc-4dfa-b2db-3ce8cf9c9903︡{"stdout":"8585856.929028342\n"}︡
 ︠de62f840-1289-47a8-aa52-e399261007d0︠
 %python  # disable preparsing in this cell; alternatively, do RealNumber=float
 from cvxopt import matrix, solvers
@@ -106,9 +121,16 @@ b = matrix([ 1.0, -2.0, 0.0, 4.0 ])
 c = matrix([ 2.0, 1.0 ])
 sol=solvers.lp(c,A,b)
 print(sol['x'])
-︡33021024-ddfc-4174-95e9-5846bc4e8966︡{"stdout":"     pcost       dcost       gap    pres   dres   k/t"}︡{"stdout":"\n 0:  2.6471e+00 -7.0588e-01  2e+01  8e-01  2e+00  1e+00\n 1:  3.0726e+00  2.8437e+00  1e+00  1e-01  2e-01  3e-01\n 2:  2.4891e+00  2.4808e+00  1e-01  1e-02  2e-02  5e-02\n 3:  2.4999e+00  2.4998e+00  1e-03  1e-04  2e-04  5e-04\n 4:  2.5000e+00  2.5000e+00  1e-05  1e-06  2e-06  5e-06\n 5:  2.5000e+00  2.5000e+00  1e-07  1e-08  2e-08  5e-08\nOptimal solution found.\n"}︡{"stdout":"[ 5.00e-01]\n[ 1.50e+00]\n\n"}︡
+︡122c91ec-aa61-4c52-9864-59a31c0a21aa︡{"stdout":"     pcost       dcost       gap    pres   dres   k/t\n 0:  2.6471e+00 -7.0588e-01  2e+01  8e-01  2e+00  1e+00\n 1:  3.0726e+00  2.8437e+00  1e+00  1e-01  2e-01  3e-01\n 2:  2.4891e+00  2.4808e+00  1e-01  1e-02  2e-02  5e-02\n 3:  2.4999e+00  2.4998e+00  1e-03  1e-04  2e-04  5e-04\n 4:  2.5000e+00  2.5000e+00  1e-05  1e-06  2e-06  5e-06\n 5:  2.5000e+00  2.5000e+00  1e-07  1e-08  2e-08  5e-08\nOptimal solution found.\n"}︡{"stdout":"[ 5.00e-01]\n[ 1.50e+00]\n\n"}︡
 ︠081c8298-ea4c-4f12-be72-7905cec1bd95︠
-
+RealNumber = float
+from cvxopt import matrix, solvers
+A = matrix([ [-1.0, -1.0, 0.0, 1.0], [1.0, -1.0, -1.0, -2.0] ])
+b = matrix([ 1.0, -2.0, 0.0, 4.0 ])
+c = matrix([ 2.0, 1.0 ])
+sol=solvers.lp(c,A,b)
+print(sol['x'])
+︡df176dbe-2c78-451f-80b6-970917347772︡{"stdout":"     pcost       dcost       gap    pres   dres   k/t\n 0:  2.6471e+00 -7.0588e-01  2e+01  8e-01  2e+00  1e+00\n 1:  3.0726e+00  2.8437e+00  1e+00  1e-01  2e-01  3e-01\n 2:  2.4891e+00  2.4808e+00  1e-01  1e-02  2e-02  5e-02\n 3:  2.4999e+00  2.4998e+00  1e-03  1e-04  2e-04  5e-04\n 4:  2.5000e+00  2.5000e+00  1e-05  1e-06  2e-06  5e-06\n 5:  2.5000e+00  2.5000e+00  1e-07  1e-08  2e-08  5e-08\nOptimal solution found.\n"}︡{"stdout":"[ 5.00e-01]\n[ 1.50e+00]\n\n"}︡
 ︠da3ec2f9-ab79-41dc-903c-dfcc7a2f1e3b︠
 
 ︠a75b00e1-0690-4ad9-82be-b9055a485d89i︠
@@ -125,22 +147,37 @@ def f0(n):
     for m in range(n):
         k += 2*m+1
     return k
-︡59f18d02-2cae-42b2-b9f3-0282f845449f︡
+︡7e157f5f-d716-4f10-9709-2d87fa02eedc︡
 ︠75f3aa1b-b432-4e4c-88e0-cd9d47bc1a9co︠
 %cython
 def f1(int n):
     cdef long m, k=0
+    z = 5
     for m in range(n):
         k += 2*m+1
+    print(type(z)        )
     return k
-︡031fa47a-df96-4b6f-ae38-46620a2a126c︡{"once":false,"file":{"show":false,"uuid":"e84e02f2-fdb6-49e6-846f-b80b50e26cdb","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/12203/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_12203_dir_hDFZy5_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_12203_dir_hDFZy5_a_pyx_0.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/12203/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_12203_dir_hDFZy5_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_12203_dir_hDFZy5_a_pyx_0.html?uuid=e84e02f2-fdb6-49e6-846f-b80b50e26cdb' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
+︡e6d09206-d2f7-484d-bf17-a3d48495ad1d︡{"once":false,"file":{"show":false,"uuid":"6e1aa023-2f2f-488a-9fad-e34e074ea464","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/28616/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_28616_dir_uqv0J5_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_28616_dir_uqv0J5_a_pyx_0.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/28616/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_28616_dir_uqv0J5_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_28616_dir_uqv0J5_a_pyx_0.html?uuid=6e1aa023-2f2f-488a-9fad-e34e074ea464' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
+︠fc82c39d-592e-4754-a5e1-361bc2135cae︠
+k.<a> = GF(9)
+k
+︡47fe1c54-db46-4832-a258-e13a83bafab5︡{"stdout":"Finite Field in a of size 3^2\n"}︡
 ︠19a38d95-4417-49e7-8811-22df190b812f︠
+b = a+1; c = a+2
+b, c
+︡705aa5de-a493-4a04-943b-87977d2d6424︡{"stdout":"(a + 1, a + 2)\n"}︡
+︠49a6a7f6-3f53-4634-b5c6-45f887a5f4b9︠
+%time b*c
+︡d0aee924-7a0f-4b99-8405-4062fd73e265︡{"stdout":"a\n"}︡{"stdout":"CPU time: 0.00 s, Wall time: 0.00 s\n"}︡
+︠03079baa-54af-4cb7-b791-8ea81c25122e︠
+%timeit b*c
+︡35df14d2-60de-4019-bbf8-ad6b9f07443b︡{"stdout":"625 loops, best of 3: 76.7 ns per loop\n"}︡
 ︠785aeeb2-14e9-439b-81fe-129a0aa97ec2︠
 %time f0(10^7)
-︡1b568af4-7940-4d17-9867-c0b1306ba7bb︡{"stdout":"100000000000000"}︡{"stdout":"\n"}︡{"stdout":"CPU time: 3.63 s, Wall time: 3.08 s\n"}︡
+︡32aef22a-70dc-4ee8-a949-d6b6848364a7︡{"stdout":"100000000000000"}︡{"stdout":"\n"}︡{"stdout":"CPU time: 1.22 s, Wall time: 1.22 s\n"}︡
 ︠f1f51f36-44ce-401d-b7f4-c2c0280fc955︠
 %time f1(10^7)   # very fast, C semantics (so silent overflow), etc.
-︡f2b34f9d-4f07-4577-a3d6-c7364a2326c4︡{"stdout":"100000000000000\n"}︡{"stdout":"CPU time: 0.01 s, Wall time: 0.00 s\n"}︡
+︡cbeb0e45-fa16-49b5-84f8-e060df777c7b︡{"stdout":"<type 'int'>\n100000000000000\n"}︡{"stdout":"CPU time: 0.01 s, Wall time: 0.01 s\n"}︡
 ︠24dbdf79-e556-4d85-9d5d-ed8291bc3582︠
 3.63/0.01
 ︡b1b41dd3-83e6-45c5-92fa-1c0adbf8857c︡{"stdout":"363.000000000000\n"}︡
@@ -158,14 +195,21 @@ def f1(int n):
 ︡2f97a817-4284-4748-ab5e-9e93cbd2edfa︡{"html":"<ul>\n<li><strong>GAP</strong>: Groups, Algorithms and Programming &#8211; a System for Computational Discrete Algebra</li>\n</ul>\n\n<p>&#8220;GAP is a system for computational discrete algebra, with particular emphasis on Computational Group Theory. GAP provides a programming language, a library of thousands of functions implementing algebraic algorithms written in the GAP language as well as large data libraries of algebraic objects.&#8221;\n<a href=\"http://www.gap-system.org/\">http://www.gap-system.org/</a></p>\n"}︡
 ︠c3247287-2bac-411f-8217-46b38296407c︠
 G = SymmetricGroup(4); G
-︡76453f13-2875-4741-81d5-d18dc62c5cea︡{"stdout":"Symmetric group of order 4! as a permutation group\n"}︡
+︡5203a571-267d-4555-93a4-189afb722633︡{"stdout":"Symmetric group of order 4! as a permutation group\n"}︡
+︠df073f22-3711-4473-902f-b082bc9643f0︠
+list(G)
+︡0966982c-7a95-4844-b582-2718110271d3︡{"stdout":"[(), (3,4), (2,3), (2,3,4), (2,4,3), (2,4), (1,2), (1,2)(3,4), (1,2,3), (1,2,3,4), (1,2,4,3), (1,2,4), (1,3,2), (1,3,4,2), (1,3), (1,3,4), (1,3)(2,4), (1,3,2,4), (1,4,3,2), (1,4,2), (1,4,3), (1,4), (1,4,2,3), (1,4)(2,3)]"}︡{"stdout":"\n"}︡
+︠27e2be3e-72d6-4b6c-8430-9bd5bada70f1︠
+G.algebra
 ︠5e04b852-5bfb-4014-ba7b-2e2584c85913︠
 # This uses nontrivial functionality of GAP behind the scenes...
 for H in G.normal_subgroups():
     print H
 ︡94aef2b2-7c8a-4b0a-a386-f396c67ed1c2︡{"stdout":"Subgroup of (Symmetric group of order 4! as a permutation group) generated by [()]\nSubgroup of (Symmetric group of order 4! as a permutation group) generated by [(1,3)(2,4), (1,4)(2,3)]\nSubgroup of (Symmetric group of order 4! as a permutation group) generated by [(2,4,3), (1,3)(2,4), (1,4)(2,3)]\nSubgroup of (Symmetric group of order 4! as a permutation group) generated by [(1,2), (1,2,3,4)]\n"}︡
+︠b442065d-23a1-4068-9466-37e62c458bf0︠
+groups.permutationutation.
 ︠73112e97-9061-413a-954a-80a7540aff5a︠
-groups.permutation.<tab>
+groups.permutatio
 ︠84443dba-998f-45e9-b3b2-a0b97ff94a0fi︠
 %md
 Directly using GAP (see <http://www.gap-system.org/Manuals/doc/tut/chap5.html#X8171DAF2833FF728>)
@@ -213,24 +257,24 @@ NOTE: You can switch a whole worksheet into gap mode by typing
 ︡33447702-a5c5-4b5a-b543-2adb26abad46︡{"html":"<ul>\n<li><strong>Pillow</strong>: image processing capabilities to [Sage].</li>\n</ul>\n\n<p><a href=\"http://pillow.readthedocs.org/en/latest/\">http://pillow.readthedocs.org/en/latest/</a> says Pillow:</p>\n\n<ul>\n<li><p>provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.</p></li>\n<li><p>designed for fast access to data stored in a few basic pixel formats. [&#8230;] a solid foundation for a general image processing tool.</p></li>\n<li><p>create thumbnails, convert between file formats, print images, etc.</p></li>\n<li><p>point operations, filtering with a set of built-in convolution kernels, and colour space conversions, image resizing, rotation and arbitrary affine transforms.</p></li>\n</ul>\n"}︡
 ︠86c3cfab-7bab-4ae9-8934-e03631685c58︠
 from PIL import Image
-︡18c542f8-5332-4eaa-a4cf-452579772658︡
+︡04b0ded7-0a2a-49a4-be3e-8d9324e8aef4︡
 ︠caf21218-8322-4880-b3d9-581ce7f97b6c︠
 im = Image.open("santi.png")
-︡eac281ad-a7f3-4300-89fa-165a9538fbf0︡
-︠c403a4be-3982-43b8-b738-11f9f934429aoo︠
+︡4baabddc-e9b1-4a3b-b300-d5118a33580d︡
+︠c403a4be-3982-43b8-b738-11f9f934429ao,o︠
 print(im.format, im.size, im.mode)
 ︡b497eefe-922b-409f-a72a-8990ee8e45b4︡{"stdout":"('PNG', (510, 472), 'RGB')\n"}︡
-︠593f4c13-c1f2-47cf-b5e2-2b46354b237eoo︠
+︠593f4c13-c1f2-47cf-b5e2-2b46354b237eo,o︠
 # convert file to a JPEG (and view it)
 im.save("tmp.jpg"); salvus.file("tmp.jpg")
 ︡7aac346b-18d2-468f-866b-c581d96dffc6︡{"once":false,"file":{"show":true,"uuid":"3f8dd807-ae11-4d8d-8c79-3aa26fe00ef3","filename":"tmp.jpg"}}︡
-︠585d6671-abec-4fb8-89ce-38d80863d848oo︠
+︠585d6671-abec-4fb8-89ce-38d80863d848o,o︠
 # create a thumbnail
 im = Image.open("santi.png")
 im.thumbnail((128,128))
 im.save('thumb.png'); salvus.file('thumb.png')
 ︡e7a17e6c-acff-4987-ba4b-b5f99098531b︡{"once":false,"file":{"show":true,"uuid":"043225f0-ae89-4eba-a084-5d8737dda60f","filename":"thumb.png"}}︡
-︠85f7eab8-985a-4ae8-9975-b7e11cd9a64eoo︠
+︠85f7eab8-985a-4ae8-9975-b7e11cd9a64eo,o︠
 # copy, flip, and paste a region
 im = Image.open("santi.png")
 box = (100, 100, 400, 400)
@@ -239,20 +283,20 @@ region = region.transpose(Image.ROTATE_180)
 im.paste(region, box)
 im.save("tmp3.jpg"); salvus.file("tmp3.jpg")
 ︡40971761-6199-46e3-b646-18c5bcb5bcd8︡{"once":false,"file":{"show":true,"uuid":"0ee1298d-8254-41fc-abb1-ada624536918","filename":"tmp3.jpg"}}︡
-︠2a59939c-5f19-4fb8-b992-ef19f3c23276oo︠
+︠2a59939c-5f19-4fb8-b992-ef19f3c23276o,o︠
 # copy, rotate, and paste a region
 im = Image.open("santi.png")
 box = (100, 100, 400, 400); region = im.crop(box)
 region = region.rotate(-30)
 im.paste(region, box)
 im.save("tmp.jpg"); salvus.file("tmp.jpg")
-︡d61f207c-2133-45d9-9129-054c870e9f32︡{"once":false,"file":{"show":true,"uuid":"7f49a584-5298-4d82-a155-ec75555f36f8","filename":"tmp.jpg"}}︡
-︠26e569ea-641c-4f5f-9ab4-397b1ecb0763oo︠
+︡c045403a-2cd0-4a56-87d7-8d9897346865︡{"once":false,"file":{"show":true,"uuid":"7f49a584-5298-4d82-a155-ec75555f36f8","filename":"tmp.jpg"}}︡
+︠26e569ea-641c-4f5f-9ab4-397b1ecb0763o,o︠
 from PIL import ImageFilter
 out = im.filter(ImageFilter.CONTOUR)
 out.save("tmp.jpg"); salvus.file("tmp.jpg")
 ︡c24eca11-bdcc-4651-a374-854aaeb2712f︡{"once":false,"file":{"show":true,"uuid":"c3c738d8-5a43-4beb-a301-78536f076e40","filename":"tmp.jpg"}}︡
-︠ca5d6df0-b158-4b6c-897d-0bf2fd91a583oo︠
+︠ca5d6df0-b158-4b6c-897d-0bf2fd91a583o,o︠
 from PIL import ImageFilter
 filters = [x for x in dir(ImageFilter) if hasattr(getattr(ImageFilter,x),'name')]
 @interact
@@ -260,8 +304,8 @@ def _(filter = selector(filters,buttons=True)):
     out = im.filter(getattr(ImageFilter, filter))
     out.save("tmp.jpg"); salvus.file("tmp.jpg")
 
-︡d0ad09c9-b97a-4847-bfee-b985de3d4ebb︡{"interact":{"style":"None","flicker":false,"layout":[[["filter",12,null]],[["",12,null]]],"id":"39d527fa-a2fd-4ee9-9884-e4aa5468d94c","controls":[{"buttons":true,"control_type":"selector","ncols":null,"button_classes":null,"default":0,"lbls":["BLUR","CONTOUR","DETAIL","EDGE_ENHANCE","EDGE_ENHANCE_MORE","EMBOSS","FIND_EDGES","GaussianBlur","MaxFilter","MedianFilter","MinFilter","ModeFilter","RankFilter","SHARPEN","SMOOTH","SMOOTH_MORE","UnsharpMask"],"label":"filter","nrows":null,"width":null,"var":"filter"}]}}︡
-︠d43d8016-9340-43e3-b958-298a459a37ecoo︠
+︡3b29282d-c847-4418-99a7-0d59d6c7b2ff︡{"interact":{"style":"None","flicker":false,"layout":[[["filter",12,null]],[["",12,null]]],"id":"bc4fe461-4d3b-4a1f-83e1-d05d217cd6a9","controls":[{"buttons":true,"control_type":"selector","ncols":null,"button_classes":null,"default":0,"lbls":["BLUR","CONTOUR","DETAIL","EDGE_ENHANCE","EDGE_ENHANCE_MORE","EMBOSS","FIND_EDGES","GaussianBlur","MaxFilter","MedianFilter","MinFilter","ModeFilter","RankFilter","SHARPEN","SMOOTH","SMOOTH_MORE","UnsharpMask"],"label":"filter","nrows":null,"width":null,"var":"filter"}]}}︡
+︠d43d8016-9340-43e3-b958-298a459a37eco,o︠
 
 
 
