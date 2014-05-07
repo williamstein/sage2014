@@ -6,7 +6,7 @@
 
 ## May 7, 2014
 
-Screencast: REMIND ME!?
+Screencast: <http://youtu.be/ry-hbfTlVqI>
 
 **Plan**
 
@@ -20,7 +20,7 @@ Screencast: REMIND ME!?
 
 - Overview of what is in Sage -- continued
 
-︡b58f92d2-6fa9-4248-8e32-06e877cc38f7︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Overview of Sage</h2>\n\n<h2>May 7, 2014</h2>\n\n<p>Screencast: REMIND ME!?</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Build Sage from source: quick checkup</p></li>\n<li><p>Sync changes: some remarks&#8230;</p></li>\n<li><p>HTML/CSS/JS instead of interact</p></li>\n<li><p>Overview of what is in Sage &#8211; continued</p></li>\n</ul>\n"}︡
+︡10383ae1-b93c-43a4-8d09-bfe4c89ccc1f︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Overview of Sage</h2>\n\n<h2>May 7, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/ry-hbfTlVqI\">http://youtu.be/ry-hbfTlVqI</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Build Sage from source: quick checkup</p></li>\n<li><p>Sync changes: some remarks&#8230;</p></li>\n<li><p>HTML/CSS/JS instead of interact</p></li>\n<li><p>Overview of what is in Sage &#8211; continued</p></li>\n</ul>\n"}︡
 ︠1c500ce6-486f-4b84-8d20-c906db56942e︠
 @interact
 def f(n=5):
