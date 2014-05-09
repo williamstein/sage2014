@@ -6,14 +6,14 @@
 
 ## May 9, 2014
 
-Screencast: REMIND ME
+Screencast: <http://youtu.be/YrO89QIizxI>
 
 **Plan**
 
 - Questions
 
 - Cython
-︡809e0640-cfde-4385-8773-32bab80ed25f︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Overview of Sage</h2>\n\n<h2>May 9, 2014</h2>\n\n<p>Screencast: REMIND ME</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Cython</p></li>\n</ul>\n"}︡
+︡29bf1b24-176c-4998-8a58-45c6e68e38d6︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Overview of Sage</h2>\n\n<h2>May 9, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/YrO89QIizxI\">http://youtu.be/YrO89QIizxI</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Cython</p></li>\n</ul>\n"}︡
 ︠b71a5cf7-0afb-4b8b-86e4-44aadf41ef02i︠
 
 %md
@@ -117,24 +117,28 @@ Let's take a very, very simple example in Python and speed it up using Cython.
 **variance** = the mean of the squares of the difference of each value from the mean = $\sum \frac{1}{n} (x_i-\mu)^2$.
 
 ︡680f033e-aedb-4a7e-adc2-101df26f1d7c︡{"html":"<h2>Problem: variance of a list of floating point numbers</h2>\n\n<p><strong>variance</strong> = the mean of the squares of the difference of each value from the mean = $\\sum \\frac{1}{n} (x_i-\\mu)^2$.</p>\n"}︡
+︠5eb37ce8-9545-45ce-9de0-2ac387576d6e︠
+
 ︠eaf5b2a5-14f6-4080-92a6-583ba791bb68︠
+%python
 # straightforward Python implementation
 def var0(v):
     m = float(sum(v))/len(v)
     return sum([(x-m)**2 for x in v])/len(v)  # use ** so this is standard Python
-︡8c38a9ce-8d7c-43aa-a443-6966bf510f34︡
+︡5240cd0b-d11c-4fba-a599-cc2a25e48b36︡
 ︠e32d47f0-2ce9-4768-97bb-4c17a4120805︠
 v = [random() for _ in range(10)]
 v
-︡09f51036-ab3c-4a1b-aec2-980857591ada︡{"stdout":"[0.8589381826391068, 0.8681592440262227, 0.6892358810838731, 0.5800153806503944, 0.6653829882189602, 0.18009338714825207, 0.9077079599252226, 0.8509199973502831, 0.9766987594487242, 0.7177646364529632]\n"}︡
+︡6da9bf48-833a-4963-891c-28c8be7824e4︡{"stdout":"[0.1241999666440795, 0.7688493160210794, 0.27251914257554644, 0.4032333800198763, 0.9485561288153582, 0.696677854333964, 0.7357727102496147, 0.7339442720461534, 0.5379013599960007, 0.7868187591689886]\n"}︡
 ︠a92bca6e-36bb-4eb4-8115-16059e6be567︠
 var0(v)
-︡a0cacd4a-b2a4-4bef-beac-45204cc2c9dd︡{"stdout":"0.04736519346871963\n"}︡
+︡3f928b72-e578-4745-965f-2914d87b6fd5︡{"stdout":"0.06068201681775176\n"}︡
 ︠13560568-57ae-4151-aa18-a6ce6a528cc0︠
 v = [random() for _ in range(10000)]
+︡680d8987-c4fa-469e-85d2-c7e49bf58e95︡
 ︠ba0eef40-8766-4e83-b92e-e4bbdc480e47︠
 %timeit var0(v)
-︡98435305-bffb-4420-bcf1-af86dc53b5c2︡{"stdout":"25 loops, best of 3: 8.63 ms per loop"}︡{"stdout":"\n"}︡
+︡4beb9695-0517-4189-a955-978c1ff2c6dd︡{"stdout":"125 loops, best of 3: 4.07 ms per loop"}︡{"stdout":"\n"}︡
 ︠c62c9af4-23f0-48d8-ad24-b93e69bb876e︠
 # Straightforward Cython implementation
 # (if the "show auto-generated" doesn't work properly for you -- with yellow -- restart your project server, since I just fixed a bug in this.)
@@ -142,13 +146,22 @@ v = [random() for _ in range(10000)]
 def var1(v):
     m = float(sum(v))/len(v)
     return sum([(x-m)**2 for x in v])/len(v)
-︡b320c980-c672-4456-81a6-71825cb37595︡{"once":false,"file":{"show":false,"uuid":"691f0279-4c77-4c59-bbb6-f2e9c9691f1d","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_wbVbwx_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_wbVbwx_a_pyx_0.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_wbVbwx_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_wbVbwx_a_pyx_0.html?uuid=691f0279-4c77-4c59-bbb6-f2e9c9691f1d' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
+︡4b539cee-b2d7-42ef-bac0-c7466994c211︡{"once":false,"file":{"show":false,"uuid":"f2309c10-79da-4755-88d1-5a6b61c8be6b","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_WBuxvh_a_pyx/interrupt.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_WBuxvh_a_pyx/interrupt.html?uuid=f2309c10-79da-4755-88d1-5a6b61c8be6b' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
 ︠9853e6b7-4bf1-4dae-96ea-f4b902a42712︠
 %timeit var1(v)
-︡69b8a04e-a520-46bb-9a76-c7ac3d23572e︡{"stdout":"125 loops, best of 3: 3.08 ms per loop"}︡{"stdout":"\n"}︡
+︡e528306c-8f24-460b-9bce-ded8e04a5cdf︡{"stdout":"125 loops, best of 3: 2.44 ms per loop"}︡{"stdout":"\n"}︡
 ︠8fbc4063-ae67-48dc-adca-2d86462a0b91︠
-8.63/3.08
-︡d3675de5-8df6-4d90-98e2-f0270ded820b︡{"stdout":"2.80194805194805\n"}︡
+4.07/2.44
+︡d792b177-96d3-4e16-bacf-6667ba31502b︡{"stdout":"1.66803278688525\n"}︡
+︠e3e500c6-889f-4951-9b04-53e1b00304cb︠
+a =float(7)
+b = a
+c = a
+c
+︡e81ea1f1-4f8c-46f6-ba03-b63d029a3194︡{"stdout":"7.0\n"}︡
+︠6b23a284-bc53-406f-9e2f-c48d772a9dd0︠
+del b
+︡08877ccc-4593-4556-8c28-74df71290d6d︡
 ︠aa255dd5-1b77-495b-a2bf-444427344041︠
 # Declare some types
 
@@ -157,13 +170,13 @@ def var2(list v):
     cdef double m, x
     m = float(sum(v))/len(v)
     return sum([(x-m)**2 for x in v])/len(v)
-︡bcb9a961-c794-4d62-ba11-6ef53c13adbe︡{"once":false,"file":{"show":false,"uuid":"f56adb5e-24d0-44df-94b5-b03867d712dc","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_9ruo88_a_pyx/stdsage.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_9ruo88_a_pyx/stdsage.html?uuid=f56adb5e-24d0-44df-94b5-b03867d712dc' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
+︡d34a5241-d699-4129-b3ff-0fe33166f237︡{"once":false,"file":{"show":false,"uuid":"cd2303b7-5453-464c-bf84-e75460155833","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_pPHKcV_a_pyx/stdsage.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_pPHKcV_a_pyx/stdsage.html?uuid=cd2303b7-5453-464c-bf84-e75460155833' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
 ︠593d401a-cf7b-4b22-8336-d040aa2624c8︠
 %timeit var2(v)
-︡c8a92698-5182-492e-acaa-feaccba13b8c︡{"stdout":"625 loops, best of 3: 786 µs per loop"}︡{"stdout":"\n"}︡
+︡fa442a0d-99c4-4adb-aa24-5d3a51937ff0︡{"stdout":"625 loops, best of 3: 807 µs per loop"}︡{"stdout":"\n"}︡
 ︠2674d3de-7cf3-4b2d-a74b-a30fe5451e08︠
-8.63/.786
-︡1f01eb9c-ef2a-423a-95c3-22b41439faff︡{"stdout":"10.9796437659033\n"}︡
+4.07/.786
+︡6742bd22-ae56-41e4-b18e-1b03ad53bb00︡{"stdout":"5.17811704834606\n"}︡
 ︠a083a526-15a3-4e8f-ad4c-b89cc029c637︠
 
 # Don't call Python's sum function, but do the sum ourselves; also don't use square which is potentially slow.
@@ -180,13 +193,13 @@ def var3(list v):
     for x in v:
         s += (x-m)*(x-m)
     return s/n
-︡cd37badd-8958-4822-ab44-583c4c27817c︡{"once":false,"file":{"show":false,"uuid":"55f5ede0-a2bb-4ed2-a5a1-a6c6b67955fb","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_Oi43Zg_a_pyx/stdsage.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_Oi43Zg_a_pyx/stdsage.html?uuid=55f5ede0-a2bb-4ed2-a5a1-a6c6b67955fb' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
+︡0a08cda4-195a-4c74-8f6d-82c6cf59228d︡{"once":false,"file":{"show":false,"uuid":"b2a2561a-08e0-4134-8f30-1f7706b0c73f","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_xYuHv5_a_pyx/interrupt.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_xYuHv5_a_pyx/interrupt.html?uuid=b2a2561a-08e0-4134-8f30-1f7706b0c73f' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
 ︠668b47aa-eb37-4583-a7a8-7e0cb7f3a4cf︠
 %timeit var3(v)
-︡0a1555ed-fbb6-4a39-b00d-5c5001a0c9d8︡{"stdout":"625 loops, best of 3: 209 µs per loop"}︡{"stdout":"\n"}︡
+︡903ec259-27a6-427d-9984-58cbb884caa8︡{"stdout":"625 loops, best of 3: 194 µs per loop"}︡{"stdout":"\n"}︡
 ︠a95b2ca2-fad2-466f-ab05-f02ef8a23c3b︠
-8.63/.209
-︡1a0a4479-d161-4f3b-81cb-847d8d8b75fe︡{"stdout":"41.2918660287081\n"}︡
+4.07/.209
+︡27c38993-e6b7-4b1e-a9e0-c8f70ef13434︡{"stdout":"19.4736842105263\n"}︡
 ︠37d0cfd1-fad2-44e2-91ac-39764ccd7ec7︠
 # Next, make our own data type for a list of doubles
 ︠598a80d6-a464-40c7-b911-76fa6f933086︠
@@ -200,7 +213,8 @@ cdef class DoubleList:
         cdef int i
         for i in range(self.n):
             self.v[i] = v[i]
-            
+    def __del__(self):
+        sage_free(self.v)            
     def variance(self):
         cdef double m, x, s
         cdef int i, n
@@ -214,19 +228,23 @@ cdef class DoubleList:
             x = self.v[i]
             s += (x-m)*(x-m)
         return s/n        
-︡a59e549b-9173-47dd-8202-8ffe79d69c2d︡{"once":false,"file":{"show":false,"uuid":"66159b17-c255-42be-908c-f6c61681bd01","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_rD2Ets_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_rD2Ets_a_pyx_0.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_rD2Ets_a_pyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_rD2Ets_a_pyx_0.html?uuid=66159b17-c255-42be-908c-f6c61681bd01' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
+︡8daf37cc-581a-4fad-8235-56114f574872︡{"once":false,"file":{"show":false,"uuid":"22a43544-ea7d-4f57-96b8-441789d55ff8","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_8g25Tr_a_pyx/interrupt.html"}}︡{"html":"<a href='/blobs//projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/9366/spyx/_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_8g25Tr_a_pyx/interrupt.html?uuid=22a43544-ea7d-4f57-96b8-441789d55ff8' target='_new' class='btn btn-small '>Show auto-generated code &nbsp;<i class='fa fa-external-link'></i></a>"}︡
 ︠c25b10b6-0109-4349-8f39-740bfeab2d25︠
 vd = DoubleList(v)
-︡d9a0be6f-de92-4421-9c96-daa71827469b︡
+︡975a6469-ad58-4ba5-97ca-280685d942f1︡
+︠db30d6b0-e190-4e2d-8ef0-e8607e8b5239︠
+vd
+︡b8e010d2-5c5c-4f16-a356-34ea53dae5bb︡{"stdout":"<_projects_74af30b7_ad25_4308_a02e_c71fcd84de6e__sage_temp_compute19dc0_9366_dir_8g25Tr_a_pyx_0.DoubleList object at 0x8c9f230>\n"}︡
 ︠e5e656ad-f202-41ac-83bd-d965f5e41a0d︠
 %timeit vd.variance()
-︡ebc12d17-4b0c-4885-a033-a6bad847ae6c︡{"stdout":"625 loops, best of 3: 29.8 µs per loop"}︡{"stdout":"\n"}︡
+︡2b9eede2-696d-4f75-97ff-170995310ec9︡{"stdout":"625 loops, best of 3: 29.8 µs per loop"}︡{"stdout":"\n"}︡
 ︠eca694d1-f0fd-4e63-8476-60c00a7bbb59︠
 # WIN
-8.63/.0298
-︡9e3f8f3b-547a-4c34-8dbf-e08a624f32cd︡{"stdout":"289.597315436242\n"}︡
+4.07/.0298
+︡fa67015b-aa29-43a8-8803-2e2f8c9220f4︡{"stdout":"136.577181208054\n"}︡
 ︠71f1c795-073b-4cc2-8c68-80e214a5577b︠
 
+    
 ︠c3b7a228-0070-4bf4-b73b-4e7a73b00866︠
 
 ︠ffd5f277-b6ac-4cdc-9206-7be8b961444a︠
