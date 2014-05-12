@@ -17,3 +17,4 @@
 - May 5 <http://youtu.be/tNQN7WPyBD4>
 - May 7 <http://youtu.be/ry-hbfTlVqI>
 - May 9 <http://youtu.be/YrO89QIizxI> (Cython)
+- May 12 <http://youtu.be/r0kxxxZABjk>

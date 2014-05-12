@@ -1,4 +1,3 @@
-
 ︠7af91bd3-1d59-4cbf-bcd4-c066b0c31904i︠
 %md
 
@@ -7,11 +6,13 @@
 
 ## May 12, 2014
 
-Screencast: REMIND ME!
+Screencast: <http://youtu.be/r0kxxxZABjk>
 
 **Plan**
 
 - Questions
+
+- Project status reports
 
 - Homework:
    - I collected 6, redistributed grading, etc.  Let me know if you're missing something.
@@ -24,8 +25,8 @@ Screencast: REMIND ME!
    - Cython support for C++
 
 
-Note: article about GO for student doing a project on it: <http://www.wired.com/2014/05/the-world-of-computer-go/>
-︡24a6ea27-e831-4abf-b5b0-f3aa5e5548c9︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>A Tour of More Advanced Cython Functionality</h2>\n\n<h2>May 12, 2014</h2>\n\n<p>Screencast: REMIND ME!</p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Homework:</p>\n\n<ul>\n<li>I collected 6, redistributed grading, etc.  Let me know if you&#8217;re missing something.</li>\n<li>Go over hw7, which is about Cython and your projects.</li>\n</ul></li>\n<li><p>Cython, part 2:</p>\n\n<ul>\n<li>Creating a standalone Cython module</li>\n<li>Cython support for numpy &#8211; it doesn&#8217;t seem to work at all in Sage right now due to incompatibilities, so we&#8217;re skipping it. Sigh.</li>\n<li>Editing Cython code in the Sage library</li>\n<li>Cython support for C++</li>\n</ul></li>\n</ul>\n\n<p>Note: article about GO for student doing a project on it: <a href=\"http://www.wired.com/2014/05/the-world-of-computer-go/\">http://www.wired.com/2014/05/the-world-of-computer-go/</a></p>\n"}︡
+
+︡4d1177a0-2fcd-437d-a2bf-d433683acf68︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>A Tour of More Advanced Cython Functionality</h2>\n\n<h2>May 12, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/r0kxxxZABjk\">http://youtu.be/r0kxxxZABjk</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Project status reports</p></li>\n<li><p>Homework:</p>\n\n<ul>\n<li>I collected 6, redistributed grading, etc.  Let me know if you&#8217;re missing something.</li>\n<li>Go over hw7, which is about Cython and your projects.</li>\n</ul></li>\n<li><p>Cython, part 2:</p>\n\n<ul>\n<li>Creating a standalone Cython module</li>\n<li>Cython support for numpy &#8211; it doesn&#8217;t seem to work at all in Sage right now due to incompatibilities, so we&#8217;re skipping it. Sigh.</li>\n<li>Editing Cython code in the Sage library</li>\n<li>Cython support for C++</li>\n</ul></li>\n</ul>\n"}︡
 ︠21ced3ae-ee45-4a0b-b2f6-4613ee02c74e︠
 
 ︠ab315ae3-ba80-4a83-a691-b05fe5e79c79i︠
@@ -48,14 +49,14 @@ $z_{n+1} = z_n^2 + c$ remains bounded.
 # BIG WARNING: though this appears to work, once you import *once* you can never import/reload again until you
 # completely restart the worksheet (or to randomly name the cython module).
 sys.path.append(".")
-import mandelcy1
-︡de31680d-5f91-4b80-a36e-4065d902d48d︡
+import mandel
+︡17bb4b75-b7b4-48b7-8abf-cc47216a759f︡
 ︠4328c6da-7e3f-4ba7-811c-90df57f6f103︠
-mandelcy1.demo()
-︡aac55fe9-c8e1-4f49-97df-e858c7771771︡{"stdout":"it took 0.305397 seconds to run"}︡{"stdout":"\n"}︡
+d=mandel.demo(1000)
+︡5ebe4dec-aad4-45ea-a080-5c46a7a0a8b0︡{"stdout":"it took 0.699130 seconds to run"}︡{"stdout":"\n"}︡
 ︠7db999d1-5ec9-4f43-b269-70aed9ed6a63︠
 salvus.file("mandelbrot.png")
-︡5b30293f-79ba-49f2-90f9-996ac722199a︡{"once":false,"file":{"show":true,"uuid":"0bb86d63-f5d8-446f-98ed-8d914159a511","filename":"mandelbrot.png"}}︡
+︡0f39ec7d-8318-4ac3-a155-8209d31b3c7e︡{"once":false,"file":{"show":true,"uuid":"9b041772-5d46-4736-944b-3217a593e041","filename":"mandelbrot.png"}}︡
 ︠6f0eb5e3-0c43-4e95-807f-7413677337e2︠
 
 ︠6e08f556-c6d6-4ac1-afd8-88641af05092︠
@@ -135,6 +136,11 @@ v =DoubleList(range(1,100000))
 ︠bcf138ea-e743-40b5-8e5c-3b1905f732d6︠
 %timeit v.log1()
 ︡a7d1bbc2-4d9a-4779-a11a-d3c7c903ffde︡{"stdout":"25 loops, best of 3: 9.07 ms per loop"}︡{"stdout":"\n"}︡
+︠00999691-1cb3-4ec5-85dd-84898d42574f︠
+print "hi"
+salvus.javascript("console.log('hi')", once=True)
+print "bye"
+︡e7c02684-0d4a-4844-8b7d-bcb75c7554fa︡{"stdout":"hi\n"}︡{"stdout":"bye\n"}︡
 ︠f71b401d-a732-4104-a9c3-94efaf1f1e18︠
 
 
