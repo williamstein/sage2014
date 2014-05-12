@@ -104,8 +104,8 @@ C is first and Python is nearly last, being over 50 times slower.
  - but Python is so nice and fun.
  - Extending Python with C/C++: <https://docs.python.org/2/extending/extending.html>
  - Cython: <cython.org> -- basically makes "extending Python with C/C++" way, way easier than the official approach
- 
-Let's take a very, very simple example in Python and speed it up using Cython.  
+
+Let's take a very, very simple example in Python and speed it up using Cython.
 
 
 ︡3ed68c34-2576-4ff2-b067-19ccb26b1a92︡{"html":"<h2>???</h2>\n\n<ul>\n<li>why?</li>\n<li>what can we do?</li>\n<li>but Python is so nice and fun.</li>\n<li>Extending Python with C/C++: <a href=\"https://docs.python.org/2/extending/extending.html\">https://docs.python.org/2/extending/extending.html</a></li>\n<li>Cython: <cython.org> &#8211; basically makes &#8220;extending Python with C/C++&#8221; way, way easier than the official approach</li>\n</ul>\n\n<p>Let&#8217;s take a very, very simple example in Python and speed it up using Cython.</p>\n"}︡
@@ -185,7 +185,7 @@ def var2(list v):
 def var3(list v):
     cdef double m, x, s, n
     n = len(v)
-    s = 0    
+    s = 0
     for x in v:
         s += x
     m = s/n
@@ -214,12 +214,12 @@ cdef class DoubleList:
         for i in range(self.n):
             self.v[i] = v[i]
     def __del__(self):
-        sage_free(self.v)            
+        sage_free(self.v)
     def variance(self):
         cdef double m, x, s
         cdef int i, n
         n = self.n
-        s = 0    
+        s = 0
         for i in range(n):
             s += self.v[i]
         m = s/n
@@ -244,7 +244,7 @@ vd
 ︡fa67015b-aa29-43a8-8803-2e2f8c9220f4︡{"stdout":"136.577181208054\n"}︡
 ︠71f1c795-073b-4cc2-8c68-80e214a5577b︠
 
-    
+
 ︠c3b7a228-0070-4bf4-b73b-4e7a73b00866︠
 
 ︠ffd5f277-b6ac-4cdc-9206-7be8b961444a︠
