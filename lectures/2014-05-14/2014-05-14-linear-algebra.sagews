@@ -1,3 +1,4 @@
+
 ︠7af91bd3-1d59-4cbf-bcd4-c066b0c31904i︠
 %md
 
@@ -6,7 +7,7 @@
 
 ## May 14, 2014
 
-Screencast: <http://youtu.be/r0kxxxZABjk>
+Screencast:
 
 **Plan**
 
@@ -15,6 +16,8 @@ Screencast: <http://youtu.be/r0kxxxZABjk>
 - Homework:
    - hw7, etc., due Monday morning at 6am
    - talk to Simon about any grading related issues
+   - Simon extra office hours: "Thursday from 13:00-15:00 in my office, PDL C-430. Come chat if you have any queries about the homework for this week, the grading for last week, or the grading results from the week before!"
+
 
 - Topic: Exact linear algebra
    - solving a system of equations: simple small naive approach
@@ -28,7 +31,7 @@ Screencast: <http://youtu.be/r0kxxxZABjk>
 
 
 
-︡42f9289c-c834-4007-99f1-99e9fd97c39e︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Linear Algebra</h2>\n\n<h2>May 14, 2014</h2>\n\n<p>Screencast: <a href=\"http://youtu.be/r0kxxxZABjk\">http://youtu.be/r0kxxxZABjk</a></p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Homework:</p>\n\n<ul>\n<li>hw7, etc., due Monday morning at 6am</li>\n<li>talk to Simon about any grading related issues</li>\n</ul></li>\n<li><p>Topic: Exact linear algebra</p>\n\n<ul>\n<li>solving a system of equations: simple small naive approach</li>\n<li>creating matrices and vectors</li>\n<li>solving a matrix equations</li>\n<li>computing invariants of matrices</li>\n<li>vector spaces</li>\n<li>linear algebra over finite fields (very important for coding theory)</li>\n<li>remarks about asymptotically fast algorithms</li>\n</ul></li>\n</ul>\n"}︡
+︡956c4dbf-3a29-4978-a429-709612b87a6b︡{"html":"<h1>Math 480b &#8211; Sage Course</h1>\n\n<h2>Linear Algebra</h2>\n\n<h2>May 14, 2014</h2>\n\n<p>Screencast: </p>\n\n<p><strong>Plan</strong></p>\n\n<ul>\n<li><p>Questions</p></li>\n<li><p>Homework:</p>\n\n<ul>\n<li>hw7, etc., due Monday morning at 6am</li>\n<li>talk to Simon about any grading related issues</li>\n<li>Simon extra office hours: &#8220;Thursday from 13:00-15:00 in my office, PDL C-430. Come chat if you have any queries about the homework for this week, the grading for last week, or the grading results from the week before!&#8221;</li>\n</ul></li>\n<li><p>Topic: Exact linear algebra</p>\n\n<ul>\n<li>solving a system of equations: simple small naive approach</li>\n<li>creating matrices and vectors</li>\n<li>solving a matrix equations</li>\n<li>computing invariants of matrices</li>\n<li>vector spaces</li>\n<li>linear algebra over finite fields (very important for coding theory)</li>\n<li>remarks about asymptotically fast algorithms</li>\n</ul></li>\n</ul>\n"}︡
 ︠bca2cebc-deac-4e93-81f0-7bdb8863e21bi︠
 %md
 ## Exact Linear Algebra
@@ -57,7 +60,16 @@ v = [2*x + 3*y + 5*z == 10,
 # solve the equations for x,y,z
 s = solve(v, [x,y,z], solution_dict=True)
 s
-︡687b40b2-7bb0-414f-9a52-4d0d4b983bc8︡{"stdout":"[{z: 62/41, x: 35/41, y: 10/41}]\n"}︡
+︡fb2bc50b-1a4f-4944-8f0b-ad958bb3aaa0︡{"stdout":"[{z: 62/41, x: 35/41, y: 10/41}]\n"}︡
+︠909e799b-7c7a-4db9-9ca9-5db838af48cc︠
+solve(sin(3*x)+cos(x*pi) == 0, x)
+︡79727a64-8c9b-46ef-8539-f653694806b0︡{"stdout":"[cos(pi*x) == -sin(3*x)]"}︡{"stdout":"\n"}︡
+︠7b100923-39ce-4712-91dd-2da4b8aea94a︠
+find_root(sin(3*x)+cos(x*pi), 0, 15)
+︡40677830-619f-43f0-9100-140ecd9d5102︡{"stdout":"14.067002298373158\n"}︡
+︠f7cf8db4-afc5-49ba-a000-cba9ef1588f7︠
+plot(sin(3*x)+cos(x*pi), 0, 15)
+︡626e94e7-7238-43ce-9cce-feec7473de3f︡{"once":false,"file":{"show":true,"uuid":"c85882e1-bff4-44c9-a2a6-64c9add18b54","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/20896/tmp_J6lZoG.png"}}︡
 ︠7cd066f7-73ef-439e-b390-e0b628ebee5e︠
 # the only solution:
 t = s[0]; t
@@ -79,9 +91,11 @@ solve(v,[x,y,z])
 ︡c319c079-d670-4c86-8db2-f86f7ed95b63︡{"stdout":"[[x == (-4.59043682722 - 2.3161925967*I), y == (-9.28326444764 - 4.05333704422*I), z == (1.28701382069 - 6.07386640933*I)], [x == (-4.59043682722 + 2.3161925967*I), y == (-9.28326444764 + 4.05333704422*I), z == (1.28701382069 + 6.07386640933*I)], [x == 0.930873621713, y == 0.379028882378, z == 1.42597239649], [x == 3, y == 4, z == -4]]"}︡{"stdout":"\n"}︡
 ︠e4376cb1-04ef-4630-81c5-8261b08a7164︠
 # solve a cubic algebraic equation
-show(solve(x^3 + 5*x + 2, x))
-︡2c876434-e948-46fd-b32f-44cc28c85a55︡{"tex":{"tex":"\\left[x = -\\frac{1}{2} \\, {\\left(\\frac{2}{9} \\, \\sqrt{38} \\sqrt{3} - 1\\right)}^{\\frac{1}{3}} {\\left(i \\, \\sqrt{3} + 1\\right)} + \\frac{-5 i \\, \\sqrt{3} + 5}{6 \\, {\\left(\\frac{2}{9} \\, \\sqrt{38} \\sqrt{3} - 1\\right)}^{\\frac{1}{3}}}, x = -\\frac{1}{2} \\, {\\left(\\frac{2}{9} \\, \\sqrt{38} \\sqrt{3} - 1\\right)}^{\\frac{1}{3}} {\\left(-i \\, \\sqrt{3} + 1\\right)} + \\frac{5 i \\, \\sqrt{3} + 5}{6 \\, {\\left(\\frac{2}{9} \\, \\sqrt{38} \\sqrt{3} - 1\\right)}^{\\frac{1}{3}}}, x = {\\left(\\frac{2}{9} \\, \\sqrt{38} \\sqrt{3} - 1\\right)}^{\\frac{1}{3}} - \\frac{5}{3 \\, {\\left(\\frac{2}{9} \\, \\sqrt{38} \\sqrt{3} - 1\\right)}^{\\frac{1}{3}}}\\right]","display":true}}︡
+solve(x^5 + 5*x + 2, x)
+︡fbc88e30-698d-4e96-9e70-ed355fa1661b︡{"stdout":"[0 == x^5 + 5*x + 2]\n"}︡
 ︠91fa1c0d-9d61-4437-b37c-bae6f361ac59︠
+
+︠9a7cf088-b58b-4b58-9ac8-d6e903edbd05︠
 
 ︠8276c3c2-e196-479f-a106-a8f9206580eei︠
 %md
@@ -93,20 +107,66 @@ show(solve(x^3 + 5*x + 2, x))
 #2*x - 5*y + z == 2
 
 m = matrix(3,3, [2,3,5,  7,-4,0,  2,-5,1])
+
 v = vector([10,5,2])
-︡c5fd9239-5ec5-493c-b43e-f4105db734ba︡
+︡7dcbb62e-d958-4d23-8f6d-929eb39665ec︡
+︠599c21e9-1fd1-46c8-b548-c6c6205a551d︠
+m[0,0]
+︡f1f71091-ec6c-4847-8e21-ae92cd322e0c︡{"stdout":"2\n"}︡
+︠b2916c0b-fe72-45e6-9713-1ef85edb4a6f︠
+m[0,0] = 10
+︡9b68c23f-0fe8-45a1-a6dc-45da627325d6︡
+︠9bba0b6e-9dd2-45e6-856e-13abbcb30985︠
+m[0]
+︡5338edf7-eed9-482f-bd48-36de17cf7327︡{"stdout":"(10, 3, 5)\n"}︡
+︠a2db812f-f8fa-4aca-847b-24d70e0654c1︠
+m.column(0)
+︡da81aa33-6863-4b39-8b25-5d446e8d31ee︡{"stdout":"(10, 7, 2)\n"}︡
+︠ee5200dc-cc5c-44c8-bc7b-cb05cac03462︠
+m.row(0)
+︡15cd5d0e-a528-4d6c-8599-12b3f90acffa︡{"stdout":"(10, 3, 5)\n"}︡
+︠5a58534c-0525-4ba3-903e-88dde5d31c10︠
+m[0][0] = 20
+︡23cd982d-7fbb-4bbb-9eb3-44579aa28634︡{"stderr":"Error in lines 1-1\nTraceback (most recent call last):\n  File \"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sagemathcloud/sage_server.py\", line 733, in execute\n    exec compile(block+'\\n', '', 'single') in namespace, locals\n  File \"\", line 1, in <module>\n  File \"vector_integer_dense.pyx\", line 185, in sage.modules.vector_integer_dense.Vector_integer_dense.__setitem__ (sage/modules/vector_integer_dense.c:3760)\nValueError: vector is immutable; please change a copy instead (use copy())\n"}︡
+︠7278905a-dfab-4474-a14b-002127372f67︠
+type(m)
+︡c87da23c-dce3-4483-bbb5-b849b226f61d︡{"stdout":"<type 'sage.matrix.matrix_integer_dense.Matrix_integer_dense'>\n"}︡
+︠d5a1afb2-e4ef-44fc-b160-ec4ea68fedcd︠
+m[0] = 10/3
+︡89525d42-f6ba-422b-b50e-16d68374107d︡{"stderr":"Error in lines 1-1\nTraceback (most recent call last):\n  File \"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sagemathcloud/sage_server.py\", line 733, in execute\n    exec compile(block+'\\n', '', 'single') in namespace, locals\n  File \"\", line 1, in <module>\n  File \"matrix0.pyx\", line 1404, in sage.matrix.matrix0.Matrix.__setitem__ (sage/matrix/matrix0.c:7295)\n  File \"matrix0.pyx\", line 1483, in sage.matrix.matrix0.Matrix._coerce_element (sage/matrix/matrix0.c:8266)\n  File \"parent.pyx\", line 1070, in sage.structure.parent.Parent.__call__ (sage/structure/parent.c:8858)\n  File \"rational.pyx\", line 3795, in sage.rings.rational.Q_to_Z._call_ (sage/rings/rational.c:26796)\nTypeError: no conversion of this rational to integer\n"}︡
+︠8fef596a-815c-4b54-82d4-d35a3caa8105︠
+m[0]
+︡d3f90b4e-d33a-484e-9ab4-f6c3d8a5e3d7︡{"stdout":"(2, 3, 5)\n"}︡
 ︠ebc1e978-d892-4d04-a0b6-9b1b6fdb29d6︠
 show(m)
 show(v)
 ︡fdf5b0ac-e77f-4915-8931-148206514216︡{"tex":{"tex":"\\left(\\begin{array}{rrr}\n2 & 3 & 5 \\\\\n7 & -4 & 0 \\\\\n2 & -5 & 1\n\\end{array}\\right)","display":true}}︡{"tex":{"tex":"\\left(10,\\,5,\\,2\\right)","display":true}}︡
 ︠10e297ea-5779-4a2f-a700-185a4454ba35︠
 matrix([[1,2], [3,4/7]])
-︡ed791b57-c906-4be6-972a-68e97d068dc6︡{"stdout":"[  1   2]\n[  3 4/7]\n"}︡
+︡e017cc21-9149-4770-ad7a-96cb97fdcdb2︡{"stdout":"[  1   2]\n[  3 4/7]\n"}︡
 ︠2d782363-90f7-46fc-aac3-01d2e610a7d2︠
 # a matrix with entries in the symbolic ring
+%var x
+reset('e')
+[[pi,e,sqrt(2)], [1,2,sin(x)]]
+︡57a87f47-f5c5-46f0-ae28-7cfb9f4be2fe︡{"stdout":"[[pi, e, sqrt(2)], [1, 2, sin(x)]]\n"}︡
+︠f03f57a9-c487-41ee-ae04-c27619c07bc6︠
 m = matrix([[pi,e,sqrt(2)], [1,2,sin(x)]])
 show(m)
-︡15c41f15-fb40-413d-b885-592929073c0a︡{"tex":{"tex":"\\left(\\begin{array}{rrr}\n\\pi & e & \\sqrt{2} \\\\\n1 & 2 & \\sin\\left(x\\right)\n\\end{array}\\right)","display":true}}︡
+︡d9357391-567a-44ae-9c70-704d088f68c5︡{"tex":{"tex":"\\left(\\begin{array}{rrr}\n\\pi & e & \\sqrt{2} \\\\\n1 & 2 & \\sin\\left(x\\right)\n\\end{array}\\right)","display":true}}︡
+︠a391f8ba-ff14-4eb7-8fba-2127432e4de4︠
+m.base_ring()
+︡42928443-1059-4233-afe4-c5b5b4a6c8f3︡{"stdout":"Symbolic Ring\n"}︡
+︠dc6081bd-6416-4a38-bb22-14195433118b︠
+︠03fa335c-1d31-478e-a613-bd53251528ff︠
+%var x, y
+m = matrix(1,[sin(x)/cos(y) == 1])
+︡f5b3ef68-1311-453a-8208-85ec7bd38f10︡
+︠973cbd45-d929-4552-844b-c7b2089d06ba︠
+m.subs({x:5, y:10})
+︡bf61d58d-a732-45a1-8050-b9af97ce1a6c︡{"stdout":"[sin(5)/cos(10) == 1]\n"}︡
+︠0f99bcd3-0148-439e-bf43-b7a65c461abd︠
+
 ︠864e5b71-f3a7-42a2-88f3-1395c8bca3ef︠
 # a biger matrix (all entries are zero by default)
 m = matrix(25,50)
@@ -118,29 +178,54 @@ print m.str()
 ︠260cf441-2586-4874-84d9-f85c5e3672cf︠
 # a random matrix with integer entries
 random_matrix(ZZ, 5, 10)
-︡cd150a0d-27b5-437c-a4ae-c28b9d56bdd0︡{"stdout":"[  0   1  -5   0   2  -1  -1   0   5  -1]\n[  1  -2   0  -1  -3   1   0   1   0   0]\n[  1  -2   0   1  -2  -1   1   0   2   0]\n[ -4   0   0  -1   0   2   1  -1   2   1]\n[ -1   8  -2  -1 -12   1   1  -1 -48 -14]\n"}︡
+︡5af87872-87e6-47f5-b81e-f46abfd9a8e2︡{"stdout":"[  0   0  -1   0   0  -1   2  -2   1   0]\n[  0   0  -2   0   0   0   2  -1  -1   2]\n[ -3  -1  -1   0  -1  -1 369  25   1   0]\n[  0  -1  -2  -1   0  -1  13   0   1  -3]\n[  1  12  -1   3  -3   9  -5  -1  -2   1]\n"}︡
+︠5565ad52-83f3-4e7f-8cb0-aef9e36c3471︠
+ZZ.random_element()
+︡bac1f067-f9ab-4f47-9c35-f2dbc71337a7︡{"stdout":"-2\n"}︡
 ︠59d09fea-ab63-4c11-bb12-c74e36acdfd8︠
 random_matrix(ZZ, 5, 10, x=-3, y=3)  # entries chosen uniformly from [-3..3]
 ︡a7a0119c-4639-444f-90c0-83120967bcf0︡{"stdout":"[-3  2 -2 -3  1  2 -3 -1  0  0]\n[-1  0 -2  0 -3  1 -3 -3  2  1]\n[-1 -3  1  2  1  1 -2 -3 -2 -2]\n[ 1 -1 -2 -3 -3  0  2  1 -2 -3]\n[-3 -3 -3  0  0  0 -1  0 -2 -1]\n"}︡
 ︠faa1cfcf-c666-4095-8154-a2be8a314c3d︠
 a = random_matrix(QQ, 3); a
-b = random_matrix(QQ,3); b
+b = random_matrix(QQ, 3); b
 
-︡eec975be-4134-4acc-8ca8-23fbebed27dc︡{"stdout":"[   0    0 -1/2]\n[   0  1/2    2]\n[   1   -1  1/2]\n"}︡{"stdout":"[ 0  1 -2]\n[-1 -1 -2]\n[-2 -2  0]\n"}︡
+︡6a51d82a-9bbd-42ff-b81d-06bb5b97e7cc︡{"stdout":"[  -1    1   -1]\n[-1/2    1    0]\n[  -2   -1    2]\n"}︡{"stdout":"[   1    1    2]\n[  -2  1/2    2]\n[-1/2  1/2    0]\n"}︡
+︠0a9477ae-344a-4717-8a4a-5fc52575bd0c︠
+QQ.random_element()
+︡f3c1aff6-e096-4a90-91e6-1def3297cbd7︡{"stdout":"-14/3\n"}︡
 ︠af0bf34d-0bf2-4987-be88-02edd9677ca4︠
-a+b
-︡0c375bfc-b731-4c5e-8dd1-94936818e442︡{"stdout":"[   0    1 -5/2]\n[  -1 -1/2    0]\n[  -1   -3  1/2]\n"}︡
+a + b
+︡74145af6-f800-4f0b-941f-0b2e5ccadb37︡{"stdout":"[   0    2    1]\n[-5/2  3/2    2]\n[-5/2 -1/2    2]\n"}︡
+︠9b717166-1ffb-4856-880c-7ad03ca8fd94︠
+a
+︡6f2bfe32-3ec1-4a3a-b751-e166c826fa05︡{"stdout":"[  -1    1   -1]\n[-1/2    1    0]\n[  -2   -1    2]\n"}︡
 ︠86880e30-81fc-4a16-bd0c-132b964c6e0f︠
 # addition adds to the *diagonal*
 a + 10
-︡dc3f7f7b-84eb-49f8-bce4-d339d2541271︡{"stdout":"[  10    0 -1/2]\n[   0 21/2    2]\n[   1   -1 21/2]\n"}︡
+︡edf79e99-3bf1-4ac0-9db2-96e04c71415a︡{"stdout":"[   9    1   -1]\n[-1/2   11    0]\n[  -2   -1   12]\n"}︡
 ︠ec15ac3e-cb62-4206-a724-934ff5b1727d︠
 # matrix multiplication is matrix multiplication
 a * b
-︡92cef98f-5c1a-4226-98bb-0958d0105437︡{"stdout":"[   1    1    0]\n[-9/2 -9/2   -1]\n[   0    1    0]\n"}︡
+︡5bded47f-a61e-4cee-ac21-3a13fa54ed07︡{"stdout":"[-5/2   -1    0]\n[-5/2    0    1]\n[  -1 -3/2   -6]\n"}︡
 ︠b4f1d91e-8cb9-4419-9810-4ce865f650e8︠
 a + a.transpose()
-︡c9735809-17a9-43ba-817d-908ad956e0ca︡{"stdout":"[  0   0 1/2]\n[  0   1   1]\n[1/2   1   1]\n"}︡
+︡f8ef6a27-987c-420f-9466-e1f16ce8e5eb︡{"stdout":"[ -2 1/2  -3]\n[1/2   2  -1]\n[ -3  -1   4]\n"}︡
+︠7fb9fa44-c6ff-4b97-9107-ad4c0e6c197c︠
+a = matrix(RR, 2,2, [1,2,3,4]); a
+︡a7b59af5-4c28-418d-aa94-3e7e6862e119︡{"stdout":"[1.00000000000000 2.00000000000000]\n[3.00000000000000 4.00000000000000]\n"}︡
+︠634d73e6-d26d-4619-b893-4fda6356b08c︠
+a = matrix(2, [1,2,3,4]); a
+︡d371cea1-382d-45c4-a181-c746704fc19e︡{"stdout":"[1 2]\n[3 4]\n"}︡
+︠82e76da4-6e89-45a5-873d-e294ecddadd0︠
+a.change_ring(RR)
+︡e01c086f-eeb2-46a6-a93f-6c8b32f636bc︡{"stdout":"[1.00000000000000 2.00000000000000]\n[3.00000000000000 4.00000000000000]\n"}︡
+︠6a38a175-7f6c-4595-9967-fe84161a60f1︠
+M = MatrixSpace(RR, 2)
+M
+︡def84370-f21b-40f6-a02d-fd6ffc3eeff3︡{"stdout":"Full MatrixSpace of 2 by 2 dense matrices over Real Field with 53 bits of precision\n"}︡
+︠96aca45a-425d-4214-bba3-5b870bd8eeaf︠
+M([1,2,3,4])
+︡3003e8e2-a196-4540-883e-0bdc37dc9b54︡{"stdout":"[1.00000000000000 2.00000000000000]\n[3.00000000000000 4.00000000000000]\n"}︡
 ︠46a62aff-cf43-49ef-ba27-cd28c3ac0d30︠
 
 ︠152cd6a9-6c95-4be5-8a5a-7a859dd30dbci︠
@@ -151,14 +236,17 @@ a + a.transpose()
 ︠76ce0d4c-2e43-4d4e-9661-ac465ae8c58f︠
 m = matrix(3,3, [2,3,5,  7,-4,0,  2,-5,1])
 v = vector([10,5,2])
-︡47448047-9dab-4e1f-a18b-e45388874b04︡
+︡fc5b0477-6f09-49aa-a25d-4e41a9090f48︡
+︠47541ea2-a631-4e4a-873f-055fe86b226c︠
+m
+︡fd210c56-851e-4f13-9462-4ebb993595fa︡{"stdout":"[ 2  3  5]\n[ 7 -4  0]\n[ 2 -5  1]\n"}︡
 ︠70604b97-4e22-4066-ac24-90db270b548c︠
 # solve m*x = v
 x = m.solve_right(v); x
-︡969802d7-6771-45a2-bb18-9934f8b9a674︡{"stdout":"(35/41, 10/41, 62/41)\n"}︡
+︡75a9d722-d4fb-442c-a450-a7015a0c6ccb︡{"stdout":"(35/41, 10/41, 62/41)\n"}︡
 ︠5fdc8af3-4598-4d06-92c5-7475f52432c2︠
-m*x
-︡558dc088-756e-4414-8f9d-ed658a408f1c︡{"stdout":"(10, 5, 2)\n"}︡
+m*x == v
+︡08102c97-7abe-4c61-84d9-8ec04f5fb304︡{"stdout":"True\n"}︡
 ︠d5027d59-5330-4cec-a7f8-dcbde892bdc6︠
 # solve x*m = v
 ︠3924094f-2440-48ad-b303-92c5ba0ec7a6︠
@@ -171,6 +259,9 @@ x*m
 # use matlab notation
 x = m \ v; x
 ︡d78b4f9e-c8fa-4e44-98bf-89ce79c35db4︡{"stdout":"(35/41, 10/41, 62/41)\n"}︡
+︠38100ca4-bdde-45bb-87bd-7792cf891e12︠
+preparse('x = m \ v')
+︡ee25b4ae-8f84-4aa6-aea5-6a55c8393830︡{"stdout":"'x = m  * BackslashOperator() * v'\n"}︡
 ︠d2b1eef9-270c-4642-940e-6290eaa3bbcai︠
 %md
 Solving gives you back one solution, if there is one, even if there are infinitely many.
@@ -198,31 +289,31 @@ m*x == b
 ︡cd9cfd0b-a68f-4f4e-b94e-32389345d1e2︡{"html":"<h2>Computing invariants of matrices</h2>\n"}︡
 ︠4f80d547-2720-480f-9dfe-19b2e2a6878b︠
 m = matrix(3,3, [2,3,5,  7,-4,0,  2,-5,1])
-︡28ab0bc2-dcc8-4ead-9985-fa92b003e4de︡
+︡2b2a66c3-abbf-42a0-a4ae-f3b88cf55f15︡
 ︠3d6dea8f-18ad-4433-ae42-cc48e0c3344e︠
 m.determinant()
-︡f72a2c68-dce1-49d5-a1c0-82bffa9a3809︡{"stdout":"-164\n"}︡
+︡4866de98-03cf-4206-b1f3-e9462ad43ba8︡{"stdout":"-164\n"}︡
 ︠3aeb21a4-5431-4706-8234-72cace4e6f81︠
 m.rank()
-︡d47fa528-98e8-4ff1-9975-1199a83b4a4b︡{"stdout":"3"}︡{"stdout":"\n"}︡
+︡8381964b-3dc4-4d2c-8508-0c57780be575︡{"stdout":"3\n"}︡
 ︠bef7cc45-6945-4f1a-948d-93920f31fb4c︠
 m.nullity()
-︡11d82eeb-3938-4896-b5d3-6101913fed36︡{"stdout":"0\n"}︡
+︡6361b074-68e8-4914-9b2f-8fd89e3d60a7︡{"stdout":"0\n"}︡
 ︠2329a2f9-fc0f-44bd-8555-83f410281bb1︠
 m.rref()  # watch out -- not the same as m.echelon_form(), in general...
-︡08dc2215-d275-430f-ae1e-cb9c7dd6f250︡{"stdout":"[1 0 0]\n[0 1 0]\n[0 0 1]\n"}︡
+︡46c2adee-bc90-4dd8-9401-c1a5f0af5ce3︡{"stdout":"[1 0 0]\n[0 1 0]\n[0 0 1]\n"}︡
 ︠bb7249ca-e75d-4f2b-a5e8-35c7ff7990f1︠
 m.echelon_form()  # this is the echelon form *over ZZ* -- no dividing allowed
 ︡63a2db12-e3af-4036-83ee-12400965ddc2︡{"stdout":"[  1   0  12]\n[  0   1 103]\n[  0   0 164]\n"}︡
 ︠a68400e4-760a-4e73-8c9d-3b4320f5e8e5︠
 m.characteristic_polynomial()
-︡b5faf4e9-7067-4859-80ee-a266664e3ece︡{"stdout":"x^3 + x^2 - 41*x + 164\n"}︡
+︡f688b329-66ec-4d37-bf5f-a0bb55d55ca6︡{"stdout":"x^3 + x^2 - 41*x + 164\n"}︡
 ︠83981e06-3a7b-434a-a361-e59769068ae1︠
 m.minimal_polynomial()
-︡9a6d3003-315d-4922-a7f4-c4ccb4f7419c︡{"stdout":"x^3 + x^2 - 41*x + 164\n"}︡
+︡fb24a50c-adbf-4329-9b76-b8d0497194b2︡{"stdout":"x^3 + x^2 - 41*x + 164\n"}︡
 ︠bbfe283b-ac8b-4d9b-8d67-8bbb2ab51605︠
 e = m.eigenvalues(); e
-︡c3eb7db6-42f5-4220-953a-862ca5d147ba︡{"stdout":"[-8.30939752116266?, 3.654698760581329? - 2.525839783704967?*I, 3.654698760581329? + 2.525839783704967?*I]\n"}︡
+︡7a66f7ad-b3a9-412d-aa81-f8a98abd49b8︡{"stdout":"[-8.30939752116266?, 3.654698760581329? - 2.525839783704967?*I, 3.654698760581329? + 2.525839783704967?*I]\n"}︡
 ︠98388e36-28b3-454f-9fab-60d74aba567e︠
 lamb = e[0]; lamb
 ︡29e5bfe6-444c-4559-893c-cec06b96b998︡{"stdout":"-8.30939752116266?\n"}︡
@@ -265,11 +356,14 @@ V
 # These arise natural as spans, kernels (=nullspaces), etc.
 
 m = matrix(QQ, 2,3, [2,3,5,  7,-4,0]); m
-︡e88ac48a-430f-48c4-a8b7-51144b10b3c1︡{"stdout":"[ 2  3  5]\n[ 7 -4  0]\n"}︡
+︡14ecca2f-b009-4ad0-9fae-80caa073e2d3︡{"stdout":"[ 2  3  5]\n[ 7 -4  0]\n"}︡
 ︠ac55fad2-1fb6-48d0-a974-1b3c24198ecf︠
 # Compute the vector space of vector x such that m*x = 0
 V = m.right_kernel(); V
-︡135b8356-d87f-439d-922e-1a34bff0d1e3︡{"stdout":"Vector space of degree 3 and dimension 1 over Rational Field\nBasis matrix:\n[     1    7/4 -29/20]\n"}︡
+︡69cbc1da-872f-471d-8229-cda05ee153ff︡{"stdout":"Vector space of degree 3 and dimension 1 over Rational Field\nBasis matrix:\n[     1    7/4 -29/20]\n"}︡
+︠5bede5c5-68e4-4997-ba12-a609b603f09b︠
+type(V)
+︡c564e708-a2bb-47b9-8cad-015e0e68f8b6︡{"stdout":"<class 'sage.modules.free_module.FreeModule_submodule_field_with_category'>\n"}︡
 ︠7db7c23d-1332-4c5a-baef-9db4536a018c︠
 V.dimension()
 ︡019fae1d-2e7f-4558-89f6-1da9768e937e︡{"stdout":"1\n"}︡
