@@ -18,4 +18,6 @@
 - May 7 <http://youtu.be/ry-hbfTlVqI>
 - May 9 <http://youtu.be/YrO89QIizxI> (Cython)
 - May 12 <http://youtu.be/r0kxxxZABjk>
-- May 14: quicktime crashed :-(
+- May 14: quicktime crashed silently during the lecture
+- May 16: class cancelled
+- May 19: 
