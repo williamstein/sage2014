@@ -55,7 +55,7 @@ Homework and peer grading of homework is due every Friday by 6pm, and homework w
 - (Monday, May 26 is Memorial Day is memorial day)
 - Monday, June 2 at 6am     -- Homework 9 due; final draft of project due; peer grading of homework 8 due
 - June 2,4,6 -- Project presentations
-- Friday, June 6     -- Peer grading of homework 9 and projects due
+- Friday, June 6 at 6    -- Peer grading of homework 9 and peer grading of projects due
 
 
 
