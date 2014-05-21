@@ -20,4 +20,5 @@
 - May 12 <http://youtu.be/r0kxxxZABjk>
 - May 14: quicktime crashed silently during the lecture
 - May 16: class cancelled
-- May 19: <http://youtu.be/B40SL4JtqPo>
+- May 19: <http://youtu.be/B40SL4JtqPo> - fast linear algebra
+- May 21: <http://youtu.be/4a1QZJ8aKUM> - graph theory
