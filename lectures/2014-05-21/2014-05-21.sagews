@@ -1,4 +1,4 @@
-︠7af91bd3-1d59-4cbf-bcd4-c066b0c31904i︠
+︠7af91bd3-1d59-4cbf-bcd4-c066b0c31904︠
 %md
 
 # Math 480b -- Sage Course
@@ -48,9 +48,9 @@ g
 ︠3ddcc2f0-c803-4559-8ff6-66217a483d65︠
 type(g)
 ︡0777eaa4-8fc3-4bdd-bf8f-0c9e7669ddf6︡{"stdout":"<class 'sage.graphs.graph.Graph'>\n"}︡
-︠06f02ebd-f917-47ee-bbc2-60c60f987dc5︠
+︠f6bc0459-ba02-4fdb-9baa-244fbf8b3840︠
 (0,9)(1,10)(2,11)(3,8)(4,7)(5,6)
-︠a519e1c1-989d-49ed-8477-5d9bbd7350a2︠
+︠f6bc0459-ba02-4fdb-9baa-244fbf8b3840︠
 (0,9)(1,10)(2,11)(3,8)(4,7)(5,6)
 ︠6b5025b4-8b7b-4b53-b360-ec30b1b0d5c7︠
 plot(g) #+ plot(sin, (-5,5))
@@ -58,16 +58,16 @@ plot(g) #+ plot(sin, (-5,5))
 ︠714d388a-ca98-433b-8058-bb671051e10c︠
 v = v = g.to_dictionary(); v
 ︡2a766cd0-3458-4ccb-b1fc-3a6f4bb23877︡{"stdout":"{0: [1, 2, 3], 1: [0, 2, 3], 2: [0, 1, 3], 3: [0, 1, 2, 4], 4: [3, 5], 5: [4, 6], 6: [5, 7], 7: [6, 8], 8: [7, 9, 10, 11], 9: [8, 10, 11], 10: [8, 9, 11], 11: [8, 9, 10]}\n"}︡
-︠c865d3bf-eea2-4df8-afd1-de4e53ecb152︠
+︠9dc2cbbd-48aa-4167-a97c-4849d7fd074e︠
 type(v)
 ︡ab2c871a-d2d7-472c-b830-9f9b1f075a47︡{"stdout":"<type 'dict'>\n"}︡
-︠e6b6796e-4593-4172-844e-f0cccc9c3ab7︠
+︠ac8245d0-e9af-48a5-8b90-5757a8603ca4︠
 Graph(v)
 ︡af047b7e-4eee-4204-84f1-ffa7d8fc4826︡{"stdout":"Graph on 12 vertices\n"}︡
-︠942f74f8-b72e-4a23-ac3f-a686c9890d2b︠
+︠9dc2cbbd-48aa-4167-a97c-4849d7fd074e︠
 type(v)
 ︡ab2c871a-d2d7-472c-b830-9f9b1f075a47︡{"stdout":"<type 'dict'>\n"}︡
-︠0208cbbb-efb0-4ae8-a31f-afd1842a9725︠
+︠ac8245d0-e9af-48a5-8b90-5757a8603ca4︠
 Graph(v)
 ︡af047b7e-4eee-4204-84f1-ffa7d8fc4826︡{"stdout":"Graph on 12 vertices\n"}︡
 ︠3d94f6c9-2691-4828-92f3-49968fc97223︠
@@ -80,12 +80,12 @@ len(dir(g))
 ︠88b7ded2-1413-48c0-b211-913e2c4f2be2︠
 g.cliques_maximal()
 ︡78594516-1f51-4f42-b09f-d6bae15ac42c︡{"stdout":"[[0, 1, 2, 3], [3, 4], [4, 5], [5, 6], [6, 7], [7, 8], [8, 9, 10, 11]]\n"}︡
-︠df424430-39dc-47ee-9c01-14de35a509a6︠
+︠5ea3159d-8821-4ded-864c-5c1b58930956︠
 (0,9)(1,10)(2,11)(3,8)(4,7)(5,6)
 ︠571813b1-a740-4c6d-9983-4e7e11abd40d︠
 P = g.coloring(); P
 ︡6af0621c-1708-47a2-927a-79338764d6a3︡{"stdout":"[[2, 10], [3, 11], [0, 4, 6, 8], [1, 5, 7, 9]]\n"}︡
-︠5d006e61-0476-412e-9b4f-a0e7739ad8ea︠
+︠5ea3159d-8821-4ded-864c-5c1b58930956︠
 (0,9)(1,10)(2,11)(3,8)(4,7)(5,6)
 ︠cf5e68a0-ebd1-4313-a5b9-806111218d73︠
 g.plot(partition=P)
@@ -199,7 +199,7 @@ Q.number_of()
 ︡f050197f-9760-4bb2-be87-77f9c031615b︡{"stdout":"9\n"}︡
 ︠969d0054-be4a-4181-9961-f63de5a003f2︠
 Q.show()
-︡d76a97dd-8dd1-4c5d-a813-effd7ac1ed85︡{"stdout":"Graph6               Num Vertices         Degree Sequence     \n------------------------------------------------------------\nBw                   3                    [2, 2, 2]           \nC]                   4                    [2, 2, 2, 2]        \nC^                   4                    [2, 2, 3, 3]        \nDFw                  5                    [2, 2, 2, 3, 3]     \nDK{                  5                    [2, 2, 2, 2, 4]     \nDLo                  5                    [2, 2, 2, 2, 2]     \nDbk                  5                    [2, 2, 2, 3, 3]     \nEIe_                 6                    [2, 2, 2, 2, 2, 2]  \nEJaG                 6                    [2, 2, 2, 2, 2, 2]  \n"}︡
+︡d76a97dd-8dd1-4c5d-a813-effd7ac1ed85︡{"stdout":"Graph6               Num Vertices         Degree Sequence     \n------------------------------------------------------------\nBw                   3                    [2, 2, 22, 2]        \nC]                   4                    [2, 2, 2, 2,        \nDFw       3          5             [2, 2, 2, 3, 3]     \nDK{                  5                    [2, 2, 2, 2, 4]     \nDLo      DFw                  5                    [2, 2, 2, 3, 3]     \nDK{                 5                    [2, 2, 2, 2, 2, 4]  \nDbk                  5                    [2, 2, 2, 3, 3]     \nIe_                 5                    [2, 2, 2, 3, 3]     \nEIe_                 6                    [2, 2, 2, 2, 2, 2]  \nEJaG                 6                    [2, 2, 2, 2, 2, 2]  \nEJaG                 6                    [2, 2, 2, 2, 2, 2]  \n"}︡
 ︠25f27202-d107-402a-b042-1c29dd883a8a︠
 g = Graph('EJaG'); plot(g)
 ︡90fbcc5a-4c44-4349-9a4f-a41ebef7e582︡{"once":false,"file":{"show":true,"uuid":"fe75ee70-7676-4fe3-9d8f-cd839658b844","filename":"/projects/74af30b7-ad25-4308-a02e-c71fcd84de6e/.sage/temp/compute19dc0/20148/tmp_KQYvb9.png"}}︡
