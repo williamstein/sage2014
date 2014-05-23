@@ -22,3 +22,4 @@
 - May 16: class cancelled
 - May 19: <http://youtu.be/B40SL4JtqPo> - fast linear algebra
 - May 21: <http://youtu.be/4a1QZJ8aKUM> - graph theory
+- May 23: <http://youtu.be/iiWPsS2Q87c> - group theory
