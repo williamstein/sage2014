@@ -1,0 +1,15 @@
+<p>This method allows you to get (download) a file within the project by ID. Using this method you can either download single files or a whole directory using the IDs given by calling <a href="#/files-get">Get on FILES</a>. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id the file to get. Obtained by calling <a href="#/files-get">Get on FILES</a></li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body is omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>File should start downloading via WebSocket file transfer. </p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>

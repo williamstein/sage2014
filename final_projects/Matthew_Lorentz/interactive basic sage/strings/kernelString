@@ -1,0 +1,12 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'> 'The result that is returned by sage' </font color> <br>
+<br>
+To find the Null-space of a matrix, type <br>
+<font color = 'green'>sage:</font color> A.right_kernel() <br>
+>>> <font color = 'blue'> Vector space of degree 3 and dimension 1 over Rational Field <br>
+Basis matrix: <br>
+[ 1 -2  1] </font color> <br>
+Where 'A' is the matrix you have previously defined (see 'How do I enter a matrix in sage' above) <br>
+For more information see <br>
+http://www.sagemath.org/doc/reference/modules/sage/modules/free_module_element.html

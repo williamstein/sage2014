@@ -1,0 +1,54 @@
+<p>This method allows the user to update any of the properties of a project in SageMathCloud. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id of the project to update.</li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body can’t be empty</strong> and must include at least the name attribute, a <code>string</code> that will be used as the name of the thing.</li>
+  <li>Parameters supported: 
+    <ol>
+      <li>bup_location (project server location)</li>
+      <li>description (description of project)</li>
+      <li>name (name of project)</li>
+      <li>public (visibility of project)</li>
+      <li>title (title of project)</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="headers">Headers</h3>
+<p><code>X-smc-authorization: &lt;API key from project&gt;</code></p>
+
+<h3 id="body-example">Body Example</h3>
+<p><code>{
+    name: 'My new thing'
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a success message.</p>
+
+<p><code>{
+	"message": "success/failure/etc"
+}</code></p>
+
+<h3 id="hidden-feature">Hidden feature</h3>
+
+<p>If you send an update request with the JSON body below, it will restart your project server if something has gone wrong. </p>
+
+<p><code>
+{
+	"project": "restart"
+}
+</code></p>
+
+<h3 id="response-1">Response</h3>
+
+<p><code>
+{
+	"status": "success"
+}
+</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>

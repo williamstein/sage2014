@@ -1,0 +1,11 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'> 'The result that is returned by sage' </font color> <br>
+<br>
+Let's say that we want to integrate $x*sin(x^2)$. We type, <br>
+<font color = 'green'>sage:</font color> integral(x*sin(x^2), x) <br>
+>>> <font color = 'blue'> -1/2*cos(x^2) </font color> <br>
+To put it another way: <br>
+<font color = 'green'>sage:</font color> integral('The function we want to integrate', 'The variable we are integrating with respect to') <br>
+For more information see <br>
+http://www.sagemath.org/doc/tutorial/tour_algebra.html

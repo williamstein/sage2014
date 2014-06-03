@@ -1,0 +1,13 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'> 'The result that is returned by sage' </font color> <br>
+<br>
+Once we have defined a matrix and vector in sage (see above), We type <br>
+<font color = 'green'>sage:</font color> A.solve_right(v) <br>
+>>> <font color = 'blue'> [1] <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0] </font color> <br>
+Or simply <br>
+<font color = 'green'> sage: </font color> A \ v <br>
+Where A is a matrix and v is a vector. Note that the number of columns of the matrix must be equal to the dimension of the vector. <br>
+For more information see <br>
+http://www.sagemath.org/doc/tutorial/tour_linalg.html

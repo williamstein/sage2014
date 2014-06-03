@@ -1,0 +1,19 @@
+<p>This method allows the user to update a file. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id of the file to update. </li>
+  <li>The headers must include a <strong>valid authentication token</strong>.
+    <ul>
+      <li>x-smc-filename the filename to post</li>
+      <li>x-smc-path the path where the file is stored. If not specified it’s $HOME. If the path doesn’t exist, it will be created.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back an HTTP 204 implying that the resource was successfully updated. </p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>

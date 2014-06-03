@@ -1,0 +1,51 @@
+<h3 id="success">Success</h3>
+
+<p>When <a href="#/user-get-name">searching for users</a> for example:</p>
+
+<p><code>{
+    "users": [
+        {
+            "account_id": "213123123-db70-43e0-974a-e461b347a14b",
+            "email": "cjt8@uw.edu",
+            "first_name": "Christopher",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+        {
+            "account_id": "112233-db70-43e0-974a-e461b347a14b",
+            "email": "trudeau.c@uw.edu",
+            "first_name": "Chris",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+    ]
+}</code>  </p>
+
+<p><code>
+{
+"status": "ok"
+}
+</code>  </p>
+
+<h3 id="error">Error</h3>
+
+<p>Error responses are simply returning <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">standard HTTP error codes</a> along with some additional information:</p>
+
+<ul>
+  <li>The error code is sent back as a status header,</li>
+  <li>The body includes an object describing both the code and message (for debugging and/or display purposes),</li>
+</ul>
+
+<p>For a call with an invalid authentication token for example:</p>
+
+<p><code>{
+    "status": "error",
+    "error": 'Access denied: invalid authentication token.'
+}</code></p>
+
+<p>For a call with a token that does not have access to the request resource:</p>
+
+<p><code>{
+    "status": "error",
+    "error": 'Forbidden: your authentication key does not have access to this project.'
+}</code></p>

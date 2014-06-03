@@ -1,0 +1,24 @@
+<p>Execute a <a href="http://www.sagemath.org/">Sage</a> command inside of your project. This method allows you to find any <a href="http://www.sagemath.org/help.html#SageStandardDoc">Sage Command inside the Sage Documentation</a> and get the results.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>Headers
+    <ul>
+      <li>x-smc-authorization a valid token</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code>{
+    "sage": "factor(2006)"   
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p><code>{
+    "status": "ok"
+    "sage_command_response": "2 * 17 * 59"
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>

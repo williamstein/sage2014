@@ -1,0 +1,16 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Setup of Project and Code}{3}
+\contentsline {section}{\numberline {2}Difference method}{4}
+\contentsline {subsection}{\numberline {2.1}Concept}{4}
+\contentsline {subsection}{\numberline {2.2}Implementation}{4}
+\contentsline {subsection}{\numberline {2.3}results}{4}
+\contentsline {subsection}{\numberline {2.4}Conclusion}{5}
+\contentsline {section}{\numberline {3}k-means}{5}
+\contentsline {subsection}{\numberline {3.1}Concept}{5}
+\contentsline {subsection}{\numberline {3.2}Implementation}{5}
+\contentsline {subsection}{\numberline {3.3}results}{7}
+\contentsline {subsection}{\numberline {3.4}Conclusion}{8}
+\contentsline {section}{\numberline {4}1D FFT to extract frequiencies and compare to kmeans}{8}
+\contentsline {subsection}{\numberline {4.1}concept}{8}
+\contentsline {subsection}{\numberline {4.2}Implementation}{8}
+\contentsline {section}{\numberline {5}Other methods I did not get to try}{8}

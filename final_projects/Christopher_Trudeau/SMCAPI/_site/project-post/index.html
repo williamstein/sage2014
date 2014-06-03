@@ -1,0 +1,36 @@
+<p>This method allows users to create a new thing.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body can’t be empty</strong> and must include at least the name attribute, a <code>string</code> that will be used as the name of the thing.</li>
+  <li>Parameters supported: 
+    <ol>
+      <li><strong>title</strong> of the project (required)</li>
+      <li><strong>description</strong> of the project (optional)</li>
+      <li><strong>public</strong> visibility of the project (optional: defaults to private))</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="headers">Headers</h4>
+<p><code>X-smc-authorization: &lt;API key from project&gt;</code></p>
+
+<h4 id="body">Body</h4>
+<p><code>{
+    "title":"&lt;Title of Project&gt;",
+    "description":"&lt;description of project&gt;",
+    "public":"&lt;visibility {public or private}&gt;"
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p><strong>If it succeeds</strong>, returns the created project and a URI to use the ‘GET’ project API.</p>
+
+<p><code>{
+    "project_id": "4d421231-66e9-44b6-b9af-15207098d2c6",
+    "project_url": "https://cloud.sagemath.com/project/4d421231-44b6-b9af-15207098d2c6"
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>

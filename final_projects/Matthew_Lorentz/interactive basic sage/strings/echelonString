@@ -1,0 +1,12 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'>'The result that is returned by sage' </font color> <br>
+<br>
+We type <br>
+<font color = 'green'>sage:</font color> A.rref() <br>
+>>> <font color = 'blue'> [1 0 -1] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0 1 2] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [0 0 0] </font color> <br>
+Where 'A' is the matrix you have previously defined (see 'How do I enter a matrix in sage' above) <br>
+For more information see <br>
+http://www.sagemath.org/doc/tutorial/tour_linalg.html

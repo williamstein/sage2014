@@ -1,0 +1,1 @@
+http://hackmap.blogspot.in/2007/09/k-means-clustering-in-scipy.html

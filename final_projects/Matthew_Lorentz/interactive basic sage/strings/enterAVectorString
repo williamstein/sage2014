@@ -1,0 +1,13 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'> 'The result that is returned by sage' </font color> <br>
+<br>
+To create a vector in sage, say vector v, we type <br>
+<font color = 'green'>sage:</font color> v = vector([1, 3, 1]) <br>
+To put it another way <br>
+<font color = 'green'>sage:</font color> v = vector([$x_1$, $x_2$, . . . ,$x_n$]) <br>
+Notice that the list of components is enclosed by a set of square braces and everything is enclosed by parentheses. <br>
+To see the vector we just entered, type <br>
+<font color = 'green'>sage:</font color> v <br>
+For more information see <br>
+http://www.sagemath.org/doc/tutorial/tour_linalg.html

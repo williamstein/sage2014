@@ -1,0 +1,25 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'>'The result that is returned by sage'</font color> <br>
+<br>
+We type <br>
+<font color = 'green'>sage:</font color> A.eigenvectors_left() <br>
+Where 'A' is the matrix you have previously defined (see 'How do I enter a matrix in sage' above). <br>
+However, the output needs to be 'unpacked' <br>
+>>> <br>
+<font color = 'blue'>[(5, [ <br>
+(1, 1, 1) <br>
+], 1), (0, [ <br>
+(1, 1, -4) <br>
+], 1), (-1, [ <br>
+(1, -1/5, -7/5) <br>
+], 1)] </font color><br>
+I know, this is ugly. First let's imagine this as one line <br>
+[(5, [(1, 1, 1)], 1), (0, [(1, 1, -4)], 1), (-1, [(1, -1/5, -7/5)], 1)] <br>
+There are square braces encosing everything. Inside those braces is the information we want. <br>
+Let's brake down the first component, '(5, [(1, 1, 1)], 1)' <br>
+'5' is the coresponding eigenvalue to the eigenvector. <br>
+'[(1, 1, 1)]' is the eigenvector of the eigenvalue. <br>
+'1' is the multiplicity of the eigenvector.<br>
+For more information see <br>
+http://www.sagemath.org/doc/tutorial/tour_linalg.html

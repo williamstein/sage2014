@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<head>
+  <title>SageMathCloud API</title>
+  <meta charset='utf-8'/>
+  <meta name='description' content='Documentation website'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+  <link href='assets.css' rel='stylesheet' type='text/css'>
+</head>
+<body>  
+  <nav id='sidebar'>
+	<h1>SageMathCloud API</h1>
+<ul id='links'>
+  
+    
+    <li><a href='#/presentation'>SageMathCloud API Documentation Presentation</a></li>
+    
+  
+    
+    <li><a href='#/response-status-codes'>Response status codes</a></li>
+    
+  
+    
+    <li><a href='#/authentication'>Authenticate</a></li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <li><h2>user</h2>
+    <ul>
+    
+              
+        <li class=''><a href='#'></a></li>
+      
+    
+              
+        <li class='GET'><a href='#/user-get-name'>Search for Users by name</a></li>
+      
+    
+    </ul>
+  </li>
+
+  <li><h2>file</h2>
+    <ul>
+    
+              
+        <li class=''><a href='#'></a></li>
+      
+    
+              
+        <li class='GET'><a href='#/files-get'>Get project files</a></li>
+              
+        <li class='PUT'><a href='#/file-put'>Update a file</a></li>
+              
+        <li class='POST'><a href='#/file-post'>Post a file</a></li>
+              
+        <li class='PATCH'><a href='#/file-patch'>Patch a file</a></li>
+              
+        <li class='DELETE'><a href='#/file-delete'>Delete a file</a></li>
+              
+        <li class='GET'><a href='#/file-get-id'>Get a file by ID</a></li>
+      
+    
+    </ul>
+  </li>
+
+  <li><h2>project</h2>
+    <ul>
+    
+              
+        <li class=''><a href='#'></a></li>
+      
+    
+              
+        <li class='GET'><a href='#/project-get-id'>Get Project by ID</a></li>
+              
+        <li class='GET'><a href='#/project-get'>Get list of Projects</a></li>
+              
+        <li class='POST'><a href='#/project-post'>Create Project</a></li>
+              
+        <li class='PUT'><a href='#/project-put'>Update a project</a></li>
+              
+        <li class='DELETE'><a href='#/project-delete'>Delete a project</a></li>
+      
+    
+    </ul>
+  </li>
+
+  <li><h2>commands</h2>
+    <ul>
+    
+              
+        <li class=''><a href='#'></a></li>
+      
+    
+              
+        <li class='POST'><a href='#/sagecommand'>Post a Sage Command</a></li>
+              
+        <li class='POST'><a href='#/cmd'>Post a command</a></li>
+      
+    
+    </ul>
+  </li>
+
+</ul>
+</nav>
+
+<section id='content'>
+
+  <article class=''>
+    <a name='/presentation' href='#/presentation'><h2>SageMathCloud API Documentation Presentation</h2></a>
+    <section class='body'>
+      <h1 id="what-is-my-project">What is my project?</h1>
+
+<ol>
+  <li>I wrote up documentation for the API that is contained in SageMathCloud</li>
+  <li>I wanted ability to use Sage to do Math in my programming without having to install Sage locally. </li>
+</ol>
+
+<h1 id="project-goals">Project Goals</h1>
+
+<ol>
+  <li>Ability to interact with SageMathCloud for any device programmatically. </li>
+  <li>Allow any internet connected device to do Math using Sage.  </li>
+  <li>Unlock SageMathCloud to third parties.</li>
+</ol>
+
+<h1 id="what-is-an-api">What is an API?</h1>
+
+<ul>
+  <li>An API or <strong>Application Programming Interface</strong> allows a product or service to talk to other products and services</li>
+  <li>Opens up data and functionality to others (eg: third party developers, companies, users, toasters, etc)</li>
+  <li>Exchange data internally and externally (separates the logic from the application)</li>
+  <li>Leverage cloud resources, because more and more devices are becoming mobile and the need for the processing to be done in the cloud is increasing. </li>
+</ul>
+
+<h1 id="api-design">API Design</h1>
+
+<p><img src="apidesign.png" alt="Drawing" style="width: 500px;" /></p>
+
+<h1 id="why-have-an-api">Why have an API?</h1>
+
+<ol>
+  <li>Leverage the same logic for all of your applications (eg: web, mobile, etc)</li>
+  <li>Partnerships with third parties. </li>
+  <li>Data exchange</li>
+  <li>Monetization</li>
+  <li>Presence/Awareness driving people to SageMathCloud</li>
+  <li>“SageMathCloud is a way to get Sage onto Windows Laptops” but the API for SageMathCloud is a way to get Sage onto every device!</li>
+</ol>
+
+<h1 id="delivering-an-api">Delivering an API</h1>
+
+<ol>
+  <li><strong>XML (Extensible Markup Language)</strong> </li>
+</ol>
+
+<p><img src="xml.png" alt="Drawing" style="width: 500px;" /></p>
+
+<ol>
+  <li><strong>JSON (JavaScript Object Notation)</strong></li>
+</ol>
+
+<p><code>
+{
+    "Student": "Christopher Trudeau"
+}
+</code></p>
+
+<h1 id="what-i-built">What I built</h1>
+
+<ul>
+  <li>Lightweight documentation to display all possible actions that can be taken by third parties in SageMathCloud. </li>
+  <li>Easy to extend using <strong>Markdown</strong></li>
+  <li><a href="https://github.com/Trudeaucj/SMCAPI">GitHub Page</a> page to explain installation as well as how to add to the documentation</li>
+</ul>
+
+<h1 id="where-to-go-next">Where to go next?</h1>
+
+<ul>
+  <li>Implement Authentication</li>
+  <li>Client Library</li>
+  <li>Spread the word of SageMathCloud APIs</li>
+  <li>If you have any ideas of useful APIs for SageMathCloud please reach out to me and let me know! </li>
+</ul>
+
+    </section>
+  </article>
+
+  <article class=''>
+    <a name='/response-status-codes' href='#/response-status-codes'><h2>Response status codes</h2></a>
+    <section class='body'>
+      <h3 id="success">Success</h3>
+
+<p>When <a href="#/user-get-name">searching for users</a> for example:</p>
+
+<p><code>{
+    "users": [
+        {
+            "account_id": "213123123-db70-43e0-974a-e461b347a14b",
+            "email": "cjt8@uw.edu",
+            "first_name": "Christopher",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+        {
+            "account_id": "112233-db70-43e0-974a-e461b347a14b",
+            "email": "trudeau.c@uw.edu",
+            "first_name": "Chris",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+    ]
+}</code>  </p>
+
+<p><code>
+{
+"status": "ok"
+}
+</code>  </p>
+
+<h3 id="error">Error</h3>
+
+<p>Error responses are simply returning <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">standard HTTP error codes</a> along with some additional information:</p>
+
+<ul>
+  <li>The error code is sent back as a status header,</li>
+  <li>The body includes an object describing both the code and message (for debugging and/or display purposes),</li>
+</ul>
+
+<p>For a call with an invalid authentication token for example:</p>
+
+<p><code>{
+    "status": "error",
+    "error": 'Access denied: invalid authentication token.'
+}</code></p>
+
+<p>For a call with a token that does not have access to the request resource:</p>
+
+<p><code>{
+    "status": "error",
+    "error": 'Forbidden: your authentication key does not have access to this project.'
+}</code></p>
+
+    </section>
+  </article>
+
+  <article class=''>
+    <a name='/authentication' href='#/authentication'><h2>Authenticate</h2></a>
+    <section class='body'>
+      <h3 id="where-to-retrive-api-key">Where to retrive API Key</h3>
+
+<p>To Authenticate go to <a href="https://cloud.sagemath.com/" title="SageMathCloud">SageMathCloud</a> 
+and go to project settings to get your API key.</p>
+
+<p><img src="auth1.jpg" alt="Authentication API Key location" /></p>
+
+<h3 id="how-to-add-your-api-to-your-request">How to add your API to your Request</h3>
+<ul>
+  <li>All calls to SageMathCloud API must have the X-smc-authorization header. </li>
+  <li>Authorization is a header to include in your request.</li>
+</ul>
+
+<p><code>
+GET https://cloud.sagemath.com/projects/&lt;ProjectID&gt;/project/
+X-smc-authorization: &lt;API key from project&gt;
+</code></p>
+
+<h3 id="how-to-connect-to-the-websocket">How to connect to the WebSocket</h3>
+<p><code>
+TDB
+</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='POST'>
+    <a name='/sagecommand' href='#/sagecommand'><h2><code><b>POST</b> /sagecommand</code> Post a Sage Command</h2></a>
+    <section class='body'>
+      <p>Execute a <a href="http://www.sagemath.org/">Sage</a> command inside of your project. This method allows you to find any <a href="http://www.sagemath.org/help.html#SageStandardDoc">Sage Command inside the Sage Documentation</a> and get the results.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>Headers
+    <ul>
+      <li>x-smc-authorization a valid token</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code>{
+    "sage": "factor(2006)"   
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p><code>{
+    "status": "ok"
+    "sage_command_response": "2 * 17 * 59"
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='POST'>
+    <a name='/cmd' href='#/cmd'><h2><code><b>POST</b> /cmd</code> Post a command</h2></a>
+    <section class='body'>
+      <p>Execute a command inside of your project.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>Headers
+    <ul>
+      <li>x-smc-authorization a valid token</li>
+      <li>x-smc-path a path of where the command should be executed</li>
+      <li>optional: x-smc-async true -or- false.  </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p><code>{
+    "status": "ok"
+    "command_response": "&lt;Response of the command&gt;"
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='GET'>
+    <a name='/project-get-id' href='#/project-get-id'><h2><code><b>GET</b> /projects/{:id}</code> Get Project by ID</h2></a>
+    <section class='body'>
+      <p>This method allows users to retrieve stuff.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li>ID of the project you are interested in must be included in the URL of the request.</li>
+  <li><strong>The body is omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back the project corresponding to the ID in the request. </p>
+
+<p><code>{
+	"account_id": "2323242s-05c7-4c28-ae22-23233434",
+	"bup_location": "3ew2323-059d-44e1-ace0-eb02918234",
+	"collaborator": {
+	    "account_id": "234232-726d-422c-81325-0472313ad5a",
+	    "first_name": "Win",
+	    "last_name": "Li"
+	},
+	"description": "#480b #star",
+	"last_edited": "1401150780000",
+	"name": "math_480b___sage_2014___shared_project",
+	"owner": {
+	    "account_id": "25213131-05c7-4c28-ae22-1e6d3d2e8bb5",
+	    "first_name": "Christopher",
+	    "last_name": "Trudeau"
+	},
+	"project_id": "4d421231-66e9-44b6-b9af-15207098d2c6",
+	"public": "true",
+	"title": "Math 480b - sage 2014 - shared project"
+}</code>  </p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='GET'>
+    <a name='/project-get' href='#/project-get'><h2><code><b>GET</b> /projects</code> Get list of Projects</h2></a>
+    <section class='body'>
+      <p>This will return to you the list of projects that are available to your authentication token.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li>The body is <strong>omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a JSON array of projects. </p>
+
+<p><code>{
+    "projects": [
+        {
+            "account_id": "2323242s-05c7-4c28-ae22-23233434",
+            "bup_location": "3ew2323-059d-44e1-ace0-eb02918234",
+            "collaborator": {
+                "account_id": "234232-726d-422c-81325-0472313ad5a",
+                "first_name": "Win",
+                "last_name": "Li"
+            },
+            "description": "#480b #star",
+            "last_edited": "1401150780000",
+            "name": "math_480b___sage_2014___shared_project",
+            "owner": {
+                "account_id": "25213131-05c7-4c28-ae22-1e6d3d2e8bb5",
+                "first_name": "Christopher",
+                "last_name": "Trudeau"
+            },
+            "project_id": "4d421231-66e9-44b6-b9af-15207098d2c6",
+            "public": "true",
+            "title": "Math 480b - sage 2014 - shared project"
+        },
+        {
+            "account_id": "2323242s-05c7-4c28-ae22-23233434",
+            "bup_location": "3ew2323-059d-44e1-ace0-eb02918234",
+            "collaborator": {
+                "account_id": "234232-726d-422c-81325-0472313ad5a",
+                "first_name": "William",
+                "last_name": "Stein"
+            },
+            "description": "#480b #star",
+            "last_edited": "1401150780000",
+            "name": "math_480b___sage_2014___shared_project",
+            "owner": {
+                "account_id": "25213131-05c7-4c28-ae22-1e6d3d2e8bb5",
+                "first_name": "Christopher",
+                "last_name": "Trudeau"
+            },
+            "project_id": "4d421231-66e9-44b6-b9af-15207098d2c6",
+            "public": "true",
+            "title": "Math 480b - sage 2014 - shared project"
+        }
+    ]
+}</code>  </p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='POST'>
+    <a name='/project-post' href='#/project-post'><h2><code><b>POST</b> /projects</code> Create Project</h2></a>
+    <section class='body'>
+      <p>This method allows users to create a new thing.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body can’t be empty</strong> and must include at least the name attribute, a <code>string</code> that will be used as the name of the thing.</li>
+  <li>Parameters supported: 
+    <ol>
+      <li><strong>title</strong> of the project (required)</li>
+      <li><strong>description</strong> of the project (optional)</li>
+      <li><strong>public</strong> visibility of the project (optional: defaults to private))</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="headers">Headers</h4>
+<p><code>X-smc-authorization: &lt;API key from project&gt;</code></p>
+
+<h4 id="body">Body</h4>
+<p><code>{
+    "title":"&lt;Title of Project&gt;",
+    "description":"&lt;description of project&gt;",
+    "public":"&lt;visibility {public or private}&gt;"
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p><strong>If it succeeds</strong>, returns the created project and a URI to use the ‘GET’ project API.</p>
+
+<p><code>{
+    "project_id": "4d421231-66e9-44b6-b9af-15207098d2c6",
+    "project_url": "https://cloud.sagemath.com/project/4d421231-44b6-b9af-15207098d2c6"
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='PUT'>
+    <a name='/project-put' href='#/project-put'><h2><code><b>PUT</b> /projects/{:id}</code> Update a project</h2></a>
+    <section class='body'>
+      <p>This method allows the user to update any of the properties of a project in SageMathCloud. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id of the project to update.</li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body can’t be empty</strong> and must include at least the name attribute, a <code>string</code> that will be used as the name of the thing.</li>
+  <li>Parameters supported: 
+    <ol>
+      <li>bup_location (project server location)</li>
+      <li>description (description of project)</li>
+      <li>name (name of project)</li>
+      <li>public (visibility of project)</li>
+      <li>title (title of project)</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="headers">Headers</h3>
+<p><code>X-smc-authorization: &lt;API key from project&gt;</code></p>
+
+<h3 id="body-example">Body Example</h3>
+<p><code>{
+    name: 'My new thing'
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a success message.</p>
+
+<p><code>{
+	"message": "success/failure/etc"
+}</code></p>
+
+<h3 id="hidden-feature">Hidden feature</h3>
+
+<p>If you send an update request with the JSON body below, it will restart your project server if something has gone wrong. </p>
+
+<p><code>
+{
+	"project": "restart"
+}
+</code></p>
+
+<h3 id="response-1">Response</h3>
+
+<p><code>
+{
+	"status": "success"
+}
+</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='DELETE'>
+    <a name='/project-delete' href='#/project-delete'><h2><code><b>DELETE</b> /projects/{:id}</code> Delete a project</h2></a>
+    <section class='body'>
+      <p>This method allows you to delete a project available to your token. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id the thing to delete.</li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body is omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p><code>{
+    "message": 'Your project (id: 73232-213123) was deleted'
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='GET'>
+    <a name='/files-get' href='#/files-get'><h2><code><b>GET</b> /files</code> Get project files</h2></a>
+    <section class='body'>
+      <p>This method allows the user to get all the files available in a specifed project ID. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body is omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a collection of files.</p>
+
+<p><code>{
+    code: 200,
+    message: 'Your thing (id: 736) was deleted'
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='PUT'>
+    <a name='/file-put' href='#/file-put'><h2><code><b>PUT</b> /files/{:id}</code> Update a file</h2></a>
+    <section class='body'>
+      <p>This method allows the user to update a file. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id of the file to update. </li>
+  <li>The headers must include a <strong>valid authentication token</strong>.
+    <ul>
+      <li>x-smc-filename the filename to post</li>
+      <li>x-smc-path the path where the file is stored. If not specified it’s $HOME. If the path doesn’t exist, it will be created.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back an HTTP 204 implying that the resource was successfully updated. </p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='POST'>
+    <a name='/file-post' href='#/file-post'><h2><code><b>POST</b> /files</code> Post a file</h2></a>
+    <section class='body'>
+      <p>This method </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li>The headers must include a <strong>valid authentication token</strong>.
+    <ul>
+      <li>x-smc-filename the filename to post</li>
+      <li>x-smc-path the path where the file is stored. If not specified it’s $HOME. If the path doesn’t exist, it will be created.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back an ID and URI of the file.</p>
+
+<p><code>{
+    "file_id": "223123-dfsdf-23123-sdasd",
+    "URI": "https://cloud.sagemath.com/projects/&lt;ProjectID&gt;/file/&lt;FileID&gt;"
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='PATCH'>
+    <a name='/file-patch' href='#/file-patch'><h2><code><b>PATCH</b> /files/{:id}</code> Patch a file</h2></a>
+    <section class='body'>
+      <p>Similar to POST or PUT on files, this method allows the user to do a DIFF on a file to append new results to a file. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id the thing to delete.</li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body is omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a message of how the patch of the file went.</p>
+
+<p><code>{
+    "message": "The patch was completed successfully",
+	"URI": "https://cloud.sagemath.com/projects/&lt;ProjectID&gt;/file/&lt;FileID&gt;"
+}</code></p>
+
+<p>OR</p>
+
+<p><code>{
+	"status": "error",
+    "message": "The patch failed, please retry",
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='DELETE'>
+    <a name='/file-delete' href='#/file-delete'><h2><code><b>DELETE</b> /files/{:id}</code> Delete a file</h2></a>
+    <section class='body'>
+      <p>This method allows the user to delete a project file by file ID.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id the file to delete see the <a href="#/files-get">get files for how to get a file ID</a>.</li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body is omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a collection of things.</p>
+
+<p><code>Status: 204 Deleted</code>
+<code>{
+    code: 204,
+    message: 'Your file (id: 736) was deleted'
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='GET'>
+    <a name='/file-get-id' href='#/file-get-id'><h2><code><b>GET</b> /files/{:id}</code> Get a file by ID</h2></a>
+    <section class='body'>
+      <p>This method allows you to get (download) a file within the project by ID. Using this method you can either download single files or a whole directory using the IDs given by calling <a href="#/files-get">Get on FILES</a>. </p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:id</code></strong> is the id the file to get. Obtained by calling <a href="#/files-get">Get on FILES</a></li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li><strong>The body is omitted</strong>.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<p>File should start downloading via WebSocket file transfer. </p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+  <article class='GET'>
+    <a name='/user-get-name' href='#/user-get-name'><h2><code><b>GET</b> /user/{:name}</code> Search for Users by name</h2></a>
+    <section class='body'>
+      <p>This method allows you to search for users in SageMathCloud. Using search you could add collaborators to projects.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:name</code></strong> is the first/last name of the user you are searching for.</li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li>The body contains the name of the person you are interested in searching for.</li>
+</ul>
+
+<h4 id="body">Body</h4>
+<p><code>{
+    "name":"&lt;Name to search&gt;",
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a collection of users found in SageMathCloud.</p>
+
+<p><code>{
+    "users": [
+        {
+            "account_id": "213123123-db70-43e0-974a-e461b347a14b",
+            "email": "cjt8@uw.edu",
+            "first_name": "Christopher",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+        {
+            "account_id": "112233-db70-43e0-974a-e461b347a14b",
+            "email": "trudeau.c@uw.edu",
+            "first_name": "Chris",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+    ]
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>
+
+    </section>
+  </article>
+
+</section>
+
+  
+  <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
+  <script src='assets.js' type='text/javascript'></script>
+  <script>require('boot');</script>
+</body>
+</html>

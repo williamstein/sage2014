@@ -1,0 +1,10 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'>'The result that is returned by sage'</font color> <br>
+<br>
+To make a 3D plot in sage, we type; <br>
+<font color = 'green'>sage:</font color> plot3d(sin(x^2+y^2),(x,-5,5),(y,-5,5)) <br>
+To put it another way, <br>
+<font color = 'green'>sage:</font color> plot(‘Our function’, (x, xMin, xMax), (y, yMin, yMax)) <br>
+For more information see <br>
+http://www.sagemath.org/doc/prep/Symbolics-and-Basic-Plotting.html#basic-3d-plotting

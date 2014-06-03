@@ -1,0 +1,13 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'>'The result that is returned by sage'</font color> <br>
+<br>
+To solve an equation in sage, we type; <br>
+<font color = 'green'>sage:</font color> x = var(‘x’) <br>
+<font color = 'green'>sage:</font color> solve(x^2 + 2 == 6, x) <br>
+>>> <font color = 'blue'> [x == 4] </font color> <br>
+To put it another way<br>
+<font color = 'green'>sage:</font color> solve(‘Our equation’, ‘The variable we are solving for’) <br>
+Notice that we first declare our variable “x = var(‘x’)” then when we enter our equation we use the double equals, i.e. “==“. <br>
+For more information see <br>
+http://www.sagemath.org/doc/tutorial/tour_algebra.html

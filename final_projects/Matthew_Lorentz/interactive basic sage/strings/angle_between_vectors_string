@@ -1,0 +1,16 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'>'The result that is returned by sage'</font color> <br>
+<br>
+To find the angle between two vectors, we type; <br>
+<font color = 'green'>sage:</font color> arccos(vecLeft.dot_product(vecRight) / (vecRight.norm() * vecLeft.norm())) <br>
+Where ‘vecLeft and vecRight’ are the vectors you have previously defined (see 'How do I enter a vector in sage' above).<br>
+To break this down a bit; <br>
+<font color = 'green'>sage:</font color> a = vecLeft.dot_product(vecRight) <br>
+<font color = 'green'>sage:</font color> b = vecRight.norm() * vecLeft.norm() <br>
+<font color = 'green'>sage:</font color> c = a / b <br>
+<font color = 'green'>sage:</font color> arccos(c) <br>
+>>> <font color = 'blue'>arccos(1/15*sqrt(3)*sqrt(2))</font color> <br>
+For more information see <br>
+http://www.sagemath.org/doc/reference/modules/sage/modules/free_module_element.html
+

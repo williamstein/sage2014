@@ -1,0 +1,39 @@
+<p>This method allows you to search for users in SageMathCloud. Using search you could add collaborators to projects.</p>
+
+<h3 id="request">Request</h3>
+
+<ul>
+  <li><strong><code>:name</code></strong> is the first/last name of the user you are searching for.</li>
+  <li>The headers must include a <strong>valid authentication token</strong>.</li>
+  <li>The body contains the name of the person you are interested in searching for.</li>
+</ul>
+
+<h4 id="body">Body</h4>
+<p><code>{
+    "name":"&lt;Name to search&gt;",
+}</code></p>
+
+<h3 id="response">Response</h3>
+
+<p>Sends back a collection of users found in SageMathCloud.</p>
+
+<p><code>{
+    "users": [
+        {
+            "account_id": "213123123-db70-43e0-974a-e461b347a14b",
+            "email": "cjt8@uw.edu",
+            "first_name": "Christopher",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+        {
+            "account_id": "112233-db70-43e0-974a-e461b347a14b",
+            "email": "trudeau.c@uw.edu",
+            "first_name": "Chris",
+            "last_name": "Trudeau",
+            "search": "chris trudeau"
+        }
+    ]
+}</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>

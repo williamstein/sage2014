@@ -1,0 +1,24 @@
+<h3 id="where-to-retrive-api-key">Where to retrive API Key</h3>
+
+<p>To Authenticate go to <a href="https://cloud.sagemath.com/" title="SageMathCloud">SageMathCloud</a> 
+and go to project settings to get your API key.</p>
+
+<p><img src="auth1.jpg" alt="Authentication API Key location" /></p>
+
+<h3 id="how-to-add-your-api-to-your-request">How to add your API to your Request</h3>
+<ul>
+  <li>All calls to SageMathCloud API must have the X-smc-authorization header. </li>
+  <li>Authorization is a header to include in your request.</li>
+</ul>
+
+<p><code>
+GET https://cloud.sagemath.com/projects/&lt;ProjectID&gt;/project/
+X-smc-authorization: &lt;API key from project&gt;
+</code></p>
+
+<h3 id="how-to-connect-to-the-websocket">How to connect to the WebSocket</h3>
+<p><code>
+TDB
+</code></p>
+
+<p>For errors responses, see the <a href="#response-status-codes">response status codes documentation</a>.</p>

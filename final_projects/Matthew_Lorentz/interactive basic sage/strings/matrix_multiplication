@@ -1,0 +1,12 @@
+Notation: <br>
+<font color = 'green'>sage:</font color> 'What we enter into sage' (note, we do not enter the 'sage:' part) <br>
+>>> <font color = 'blue'>'The result that is returned by sage'</font color> <br>
+<br>
+To multiply matrices in sage we simply multiply them.<br>
+Say we have previously defined matrices v and u (see 'How do I enter a matrix in sage' above), we type; <br>
+<font color = 'green'>sage:</font color> v * u <br>
+>>> <font color = 'blue'> [-1/6 -1/6  2/3] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ 1/3  4/3 -7/3] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-1/6 -7/6  8/3] </font color> <br>
+For more information see <br>
+http://www.sagemath.org/doc/tutorial/tour_linalg.html
