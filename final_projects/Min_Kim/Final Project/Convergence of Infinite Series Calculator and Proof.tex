@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{letltxmacro}
+\usepackage{amssymb}
+
+\title{Convergence Caculator of Infinite Series And Proof}
+\author{Min Soo Kim}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents{}
+\newpage
+Definitions,Introduction Different Convergence Test of Infinite Series
+\begin{abstract}
+This document is for my Math 480 final project showing that how this project works accroding to some mathematical convergence theorem of infinite series.
+\end{abstract}
+%%%Introduction%%%%
+\section{Introduction}
+In order to find out about the convergence and divergence of infinite series, we can find out by testing with several different test. For instance, a infinite series is a sum of the form $\displaystyle\sum_{k=1}^{\infty}a_k=a_1+a_2+\cdots$. The numbers $a_k$ are the terms of the series. Then $n^{th}$ partial sum of the series of the number
+$S_n=\displaystyle\sum_{k=1}^{n}a_k=a_1+a_2+\cdots+a_n$\newline
+If the sequence ${S_n}$ of partial sums converges, then we say that the series $\displaystyle\sum_{k=1}^{\infty}a_k$ $lim_{n\to\infty}S_n$.
+If ${s_n}$ does not converge, then the series $\displaystyle\sum_{k=1}^{\infty}a_k$ diverges.
+\begin{itemize}
+\item $\displaystyle\sum_{k=1}^{\infty}\frac{1}{2^k}=\frac{1}{2}+\frac{1}{4}+\cdots$
+\end{itemize}
+Then for $n\in \mathbb{N}$ \\
+$S_n=\displaystyle\sum_{k=1}^{\infty}\frac{1}{2^k}=\displaystyle\sum_{k=1}^{\infty}\big(\frac{1}{2}\big)^k$\\
+$=\displaystyle\sum_{k=0}^{n}\big(\frac{1}{2}\big)^k-1$\\
+$=\big(\frac{1-(\frac{1}{2}\big)^{n+1}}{1-\frac{1}{2}}\big)-1$\newline
+$=1-\big(\frac{1}{2}\big)^n$\\
+Then, $lim_{n\to\infty}S_n=lim_{n\to\infty}\big(1-\big(\frac{1}{2}\big)^n\big)$\\
+$=lim_{n\to\infty}1-lim_{n\to\infty}\big(\frac{1}{2}\big)^n$\\
+$=1-0=1$\\
+Since ${S_n}$ converges to 1, the series $\displaystyle\sum_{k=1}^{\infty}a_k$ converges and we write $\displaystyle\sum_{k=1}^{\infty}a_k=1$.\\
+This is the definition of partial sum of the infinite series. If the partial sum of the infinite series converges then the series converges. There are various test I will introduce in this project: Geometric Series Test, P-Series Test, Divergence Test, Integral Test, Comparison Test, Limit Comparison Test, Ratio Test, Root Test. I am going to use abbreviations for each test such as GST,DT, CT, IT, PST, LTC, RT, ROOT, ALT. Depending on the test, it will either return True for successful test which means the infinite series converges and Flase for otherwise.\newline
+
+
+%%%Table of abbreviation %%%
+\begin{table}
+\caption{Abbreviation List}
+\centering
+\begin{tabular}{c c}
+\hline\hline
+Abbreviation & Definition \\ [0.5ex]
+\hline
+GST & Geometric Series Test \\
+PST & P-Series Test \\
+DT & Divergence Test \\
+IT & Integral Test \\
+CT & Comparison Test \\
+LTC & Limit Comparison Test \\
+RT & Ratio Test \\
+ROOT & Root Test \\
+\hline
+\end{tabular}
+\label{table:abbv}
+\end{table}
+%%%Definition%%%
+\section{definition}
+%%%Term Test%%%
+\subsection{Divergence Test}
+If $\displaystyle\sum_{k=1}^{\infty}a_k$ converges, then $lim_{n\rightarrow\infty}a_n=0$
+%%%Geometric Series Test%%%
+\subsection{Geometric Series Test}
+Let $r\in \mathbb{R}$
+\begin{itemize}
+\item If $|r|<1$, then the series $\displaystyle\sum_{k=0}^{\infty}r^k$ converges to $\frac{1}{1-r}$
+\item If $|r|\ge1$, then the series $\displaystyle\sum_{k=0}^{\infty}r^k$ diverges.
+\end{itemize}
+%%%Comparison Test%%%
+\subsection{Comparison Test}
+Suppose ${a_k}$ and ${b_k}$ are sequences such that $0\le{a_k}\le{b_k}$ for each $k\in \mathbb{N}$
+\begin{itemize}
+\item If $\displaystyle\sum_{k=1}^{\infty}b_k$ converges, then $\displaystyle\sum_{k=0}^{\infty}a_k$ converges.
+\item If $\displaystyle\sum_{k=0}^{\infty}a_k$ diverges, then $\displaystyle\sum_{k=0}^{\infty}b_k$ diverges.
+\end{itemize}
+%%%Integral Test%%%
+\subsection{Integral Test}
+Suppose $a_k = f(n)$ where $f(x)$ is a positive continuous which decreses for all $x \geq 1$ Then
+\[
+\sum_{k=1}^{\infty} a_k \text{ and } \int\limits_1^\infty f(x) dx
+\
+\]
+either both converge or both diverge.The same holds if $f(x)$ decreases for all $x > b$ where $b \geq 1$.
+%%%P-Series Test%%%
+\subsection{P-Series Test}
+The P-Series $\displaystyle\sum_{k=0}^{\infty}\frac{1}{k^p}$ converges if and only if $p>1$ and diverges if $p\le1$.
+%%%Alternating Series Test%%%
+\subsection{Alternating Series Test}
+Suppose ${a_k}$ is a decreasing sequence of non-negative terms that converges to 0. Then the series $\displaystyle\sum_{k=1}^{\infty}(-1)^{k+1}a_k=a_1-a_2+a_3-a_4\cdots$converges.
+%%%Ratio Test%%%
+\subsection{Ratio Test}
+Suppose $a_k\ne 0 \forall k$ and $lim_{k\rightarrow\infty}\frac{|a_{k+1}|}{a_k}=l\in\mathbb{R}$
+\begin{itemize}
+\item If $l<1$ then, $\sum a_k$ converges absolutely
+\item If $l>1$ then, $\sum a_k$ diverges
+\item If $l=1$ the, test fails and should try other test.
+\end{itemize}
+%%%Root Test%%%
+\subsection{Root Test}
+\begin{itemize}
+\item $\lim_{k \to \infty} \sqrt[k]{|a_k|} = L < 1$ then $\sum a_k$ coverges absolutely (converges)
+\item $\lim_{k \to \infty} \sqrt[k]{|a_k|} = L > 1$ or $L = \infty$ then $\sum a_k$ diverges
+\item $\lim_{k \to \infty} \sqrt[k]{|a_k|} = L = 1$ then the test fails, nothing can be said
+\end{itemize}
+%%%Examples of Various Tests%%%
+\section{Examples of Various Tests}
+\begin{itemize}
+\item $\displaystyle\sum_{k=3}^{\infty}\frac{1}{7^k}$ converges to $\frac{7}{6}$ by Geometric Series Test.
+\item $\displaystyle\sum_{k=1}^{\infty}\frac{1}{\sqrt{k}2^k}$ For $k\in \mathbb{N}$ converges since $\sum \frac{1}{2^k}$ is a Geometric Series that converges and $\frac{1}{\sqrt{k}2^k}\le \frac{1}{2^k}$ By the CT $\displaystyle\sum_{k=1}^{\infty}\frac{1}{\sqrt{k}2^k}$ converges.
+\item $\displaystyle\sum_{k=1}^{\infty}(-1)^{k+1}\big(\frac{5^k}{k!}\big)$ converges by the Ratio Test, $l$ is less than 1.
+\item $\displaystyle\sum_{k=1}^{\infty}\frac{3}{k^3}$ converges by the P-Series Test since $p>1$.
+\end{itemize}
+\section{Algorithms and Application of Algorithms}
+\subsection{Algorithms}
+\begin{itemize}
+\item seristest(name of the test, equation) is format for the using the definition of python class.
+\item Equation must be in right format for each type of test for convergence and divergence test. And abbreviation of tests will be used as mentioned. Independent variable of equation must be '$x$'. 
+\item For theorem that involving calculation of limits, it will print both limit and True or False value.
+\item This class either return True of False. If it return True, then the infinite series converges and for False, the infinite series diverges or should test for other test. For instance, If the limit is $1$ for Ratio Test and Root Test, then user should try for other test.
+\item Coding is based on the definition of each test.
+\item When trying Limit Convergence Test and Comparison Test, it will return True for both convergence or divergence and if test fails then nothing can be explained about comparing two equation then it will return False.
+\item Unlike other tests, LCT and CT, definition of class is seristest(eq1, eq2, variable, type of test) since this theorem is mainly used for comparison of convergence or divergence.
+\end {itemize}
+\subsection{Application of Algorithms}
+\begin{itemize}
+\item seriestest(1/(x**(3)), 'pst') conveges because $p\ge 1$ and return True
+\item seriestest((7/4)**(x),'gst') diverges because $r\le 1$ and return False.
+\item seriescomp((3*x+4)/(4*x), (2*x+1)/(3*x), 'lct') $\to$ 1/4*(3*x + 4)/x and 1/3*(2*x + 1)/x are either converge or diverge because LCT value is equal to 9/8 and return True.
+\end{itemize}
+\section{Conclusion}
+Thinking about weather or not the infinite series converges or diverges may take long time to figure out. Although user needs to put types of test as well, I believe this code can be modified better so that user only needs to put $a_k$.
+\end{document}
+
+%sagemathcloud={"zoom_width":100}

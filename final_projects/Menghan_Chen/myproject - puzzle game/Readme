@@ -1,0 +1,16 @@
+Menghan Chen, MATH480B, 14sp, Project
+============
+
+For my project, I first did the html version of the puzzle game, using coding of html, css and javascript. Then I started to consider how to make a sage version of the puzzle game. I got some idea from the Sudoku Puzzles Class (http://www.sagemath.org/doc/reference/games/sage/games/sudoku.html#sage.games.sudoku.Sudoku). Then I successfully made my own Puzzle Class in Sage.
+
+============
+
+For the html version of the puzzle game, the size of the puzzle is fixed, which is 4*4. You can move the tiles in different direction. You can shuffle the tiles to get a new puzzle game. You can change background image. And when you solve the puzzle, you will get a notification at the bottom of the page. There is also a counter to count how many times you win.
+
+To use the html version of the puzzle game, you need to download all the files in the folder "html version". Then you can open "puzzle.html" to play the game. You can add your own background image in the folder, but you need to scale the image size to 400*400 pixels.
+
+============
+
+For the sage version of the puzzle game, you can define your own size of the puzzle. The number of the grid should be an integer between 2 and 9 inclusively. Like the html version, you can move the tiles in different direction. You can shuffle the tiles to get a new puzzle. You can always check if the puzzle is solved or not. Unfortunately, there is no background image for the sage version puzzle. 
+
+To use the sage version of the puzzle game, just use the sage worksheet "puzzle.sage" in the folder "sage version". You can see my source code for the Puzzle Class with docstrings for all the functions. I have also included some application so you can have the idea on how to use the Puzzle Class.

@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Why study Monte Carlo methods?}{3}
+\contentsline {subsection}{\numberline {1.2}What is a Monte Carlo method?}{3}
+\contentsline {section}{\numberline {2}Monte Carlo Integration}{3}
+\contentsline {section}{\numberline {3}Examples of Monte Carlo methods}{4}
+\contentsline {subsection}{\numberline {3.1}Approximation of $\pi $}{4}
+\contentsline {subsection}{\numberline {3.2}Dice Rolling}{6}
+\contentsline {section}{\numberline {4}Real-World Applications}{8}
+\contentsline {subsection}{\numberline {4.1}Finance}{8}
+\contentsline {subsection}{\numberline {4.2}Risk Analysis}{8}
+\contentsline {subsection}{\numberline {4.3}Natural Disasters}{9}
+\contentsline {section}{\numberline {5}Problems with Monte Carlo}{11}

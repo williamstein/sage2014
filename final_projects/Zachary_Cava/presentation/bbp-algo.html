@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- metadata -->
+		<meta charset="utf-8" />
+		<meta name="author" content="Zachary Cava" />
+		<meta name="description" content="Lecture slides to accompany a talk on an exploration of the BBP Algorithm" />
+		<meta name="keywords" content="mathematics, sage, bbp, bailey, borwein, plouffe, bailey-borwein-plouffe formula, spigot, pi" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no" />		
+		
+		<!-- style sheet links -->
+		<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+		<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+		<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+		<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+
+		<!-- S5 JS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js" type="text/javascript"></script>
+		<script src="ui/default/slides.js" type="text/javascript"></script>
+
+		<!-- LaTeX in JS -->
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<title>The Bailey-Borwein-Plouffe Formula: The \(\pi\) spigot - Zachary Cava</title>
+	</head>
+
+	<body>
+		<div class="layout">
+			<div id="controls"><!-- DO NOT EDIT --></div>
+			<div id="currentSlide"><!-- DO NOT EDIT --></div>
+			<div id="header"></div>
+			<div id="footer">
+				<h1>The Bailey-Borwein-Plouffe Formula</h1>
+				<h2>Topic : The \(\pi\) Spigot</h2>
+			</div>
+		</div>
+
+		<div class="presentation">
+			<div class="slide">
+				<h1>The Bailey-Borwein-Plouffe Formula</h1>
+				<h2>The \(\pi\) Spigot</h2>
+				<h4>By: Zachary Cava</h4>
+
+				<p class="license">
+					Except where otherwise noted, the contents of this document are
+					Copyright 2014 Zachary Cava.
+					
+					All rights reserved.
+					Any redistribution, reproduction, transmission, or storage of part
+					or all of the contents in any form is prohibited without the author's
+					expressed written permission.
+				</p>
+			</div>
+
+			<div class="slide">
+				<h1>What is the BBP formula?</h1>
+				<p> 
+					Bailey-Borwein-Ploueffe, or BBP for short, is a formula that allows for the computation of any arbitrary digit of \(\pi\) without first computing the preceding digits.
+				</p>
+				<p>
+					The explicit formula is:
+					$$\pi = \sum_{k=0}^{\infty}\left[\frac{1}{16^{k}}\left(\frac{4}{8k+1}-\frac{2}{8k+4}-\frac{1}{8k+5}-\frac{1}{8k+6}\right)\right]$$
+				</p>
+				<p class="incremental">
+					This formula is a spigot algorithm, which means it is used to compute the value of a mathematical constant.
+				</p>
+			</div>
+
+			<div class="slide">
+				<h1>Interesting Notes</h1>
+				<ul>
+					<li>
+						The formula is created such that the results are in base 16, meaning the <em>nth</em> digit is not the <em>nth</em> digit in base 10, but the <em>nth</em> digit in base 16.
+					</li>
+					<li class="incremental">
+						This formula is bounded, meaning the digit expected must be specified in advanced of computation.
+					</li>
+					<li class="incremental">
+						As a side effect of the computation, multiple digits of \(\pi\) will be produced starting with the requested one. The number of extra digits vary depending on the calculation precision of the system.
+					</li>
+				</ul>
+			</div>
+
+			<div class="slide">
+				<h1>Drawbacks</h1>
+				<ul>
+					<li>
+						The formula cannot be directly implemented since doing so would be computationaly expensive, instead it must be reworked into smaller/faster pieces
+					</li>
+					<li class="incremental">
+						The implementation is only semi-specific to the constant \(\pi\) allowing for reuse with BBP algorithms that share a similar decomposed structure.
+					</li>
+					<li class="incremental">
+						The algorithm is still <em>linearithmic</em> meaning larger values of n will take longer to compute. Specifically it is \(O(nlog(n))\)
+					</li>
+				</ul>
+			</div>
+
+			<div class="slide">
+				<h1>Programmable Decomposition</h1>
+				<p>
+					After reading a few papers and a little testing I settled on this decomposition of the equation:
+					$$\pi = 4 * \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 1}\right)\right]
+					    - 2 * \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 2}\right)\right] \\
+					    - \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 5}\right)\right]
+					    -  \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 6}\right)\right]$$
+				</p>
+			</div>
+
+			<div class="slide">
+				<h1>Programmable Decomposition</h1>
+				<p>
+					Each of these smaller sums are faster to compute and lend to a nice and abstract generalization:
+					$$s * \sum_{k=0}^{\infty}\left[\left(\frac{1}{b^{k}}\right)\left(\frac{1}{m*k + a}\right)\right]$$
+				</p>
+				<ul>
+					<li>\(s\): A value to scale the partial sum by</li>
+					<li>\(b\): The base the computation occurs in</li>
+					<li>\(m\): The \(k\) value multiplier in denominator</li>
+					<li>\(a\): The value added to the scaled \(k\) value in the denominator</li>
+				</ul>
+			</div>
+
+			<div class="slide">
+				<h1>Computing [1..n] vs n directly</h1>
+				<p>
+					As the graph shows, for small n the difference is neglectible, but as n grows larger the spigot clearly wins.
+				</p>
+				<p style="text-align: center;">
+					<img src="n-v-direct.png" alt="direct, sequential, parallel"/>
+				</p>
+				<p class="incremental">
+					But we can still do a little better!
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Taking advantage of the smaller sums</h1>
+				<p>
+					Looking at these smaller sums again we can notice that they are completely independent of each other:
+					$$\pi = 4 * \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 1}\right)\right]
+					    - 2 * \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 2}\right)\right] \\
+					    - \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 5}\right)\right]
+					    -  \sum_{k=0}^{\infty}\left[\left(\frac{1}{16^{k}}\right)\left(\frac{1}{8k + 6}\right)\right]$$
+				</p>
+				<p class="incremental">
+					We can hand off each smaller sum to a different CPU and calculate the pieces in parallel!
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Computing [1..n] vs n directly (sequential) vs n directly (parallel)</h1>
+				<p>
+					As expected, on a machine with enough cores, the time for n direct is divided by about the number of small sums
+				</p>
+				<p style="text-align: center;">
+					<img src="n-v-seq-par.png" alt="direct, sequential, parallel" />
+				</p>
+			</div>
+			<div class="slide">
+				<h1>Generalizing BBP</h1>
+				<p>
+					Just like the smaller sums can be generalized, the entire function can be generalized and has been:
+					$$\alpha = \sum_{k=0}^{\infty}\left[\left(\frac{1}{b^{k}}\right)\left(\frac{p(k)}{q(k)}\right)\right]$$
+				</p>
+				<ul>
+					<li>\(b\): An integer numerical base</li>
+					<li>\(p\) and \(q\): Are polynomials with integer coefficients</li>
+				</ul>
+			</div>
+			<div class="slide">
+				<h1>Credits</h1>
+				<ul>
+					<li>Papers Referenced
+						<ul>
+							<li><a href="http://www.davidhbailey.com/dhbpapers/bbp-alg.pdf">The BBP Algorithm for Pi</a> - David H. Bailey</li>
+							<li><a href="http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf">Unbounded Spigot Algorithms for the Digits of Pi</a> - Jeremy Gibbons</li>
+							<li><a href="http://www.cecm.sfu.ca/~jborwein/Expbook/Manuscript/Related%20files/spigot.pdf">A Spigot Algorithm for the Digits of \(pi\)</a> - Stanley Rabinowitz; Stan Wagon</li>
+						</ul>
+					</li>
+					<li>Slide Framework - <a href="http://www.martystepp.com/">Marty Stepp</a></li>
+				</ul>
+			</div>
+		</div><!-- end div class="presentation" -->
+	</body>
+</html>

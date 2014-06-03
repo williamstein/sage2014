@@ -1,0 +1,156 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usetheme{Warsaw}
+
+\title{Perfect Numbers}
+\author{Lukas Ng}\institute{University of Washington}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+
+\end{frame}
+
+\begin{frame}
+What is a Perfect Number?
+
+\bigskip
+
+What a great question audience!
+
+\end{frame}
+
+\begin{frame}
+
+A perfect number is an integer $n$, such that the sum of its divisors are equal to $2n$.
+
+The sum of divisor function is usually represented by $\sigma(n)$, and so we can say that if $n$ is a perfect number, then 
+
+\begin{center}
+
+$\sigma(n) = 2n$
+
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+
+Here is a short list of some perfect numbers.
+
+$6, 28, 496, 8128, 33550336, ...$
+
+As we can see, the list of perfect numbers increases quite quickly. 
+
+Thus far, there are $48$ known perfect numbers.
+
+It should also be noted that the list of known perfect numbers only include even integers.
+
+\end{frame}
+
+\begin{frame}
+
+\textbf{Mersenne Primes}
+
+\bigskip
+
+Prime numbers of the form: $m = 2^p - 1$, where both $m, p$ are primes.
+
+Usually, the largest known prime is a Mersenne Prime.
+
+\bigskip
+
+But why do we care?
+
+\end{frame}
+
+\begin{frame}
+
+It turns out that Even Perfect Numbers can only be of the form:
+
+\begin{center}
+
+$2^{p-1} (2^p - 1)$
+
+\end{center}
+
+This was proven by Euclid.
+
+\medskip
+
+That second part looks awfully familiar... (Hint: It looks a lot like a Mersenne Prime)
+
+\medskip
+
+So now let's take a look at the proof of this fact.
+
+\end{frame}
+
+\begin{frame}
+
+Just kidding, it is a bit long for this presentation. For now, we will just accept this as fact. See page 6 and 7 of my paper for the proof.
+
+\end{frame}
+
+\begin{frame}
+
+Now, we will turn our attention to Odd Perfect Numbers.
+
+\bigskip
+
+Thus far, no Odd Perfect Number has ever been discovered. 
+
+It is widely believed by mathematicians that no Odd Perfect Numbers exist.
+
+I wrote some short code presented in my paper that can perhaps convince us of this fact.
+
+\bigskip
+
+That does not mean we know nothing about these numbers though...
+
+\end{frame}
+
+\begin{frame}
+
+It turns out that while mathematicians have been unable to prove Odd Perfect Numbers do not exist, they have been able to prove various necessary conditions for them to exist.
+
+\end{frame}
+
+\begin{frame}
+
+Here are a few conditions necessary for the existence of Odd Perfect Numbers:
+
+\bigskip
+
+- An OPN must have at least $9$ distinct prime divisors.
+
+- If an OPN is not divisible by $3$, it must have at least $12$ distinct prime divisors.
+
+- If an OPN is not divisible by $3$ or $5$, it must have at least $15$ distinct prime divisors.
+
+- If an OPN is not divisible by $3$, $5$, or $7$, it must have at least $27$ distinct prime divisors.
+
+- Any OPN must have a prime factor larger than $10^8$.
+
+- And more...
+
+\end{frame}
+
+\begin{frame}
+
+This problem has been around for quite some time and worked on by a lot of mathematicians.
+
+To date, it has been verified that no OPNs exist up to $10^{1500}$.
+
+\bigskip
+
+A proof of this could come at any day, or escape us for the rest of our individual lives. 
+
+Either way, a seemingly trivial problem like this shows us that there is still much for us to learn and discover about numbers.
+
+\end{frame}
+
+\end{document}
+%sagemathcloud={"zoom_width":90}

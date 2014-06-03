@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Parallel Covariance and Variance Calculation Paper.aux
+The style file: plain.bst
+Database file #1: references.bib
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            517 strings with 4806 characters,
+and the built_in function-call counts, 1040 in all, are:
+= -- 95
+> -- 35
+< -- 0
++ -- 15
+- -- 10
+* -- 27
+:= -- 179
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 35
+empty$ -- 111
+format.name$ -- 10
+if$ -- 226
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 0
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 40
+preamble$ -- 1
+purify$ -- 15
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 25
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 0
+while$ -- 10
+width$ -- 6
+write$ -- 47

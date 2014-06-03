@@ -1,0 +1,56 @@
+<html>
+  <head>
+	<meta charset="utf-8">
+	<script src="lib/jquery-1.10.2.js"></script>
+	<script src="lib/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="lib/jquery.json-2.2.min.js"></script>
+    <script src="lib/jquery.websocket-0.0.1.js"></script>
+	<script src="scripts/fetch.js"></script>
+	<script src="scripts/popup.js"></script>
+	<link href="styles/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    
+    <style>
+	body{
+		font: 62% "Trebuchet MS", sans-serif;
+		margin: 0 auto;
+		padding 0px;
+	}
+	#popup {
+		width:450px;
+		margin:0 auto;
+		padding:0px;
+	}
+	h3 {
+		margin-top:0;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	</style>
+  </head>
+
+  <body>
+    <div id="popup">
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Stats</a></li>
+            <li><a href="#tabs-2">Search</a></li>
+            <li><a href="#tabs-3">Notes</a></li>
+        </ul>
+        <div id="tabs-1"></div>
+        <div id="tabs-2">Search SageMath Documentation<br/>
+            <form id="sagemath_docsearch" action="http://www.sagemath.org/doc/reference/search.html" method="get" target="_blank">
+            	<input id="autocomplete" title="type &quot;a&quot;" class="ui-autocomplete-input" autocomplete="off" name="q" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+                <button id="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false" type="submit">
+                    <span class="ui-button-text">Search</span>
+                </button>
+            </form>
+        </div>
+        <div id="tabs-3" >
+<textarea id="textarea" style="width:100%;height:250px;clear:both;"></textarea></div>
+    </div>
+</div>
+  </body>
+</html>

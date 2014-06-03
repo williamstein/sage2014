@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usetheme{Warsaw}
+\setlength{\parskip}{1em}
+
+\title{Introduction to Curves in Differential Geometry}
+\author{Dylan Estes}\institute{University of Washington}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+
+\end{frame}
+
+\begin{frame}
+The point of this project is to give an accurate and interactive model from which new students to Differential Geometry can play around with until they become more comfortable with the terms and what they represent
+\end{frame}
+
+\begin{frame}
+Defenition: A parametrized differential curve is a differentible map $\alpha: I \rightarrow R^3$ of an open interval $I = (a,b)$ of the real line $R$ into $R^3$
+
+Example: $\alpha(t) = (acos(t),asin(t),bt)$,  $t\in R$
+\end{frame}
+
+
+\begin{frame}
+Important Vectors:\\
+Tangent: $t = \alpha'(s)$\\
+Normal: $n = \alpha''(s)/\mid k(s)\mid$\\
+Binormal: $b$ = $t$ x $n$
+\end{frame}
+
+\begin{frame}
+Curvature
+Let $\alpha:I \rightarrow R^3$ be a curve parameterized by arc length $s \in I$. The number $\mid \alpha''(s)\mid = k(s)$ is called the curvature of $\alpha$ at s.
+
+$\mid \alpha''(s)\mid$ therefore, is a measure of how rapidly the curve pulls away from the tangent line at s in a neighborhood of s
+\end{frame}
+
+\begin{frame}
+Frenet Frame:\\
+$t' = kn$\\
+$n' = -kt - \tau b$\\
+$b' = \tau n$\\
+\end{frame}
+
+\begin{frame}
+Torsion: 
+Definition: Let $\alpha:I \rightarrow R^3$ be a curve parametrized by arc length s such that $\alpha''(s) \neq 0, s \in I$. The number $\tau (s)$ defined by $ b'(s) = \tau (s)n(s)$ is called the torsion of $\alpha$ at s
+
+\end{frame}
+
+
+\end{document}
+%sagemathcloud={"zoom_width":90}

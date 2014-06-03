@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Inputs}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{S\&P 500}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Log Return}{5}{0}{2}
+\beamer@sectionintoc {3}{Outputs}{10}{0}{3}
+\beamer@sectionintoc {4}{Visualized Result}{11}{0}{4}
+\beamer@sectionintoc {5}{Flaws}{15}{0}{5}

@@ -1,0 +1,69 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usetheme{Warsaw}
+\AtBeginSection[]
+
+
+\title{SQLCache}
+\subtitle{An alternative to FileCache}
+\author{Connor Moore}\institute{University of Washington}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+
+\end{frame}
+
+\begin{frame}
+\frametitle{FileCache}
+FileCache is a class in "src/sage/misc/cachefunc.pyx" used to cache general information. It currently uses many different files in many different directories that it creates, which makes for a lot of overhead and a dangerously open file system.
+\end{frame}
+
+\begin{frame}
+\frametitle{SQLCache}
+SQLCache, as the name suggests, uses a SQL database, specifically the sqlite3 framework built into Python by default. It began as a class that would be backwards compatible with FileCache, but evolved into a class that offers a completely alternative interface. Arguably, it is simpler, and more curtailed to use with mathematical functions that don't change from call to call.
+\end{frame}
+
+\begin{frame}
+\frametitle{SQLCache: Interface}
+SQLCache has the following methods:
+\begin{itemize}
+\item \_\_init\_\_: Intializes the object
+\item \_\_repr\_\_: Returns a representation
+\item caching\_function: Returns a caching decorator function
+\item remove\_table: Removes a table associated with a function
+\item \_\_contains\_\_: Determines if a function table is in the cache
+\item \_\_iter\_\_: Iterates through the names of cached functions
+\item get\_elements: Returns the names of all cached functions
+\item values: Returns all cached values for a given function
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{SQLCache: caching\_function}
+The real meat of this class is the caching\_function function. The full title is caching\_function(function), where function is some arbitrary function. To summarize, it returns a decorator function similar to the function passed in. The decorator function has the exact same interface as the passed in function, and the exact same functionality. However, before executing this functionality, the new decorator function will check to see if there is a cached output associated with the input:
+\begin{itemize}
+\item If it is, the output is returned.
+\item Otherwise, the output is computed, cached, and returned.
+\end{itemize}
+This significantly improves runtime for repeated tasks
+\end{frame}
+
+\begin{frame}
+\frametitle{Warning}
+As mentioned, this Class is curtailed for mathematical functions. It's best used with functions that follow the reflexive property. That is, a function f should have the following property:
+\begin{align}
+f(*args) = f(*args)
+\end{align}
+If a function returns something different from call to call, the decorator function will falsely return an old cached output, when in fact the desired output has changed.
+\end{frame}
+
+\begin{frame}
+\frametitle{General Information}
+In the abstract, SQLCache operates on a database that may contain many tables: one for each function it is given. one can also use SQLCache to operate on these tables: To view the name of each table, to remove a table, and to get all values from within a table. Let's now switch to sage for some examples in working with SQLCache
+\end{frame}
+
+\end{document}
+%sagemathcloud={"zoom_width":90}

@@ -1,0 +1,1 @@
+Just look at NOTES_ABOUT_PROJ.md

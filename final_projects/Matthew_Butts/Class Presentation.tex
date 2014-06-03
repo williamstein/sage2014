@@ -1,0 +1,130 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usetheme{Warsaw}
+
+\title{Computing Covariance and Variance of Stock Returns in Parallel}
+\author{Matt Butts}\institute{University of Washington}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+Common approaches to practical applications of calculating statistical moments are slow because of the computational complexity that comes with huge data sets. This is a problem in finance when computing stock relationships because computing these moments requires iterations over those return data sets.
+\end{frame}
+
+\begin{frame}
+The first moment is the mean of the list.
+$$M_{1, X} = \bar{x} = \sum\limits_{i=1}^n \frac{x_i}{n}$$
+
+$$M_{1, Y} = \bar{y} = \sum\limits_{i=1}^n \frac{y_i}{n}$$
+\end{frame}
+
+\begin{frame}
+The second moment is the variance of the list.
+$$M_{2, X} = \sum\limits_{i=1}^n \frac{(x_i - \bar{x})^2}{n}$$
+Standard Deviation (units of the data)
+$$StdDevX = \sqrt{\sum\limits_{i=1}^n \frac{(x_i - \bar{x})^2}{n}}$$
+\end{frame}
+
+\begin{frame}
+The second co-moment is the covariance of the two lists.
+$$M_{2, X, Y} = COV(X,Y) = \sum\limits_{i=1}^n \frac{(x_i - \bar{x})(y_i - \bar{y})}{n}$$
+The correlation (standardized units)
+$$Corr_{X,Y} = \frac{\sum\limits_{i=1}^n \frac{(x_i - \bar{x})(y_i - \bar{y})}{n}}{StdDevX * StdDevY}$$
+\end{frame}
+
+\begin{frame}
+\textbullet My project is a Sage progam that can compute correlation and standard deviation of large data sets of stock returns quickly by calculating covariance and variances in parallel.
+
+\textbullet These large data sets can be partitioned into blocks and expensive calculations made in forked processes then reassembled to represent the entire data set.
+
+\end{frame}
+
+\begin{frame}
+Simple Breakdown of Algorithm:
+
+1. Input/List Processing
+
+2. Calculate Chunk
+
+3. Chunk Assembly
+
+4. Output
+\end{frame}
+
+
+\begin{frame}
+File Input/Chunk Processing:
+
+\textbullet My program reads a CSV file with column data representing stock returns for two stocks
+
+\textbullet User can specify to save to a .txt file and/or print results
+
+\textbullet The lists are divided into blocks to computed in parallel
+\end{frame}
+
+
+\begin{frame}
+Calculate Chunk:
+
+\textbullet Performs computations to convert return lists into dictionaries of data.
+
+\textbullet Parallel Decorator runs list of partitions of original list in parallel forked processes
+
+\textbullet Running forked processes in this step makes this algorithm efficient for larger data sets.
+
+\vspace{1cm}
+Chunk Assembly:
+
+\textbullet Pairwise assembly algorithm that assembles the four chunks, now represented with dictionaries, into one that represents entire data set.
+
+\end{frame}
+
+\begin{frame}
+Output:
+
+\textbullet My program can save/print the output as a dictionary of the moment/co-moment data
+
+\textbullet It calculates correlation and standard deviation because these are considered standardized measures
+
+\end{frame}
+
+\begin{frame}
+I ran the same data sets on my parallel program and a program that runs a similar algorithm, not using parallel processes.
+
+Data Points are per set and speed is calculated per loop using "timeit"
+\begin{table}[h]
+\begin{tabular}{llll}
+Data Points& My Algorithm & Common Approach & Results \\
+1,000 & 60.9 ms& 19.3 ms & Slower \\
+5,000 & 89.9 ms& 88.6 ms & Almost equal \\
+50,000 & 232 ms& 897 ms & 3.86x faster \\
+100,000 & 393 ms& 1.76 s & 4.48x faster \\
+500,000 & 1.72 s& 9.02 s & 5.24x faster \\
+1,000,000 & 3.37 s& 17.8 s & 5.28x faster
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+If I had more time and knowledge to make this program faster:
+
+\textbullet Implement cython in the computationally heavy functions
+
+\textbullet Somehow optimize how processes are run in parallel
+
+\textbullet Optimize the number of list divisions based on original data list size and idea of pairwise assembly
+\end{frame}
+
+
+\begin{frame}
+Questions?
+\end{frame}
+
+\end{document}
+%sagemathcloud={"zoom_width":90}

@@ -1,0 +1,18 @@
+{
+  "manifest_version" : 2,
+  "name": "SageMath Extension",
+  "version": "1.0",
+  "description": "Resource and helper extension for SageMath and SageMath Cloud",
+  "homepage_url": "http://github.com/ronindesign/sagemath-ext",
+	"background": {
+    "page" : "background.html" },
+	"permissions": [
+	  "https://cloud.sagemath.com/*",
+	  "http://cloud.sagemath.com/*"
+	],
+	"browser_action": {
+    "default_icon": "icon.png", 
+    "default_title": "SageMath Extension",      
+    "default_popup": "popup.html"       
+  }
+}

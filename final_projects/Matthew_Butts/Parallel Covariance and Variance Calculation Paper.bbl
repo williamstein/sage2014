@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{covariance}
+Janine Bennett.
+\newblock Numerically stable, single-pass, parallel statistics algorithms.
+\newblock
+  \url{http://www.janinebennett.org/index_files/ParallelStatisticsAlgorithms.pdf}.
+
+\bibitem{pairwise}
+Tony Chan.
+\newblock Updating formulae and a pairwise algorithm for computing sample
+  variances.
+\newblock
+  \url{ftp://reports.stanford.edu/pub/cstr/reports/cs/tr/79/773/CS-TR-79-773.pdf}.
+
+\bibitem{bigdata}
+Michael Stonebraker.
+\newblock What does big data mean?
+\newblock
+  \url{http://cacm.acm.org/blogs/blog-cacm/156102-what-does-big-data-mean-part-2/fulltext}.
+
+\bibitem{parallel}
+Sage~Development Team.
+\newblock Sage documentation.
+\newblock \url{http://www.sagemath.org/pdf/en/reference/parallel/parallel.pdf}.
+
+\bibitem{wiki}
+Wikipedia.
+\newblock Algorithms to calculate variance and covariance.
+\newblock
+  \url{http://en.wikipedia.org/wiki/Algorithms_for_calculating_variance}.
+
+\end{thebibliography}

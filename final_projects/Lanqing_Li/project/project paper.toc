@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Inputs}{3}
+\contentsline {subsection}{\numberline {2.1}S\&P 500}{3}
+\contentsline {subsection}{\numberline {2.2}Why Use the Log of Returns, Rather Than Price or Raw Returns?}{3}
+\contentsline {section}{\numberline {3}Outputs}{5}
+\contentsline {section}{\numberline {4}Flaws}{5}

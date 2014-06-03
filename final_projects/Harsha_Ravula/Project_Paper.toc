@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}What is a Dynamical System?}{3}
+\contentsline {subsection}{\numberline {1.1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.2}Importance of dynamical systems}{3}
+\contentsline {section}{\numberline {2}Qualitative Properties of a Dynamical System}{4}
+\contentsline {section}{\numberline {3}An Example Dynamical System}{6}
+\contentsline {subsection}{\numberline {3.1}Briefing of the example}{6}
+\contentsline {subsection}{\numberline {3.2}Solution to the example}{7}
+\contentsline {section}{\numberline {4}References}{9}

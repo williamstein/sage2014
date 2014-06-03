@@ -1,0 +1,36 @@
+/*Menghan Chen, MATH480B, 14sp, Project
+  This is the style sheet for the web page.*/
+
+body, select, button{
+	font-size: 14pt;
+	font-family: cursive;
+	text-align: center;
+}
+
+#puzzlearea {
+	width: 400px;
+	height: 400px;
+	position: relative;  /* so the sqaures' x/y coords are relative to me */
+	margin: auto;
+}
+
+.square {
+	width: 94px;
+	height: 94px;
+	border: 3px solid black;
+	position: absolute;
+	font-size: 40pt;
+}
+
+.highlight {
+	border: 5px solid red;
+	cursor: pointer;
+}
+
+#win {
+	font-weight: bold;
+}
+
+.highlight, #win{
+	color: red;
+}

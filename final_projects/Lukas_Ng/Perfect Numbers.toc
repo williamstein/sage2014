@@ -1,0 +1,7 @@
+\contentsline {section}{\tocsection {}{1}{Introduction}}{3}{section.1}
+\contentsline {section}{\tocsection {}{2}{The Sum of Divisors Function}}{4}{section.2}
+\contentsline {section}{\tocsection {}{3}{Mersenne Primes and Even Perfect Numbers}}{5}{section.3}
+\contentsline {subsection}{\tocsubsection {}{3.1}{Mersenne Primes}}{5}{subsection.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.2}{Even Perfect Numbers}}{5}{subsection.3.2}
+\contentsline {section}{\tocsection {}{4}{Odd Perfect Numbers}}{8}{section.4}
+\contentsline {section}{\tocsection {}{5}{References}}{10}{section.5}

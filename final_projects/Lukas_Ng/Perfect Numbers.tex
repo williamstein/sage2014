@@ -1,0 +1,334 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage[margin=1.36in]{geometry}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\title{Even Perfect Numbers and Necessary Conditions for the Existence of Odd Perfect Numbers}
+\author{Lukas Ng}
+
+\begin{document}
+\pagestyle{plain}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+For the entirety of this discussion, we will restrict $n$ to the integers.
+
+While this discussion will primarily focus on Odd Perfect Numbers (OPNs hereafter), we will first talk about perfect numbers in general and Even Perfect Numbers (EPNs hereafter).
+
+Perfect numbers are numbers whose sigma function is twice that of their value. In this case, the sigma function of $n$ is the sum of divisors function. That is, $\sigma (n)$ is equal to the sum of the divisors of $n$ and if $\sigma (n) = 2n$, then $n$ is perfect.
+
+For example, 6 is a perfect number because the divisors of 6 are 1, 2, 3, and 6. We then have 1+2+3+6 = 12. So we have $\sigma (n) = 2n$, and more specifically $\sigma (6) = 12$ meaning that 6 is a perfect number. 6 is in fact the first perfect number because $\sigma (1) = 1$, $\sigma (2) = 3$, $\sigma (3) = 4$, $\sigma (4) = 7$, and $\sigma (5) = 6$. 
+
+\newpage
+
+\section{The Sum of Divisors Function}
+
+Since we have defined perfect numbers in terms of the sum of divisors function, we will state a formula to calculate $\sigma(n)$ for all values of $n$.
+
+Let the prime factorization of $n$ be denoted by $p_1^{a_1} * p_2^{a_2} * ... * p_k^{a_k}$ for some integer $k$.
+
+\begin{center}
+$\sigma(n) = \prod{\frac{p_i^{a_i + 1} - 1}{p_i - 1}}$
+
+for $i = 1$ up to $k$.
+\end{center}
+
+Since $\sigma(n)$ expresses some arithmetic property of n, then $\sigma(n)$ is an arithmetic function.
+
+\underline{Theorem 2.1.1:} The arithmetic function $\sigma(n)$ is multiplicative. 
+
+That is, $\sigma(ab) = \sigma(a) \sigma(b)$.
+
+\underline{Proof:} Suppose a and b are positive integers that are relatively prime.
+
+This means that the greatest common divisor of a and b is one, denoted as $(a,b) = 1$.
+
+Then $\sigma(a) \sigma(b) = \sum_{d|a}{d} \sum_{d|b}{d}$, where the first summation sums over a when d divides a and the second summation sums over b when d divides b.
+
+This is equivalent to: $\sum_{a'|a}{a'} \sum_{b'|b}{b'}$
+
+Which is equal to: $\sum_{a'|a, b'|b}{a'b'}$
+
+Which we can rewrite as: $\sum_{d|ab}{d}$
+
+This finally brings us to: $\sigma(ab)$
+
+We have then concluded that $\sigma(a) \sigma(b) = \sigma(ab)$ and therefore, $\sigma(n)$ is a multiplicative arithmetic function.
+
+QED
+
+\newpage
+
+\section{Mersenne Primes and Even Perfect Numbers}
+
+\subsection{Mersenne Primes}
+
+Mersenne Primes are any prime numbers that have the form $m = 2^p - 1$, where both p and m are prime. While it is true that both $p$ and $m$ must be prime for m to be a Mersenne Prime, it is NOT necessarily true that this holds for all $p$.
+
+For example, we have:
+\begin{center}
+$2^{11} - 1 = 2047$
+
+and
+
+$2047 = 23 * 89$
+\end{center}
+
+Since 2047 has a prime factorization other than the trivial factors, while $p = 11$ is prime, $m$ is not prime and therefore $p = 11$ does not yield a Mersenne Prime.
+
+We now know that we must be careful when choosing $p$ to ensure that $m$ is also prime.
+
+Examples of Mersenne Primes include:
+\begin{center}
+$2^2 - 1 = 3$
+
+$2^3 - 1 = 7$
+
+$2^5 - 1 = 31$
+
+$2^7 - 1 = 127$
+\end{center}
+
+And so forth. As of when this is being written there are 48 known Mersenne Primes with the largest known one being:
+\begin{center}
+$2^{57,885,161} - 1$
+\end{center}
+
+It is usually the case that the largest known prime is a Mersenne Prime since we can use already known large primes to try and generate even larger ones.
+
+Mersenne Primes will play a role in our discussion about EPNs.
+
+\subsection{Even Perfect Numbers}
+
+It was proved by Euclid that EPNs had to be of the form
+\begin{center}
+$2^{p-1} (2^p - 1)$
+\end{center}
+
+If we look closely at the second part of the expression, we see the recognizable 
+\begin{center}
+$2^p - 1$
+\end{center}
+which we recall is the form of a Mersenne Prime.
+
+We will now see how the proof of this extraordinary fact goes.
+
+\bigbreak
+
+\underline{Theorem 3.2.1:} EPNs must be of the form $2^{p-1} (2^p - 1)$
+
+\bigbreak
+
+\underline{Proof (left to right):} 
+
+Suppose that n is an even perfect number. 
+
+Let $n = t2^{s}$, where $s$ is a positive integer and $t$ is an odd integer.
+
+Then, $\sigma(n)=2n= t2^{s+1}$. 
+
+Also we have $\sigma(n) = \sigma(2s)\sigma(t)$ 
+
+and in turn $\sigma(2s)\sigma(t)=(2^{s+1}-1)\sigma(t)$.
+
+Since the greatest common divisor of $(2^{s+1}-1, 2^{s+1})$ is just $1$, we have that $2^{s+1}$ divides $\sigma(t) (2^{s+1}-1)$.
+
+This must mean that $2^{s+1}$ divides $\sigma(t)$. 
+
+Hence $\sigma(t)=k 2^{s+1}$ where k is some positive integer. 
+
+We also have that $t2^{s+1}=(2^{s+1}-1)(k 2^{s+1})$. 
+
+Then $t=(2^{s+1}-1)k$, for some $k > 1$. 
+
+Since $k$ divides $t$, and $k \neq 1, t$; then
+
+\begin{center}
+
+$\sigma(t) \geq 1+t+k$
+
+and
+
+$1+t+k = 1 + k2^{s+1}$
+
+and
+
+$1 + k2^{s+1} = 1 + \sigma(t)$
+
+\bigskip
+
+But this is a contradiction to the fact that $2^{s+1}$ divides $\sigma(t)$.
+\end{center}
+
+Hence, $k = 1$ and $t=2^{s+1}-1$. 
+
+$\sigma(t)= t+1$ implies that t is prime. 
+
+Therefore, $n=2^s(2^{s+1}-1)$ where $2^{s+1}-1$ is prime.
+
+\medskip
+
+Since this is an if and only if statement, we must now prove it from right to left.
+
+\medskip
+
+\underline{Proof continued (right to left):} 
+
+Suppose $n=2^p(2^{p+1}-1)$, where both $n$ and $p$ are prime numbers. 
+
+By Theorem 2.1.1, $\sigma(n)$ is a multiplicative arithmetic function. So then,
+
+\begin{center}
+$\sigma{(n)} = \sigma{(2^p(2^{p+1}-1))}$
+
+$\sigma{(2^p(2^{p+1}-1))} = \sigma{(2^p)}\sigma{(2^{p+1}-1)}$
+\end{center}
+
+Since $2^p - 1$ is prime in the form of a Mersenne Prime we discussed before, according to the formula given in Section 2 we have,
+
+\begin{center}
+$\sigma(2^p - 1) = 2^p$
+\end{center}
+
+With a little bit of manipulation including the formula for $\sigma(n)$ in Section 2, we have the following equalities:
+
+\begin{center}
+$\sigma(n) = \sigma(2^{p-1}) \sigma(2^p -1)$
+
+$ = 2^p\frac{2^p - 1}{2-1}$
+
+$ = 2^p(2^p - 1)$
+
+$ = 2(2^{p-1}(2^p - 1))$
+
+$ = 2n$
+
+\end{center}
+
+In conclusion, if $n = (2^p(2^{p+1}-1))$ then $\sigma(n) = 2n$. 
+
+QED
+
+This means that every even perfect number must be of the form $2^p(2^{p+1}-1)$ or equivalently $2^{p-1}(2^p -1)$.
+
+\newpage
+
+\section{Odd Perfect Numbers}
+
+We have discussed Mersenne Primes and EPNs, but we have not said anything about OPNs yet. This is in fact interesting because to this day nobody has found an OPN nor proved the non-existence of OPNs. This is not to say that we cannot learn certain attributes that an OPN must have in order to exist.
+
+The rest of our discussion will involve looking at what properties an OPN would need to have in order to exist. This is an exercise in hypotheticals and does not prove an OPN exists; however, these properties can be used to reduce time and computation power needed to search for OPNs.
+
+Some of the proofs of the properties that OPNs must have are quite technical and rigorous beyond my level of understanding and probably most other undergraduates without a large amount of coursework in Number Theory. We will then state several properties of OPNs while proving only one of them.
+
+\underline{Theorem 4.1.1:} If $3|n$, and if the power of the prime 3 in the prime factorization of $n$ is exactly 2, and if the powers of 13, 61, and 97 (if they appear) are $\equiv 2 (mod 3)$, then $n$ is not an OPN.
+
+\underline{Lemma:} $\sigma(s^f)|\sigma(s^{f+m(f+1)}$ for all primes s and m, and where f is a positive integer.
+
+\underline{Proof of Lemma:} $\sigma(s^f) = \frac{s^{f+1}-1}{s-1}$ by the formula in Section 2.
+
+\begin{center}
+$\sigma(s^{f+(f+1)m}) = \frac{s^{f+1+m(f+1)-1}}{s-1}$
+
+$ = \frac{s^{(f+1)(m+1)-1}}{s-1}$
+\end{center}
+
+Since $(t-1)|(t^k -1)$ for all positive integers $y, k$ where $y \neq 1$, when we multiply out by $(s-1)$, we have the desired result that $\sigma(s^f)|\sigma(s^{f+m(f+1)})$.
+
+\underline{Proof of Theorem 4.1.1:} Suppose that n is an OPN such that $3|n$.
+
+Let $a^k||b$ read as "$a^k$ exactly divides $b$". 
+
+Mathematically, we will take this to mean: $a^k | b$, but $a^{k+1} \nmid b$
+
+This means that $3^2 || n$, and thus $\sigma(3^2) = 13|n$.
+
+We assume the result that:
+
+$n = q^e * p_1^{2a_1} * p_2^{2a_2} * ... * p_k^{2a_k}$, where $q$ and $p_i$ are distinct primes, and $q \equiv e \equiv 1 (mod 4)$ and $a_i$ are of course all positive integers.
+
+Using the result from the Lemma we proved with $f = 2$, we have:
+
+$\sigma(13^2) | \sigma(13^{2a_1} | n$, where $13^{2a_1} || n$. This means $\sigma(13^2) = 3*61|n$.
+
+$\sigma(61^2) | \sigma(61^{2a_2} | n$, where $61^{2a_2} || n$. This means $\sigma(61^2) = 3*13*97|n$.
+
+$\sigma(97^2) | \sigma(97^{2a_3} | n$, where $97^{2a_3} || n$. This means $\sigma(97^2) = 3*3169|n$.
+
+However, this means that $\sigma(97^{2a_3}) \equiv \sigma(61^{2a_2}) \equiv \sigma(13^{2a_1}) \equiv 0 (mod 3)$. This leads us to the conclusion that $3^3|n$, but this is a contradiction!
+
+This tells us that $n$ is an OPN where $3|n$ if either:
+
+\begin {center}
+$3^2 || n$ and the power of 13, 61, or 97 is 3 or higher
+
+or
+
+$3^4 | n$.
+\end{center}
+
+QED
+
+\bigskip
+
+There are other results on the necessary conditions for odd perfect numbers. Most of these results are beyond my current comprehension for proving, but proofs can be found in the references at the end of this paper.
+
+For now, we will merely state a few more necessary conditions for odd perfect numbers:
+
+\bigskip
+
+- An OPN must have at least $9$ distinct prime divisors.
+
+- If an OPN is not divisible by $3$, it must have at least $12$ distinct prime divisors.
+
+- If an OPN is not divisible by $3$ or $5$, it must have at least $15$ distinct prime divisors.
+
+- If an OPN is not divisible by $3$, $5$, or $7$, it must have at least $27$ distinct prime divisors.
+
+- Any OPN must have a prime factor larger than $10^8$.
+
+It is quickly apparent why it is difficult to compute an OPN by brute force when writing some quick code.
+
+With a naive approach, most computers will run out of memory after a few million.
+
+In the same folder as this document, I have a file called "Test Code.sagews" that runs through and searches for OPNs. 
+
+Without any extra conditions programmed in, it takes a long time to compute anything above a million, and in fact my computer is unable to go past a few million due to limited memory.
+
+By programming these conditions in along with many others and with the use of supercomputers, to date, mathematicians have verified up to $10^{1500}$ that no odd perfect numbers exist.
+
+Based on from this result, there are not many mathematicians who believe an odd perfect number (or more than one) exists, but until there is definite proof that one must not exist, we cannot say for certain one way or the other. 
+
+\newpage
+
+\section{References}
+
+[1] Richard K Guy. Unsolved Problems in Number Theory. Second Edition, Volume I. Pages 44-45. 1994.
+
+[2] Harold M Stark. An Introduction to Number Theory. Pages 1-106. 1970.
+
+[3] Jonathan Pearlman. Necessary Conditions For the Non-existence of Odd Perfect Numbers. University of California, San Diego. 2005. 
+
+[4] Ben Stevens. A Study on the Necessary Conditions of Odd Perfect Numbers. University of South Florida. 2012
+
+[5] Great Internet Mersenne Prime Search (GIMPS). 
+
+http://www.mersenne.org/various/57885161.htm. 2014.
+
+[6] Math 301A Lecture. Matthew Conroy. University of Washington. 2014.
+
+
+\end{document}
+
+%sagemathcloud={"zoom_width":120}
