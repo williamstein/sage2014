@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Math480 finalproject by bryantwong</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Math480 finalproject</h1>
+        <p>Final Project for Math 480</p>
+
+        <p class="view"><a href="https://github.com/bryantwong/Math480_FinalProject">View the Project on GitHub <small>bryantwong/Math480_FinalProject</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/bryantwong/Math480_FinalProject/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/bryantwong/Math480_FinalProject/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/bryantwong/Math480_FinalProject">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="math-480-final-project" class="anchor" href="#math-480-final-project"><span class="octicon octicon-link"></span></a>Math 480 Final Project</h1>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>This project was done for <a href="https://github.com/williamstein/sage2014">Math 480b</a> at the University of Washington, Spring 2014 by <a href="https://github.com/bryantwong">Bryant Wong</a>, <a href="https://github.com/syq2012">Yuki Sheng</a>, and <a href="https://github.com/incredibleTony">Tony Xu</a>.</p>
+
+<p>The basic premise of our project is that we are interested in figuring out why different instruments sound different, i.e. what makes instruments have different timbres. </p>
+
+<p>Our process is to input some uncompressed audio file of an instrument playing at 440HZ (A4), process that file at a sampling rate of 44.1 kHz, run it through a self-implemented version of the Fast Fourier Transform, and look at the amplitude and frequncies of the resulting sine waves. At this stage, there are various things we can do with this output, some of which we will investigate.</p>
+
+<p>Most of our code is currently written in pure Python, but one of the things we would like to do is to speed up our FFT algorithm by rewriting it in Cython.</p>
+
+<h2>
+<a name="implementationprocess" class="anchor" href="#implementationprocess"><span class="octicon octicon-link"></span></a>Implementation/Process</h2>
+
+<p>Initially we were interested in working with Fourier transforms to derive some qualities from an audio clip of a song, such as BPM. However, since we have not done too much with discrete Fourier transforms before, this project was scrapped in favor of the one we have now.</p>
+
+<p>We knew that the Python package <a href="http://www.numpy.org">numpy</a> already has an extensive implementation of the FFT/DFT, but we felt like that it would 1) be beneficial to our programming skills and 2) add to the mathematical rigor of our project if we implemented an FFT algorithm ourselves. Initially we looked at how other packages like numpy implemented their algorithms. Most use the Cooley-Tukey Fast Fourier Transform algorithm which is extremely optimized, however we decided to use a simpler algorithm that we found more understandable that utilizes recursion. As a result, our FFT algorithm is not very fast, but we think that it's more understandable and clearer to someone who has not had much experience with Discrete Fourier Transforms.</p>
+
+<p>The algorithm we implemented is the following piece of code:</p>
+
+<div class="highlight highlight-python"><pre>    <span class="c"># The actual FFT function </span>
+    <span class="k">def</span> <span class="nf">fft</span><span class="p">(</span><span class="n">signal</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+
+        <span class="c"># if the input is only one sample then we can't really do a fft </span>
+
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">signal</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c"># breaking up into odd and even pieces</span>
+            <span class="n">F_even</span> <span class="o">=</span> <span class="n">fft</span><span class="p">([</span><span class="n">signal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+            <span class="n">F_odd</span> <span class="o">=</span> <span class="n">fft</span><span class="p">([</span><span class="n">signal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+
+            <span class="c"># defining new empty array with n entries</span>
+            <span class="n">combined</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+
+            <span class="c"># implementation of the alg (using roots of unity)</span>
+                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">):</span>
+                <span class="n">combined</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">F_even</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">+</span> <span class="n">omega</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="o">-</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">F_odd</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
+                <span class="n">combined</span><span class="p">[</span><span class="n">m</span> <span class="o">+</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">F_even</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">-</span> <span class="n">omega</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="o">-</span><span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">F_odd</span><span class="p">[</span><span class="n">m</span><span class="p">]</span>
+
+            <span class="k">return</span> <span class="n">combined</span>
+</pre></div>
+
+<p>(INSERT MATHY STUFF ABOUT FFTS HERE) + explanation of the algorithm will be done for final project.</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>For our example, we will take a 1 second clip of an oboe playing A4 (440 HZ) and run it through our algorithm. Here is the original sample:</p>
+
+<iframe width="100%" height="125" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/148930101&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+
+<p>Running it in the terminal (GUI in progress):</p>
+
+<pre><code>    python finalProj.py oboe.wav
+</code></pre>
+
+<p>After about a minute, (will implement in Cython ASAP to reduce computation time), the program outputs an image with the frequencies and their associated relative amplitudes: <img src="http://i.imgur.com/t5RDUOS.png"></p>
+
+<p>One interesting thing that we can do is actually try to reconstruct the sound of the oboe using the information given above using Audacity by adding up a bunch of sine waves with the appropriate frequencies and amplitudes: <img src="http://i.imgur.com/qgpheYg.png"></p>
+
+<p>What we get is a sound that is extremely close to the original file:</p>
+
+<iframe width="100%" height="125" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149097287&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+
+
+
+<h2>
+<a name="things-to-do" class="anchor" href="#things-to-do"><span class="octicon octicon-link"></span></a>Things to do</h2>
+
+<p>We are currently working on adding a GUI or some sort of interface so that people can take their own sounds and choose sampling rate/number of samples to get their own plots. Other small things on our to-do list include adding docstrings to our functions, as well as rewriting the FFT portion of our code in Cython to get a speedup and remove the bottleneck in our program.</p>
+
+<p>Possible directions we have been thinking of include some sort of synthesizer where people can blend sounds of different instruments and automatic reconstruction of the sound in Audacity.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/bryantwong">bryantwong</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
